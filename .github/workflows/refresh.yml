@@ -1,14 +1,13 @@
 name: refresh-snapshot
 
-# 云端备份链路：在 GitHub Actions 免费额度内定时抓取行情并重建快照，
+# 云端备份链路：全时段每 10 分钟抓取行情并重建快照。
+# 若数据无实质变化（休市、周末、夜间）则跳过提交，避免空转。
 # 推回本仓库后 GitHub Pages 自动更新。本地 Mac 服务仍是主链路。
 on:
   workflow_dispatch:
   schedule:
-    # 韩股时段：UTC 00:00-07:59 ≈ 首尔 09:00-16:59（含每日收盘刷新 16:40）
-    - cron: "7,22,37,52 0-7 * * 1-5"
-    # 美股 ADR 时段：UTC 14:00-20:59 ≈ 美东夏令 10:00-16:59
-    - cron: "11,26,41,56 14-20 * * 1-5"
+    # 全时段每 10 分钟（错开整点高峰）
+    - cron: "4,14,24,34,44,54 * * * *"
 
 permissions:
   contents: write
@@ -24,8 +23,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Backup previous snapshot
+        run: cp state.json /tmp/old_state.json
+
       - name: Fetch data and rebuild snapshot
         run: python3 monitor/run_refresh.py
+
+      - name: Restore files if nothing meaningful changed
+        run: |
+          if python3 - <<'EOF'
+          import json, sys
+          IGNORE_TOP = ("generated_at", "generated_at_seoul", "trigger")
+          def normalize(path):
+              d = json.load(open(path))
+              for k in IGNORE_TOP:
+                  d.pop(k, None)
+              dq = d.get("data_quality") or {}
+              dq.pop("next_scheduled_refresh", None)
+              for src in (dq.get("sources") or {}).values():
+                  src.pop("fetched_at", None)
+              return d
+          sys.exit(0 if normalize("state.json") != normalize("/tmp/old_state.json") else 1)
+          EOF
+          then
+            echo "meaningful change detected, will publish"
+          else
+            echo "no meaningful change; restoring files to skip commit"
+            git restore state.json monitor/data
+          fi
 
       - name: Commit and push snapshot
         run: |
