@@ -5,7 +5,7 @@ set -euo pipefail
 
 export PATH="/Users/midongkeji/.agent-reach/tools/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-SITE_DIR="/Users/midongkeji/Documents/kimi/workspace/skhynix-public"
+SITE_DIR="/Users/midongkeji/Library/Application Support/SKHynixRiskMonitor/public-site"
 cd "$SITE_DIR"
 
 python3 "$SITE_DIR/patch_site.py"

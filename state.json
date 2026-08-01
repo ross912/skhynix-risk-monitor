@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-01T03:37:22+00:00",
-  "generated_at_seoul": "2026-08-01T12:37:22+09:00",
+  "generated_at": "2026-08-01T04:04:27+00:00",
+  "generated_at_seoul": "2026-08-01T13:04:27+09:00",
   "trigger": "manual",
   "summary": {
     "status_counts": {
@@ -1966,7 +1966,7 @@
     "evidence_history": [
       {
         "date": "2026-07-31",
-        "generated_at": "2026-08-01T03:37:22+00:00",
+        "generated_at": "2026-08-01T04:04:27+00:00",
         "price": 1718000.0,
         "status_counts": {
           "alert": 4,
@@ -2212,47 +2212,47 @@
     "sources": {
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-01T03:37:17+00:00",
+        "fetched_at": "2026-08-01T04:04:24+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-01T03:37:17+00:00",
-        "error": null
-      },
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-01T03:37:17+00:00",
-        "error": null
-      },
-      "krx_quote": {
-        "status": "fresh",
-        "fetched_at": "2026-08-01T03:37:17+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-08-01T03:37:17+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-01T03:37:17+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-01T03:37:17+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-08-01T03:37:17+00:00",
+        "fetched_at": "2026-08-01T04:04:24+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-01T03:37:17+00:00",
+        "fetched_at": "2026-08-01T04:04:24+00:00",
+        "error": null
+      },
+      "kospi_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-01T04:04:24+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-08-01T04:04:24+00:00",
+        "error": null
+      },
+      "krx_quote": {
+        "status": "fresh",
+        "fetched_at": "2026-08-01T04:04:24+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-08-01T04:04:24+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-08-01T04:04:24+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-08-01T04:04:24+00:00",
         "error": null
       }
     },

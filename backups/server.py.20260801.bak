@@ -1,0 +1,1108 @@
+#!/usr/bin/env python3
+"""Local SK hynix investment risk monitor.
+
+The service binds to 127.0.0.1 only. It combines public market data with
+explicit slow-moving assumptions from config.json. No API key is required.
+"""
+
+from __future__ import annotations
+
+import json
+import math
+import os
+import statistics
+import threading
+import time
+import urllib.error
+import urllib.request
+import webbrowser
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import date, datetime, timedelta, timezone
+from http import HTTPStatus
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+from typing import Any, Callable
+from urllib.parse import urlparse
+from xml.etree import ElementTree
+from zoneinfo import ZoneInfo
+
+
+ROOT = Path(__file__).resolve().parent
+DATA_DIR = ROOT / "data"
+CONFIG_PATH = ROOT / "config.json"
+STATE_PATH = DATA_DIR / "state.json"
+RAW_CACHE_PATH = DATA_DIR / "raw_cache.json"
+EVIDENCE_HISTORY_PATH = DATA_DIR / "evidence_history.json"
+LOG_PATH = DATA_DIR / "monitor.log"
+HOST = os.environ.get("SKHYNIX_MONITOR_HOST", "127.0.0.1")
+PORT = int(os.environ.get("SKHYNIX_MONITOR_PORT", "8765"))
+USER_AGENT = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36 "
+    "SKHynixRiskMonitor/1.0"
+)
+
+REFRESH_LOCK = threading.Lock()
+STATUS_LOCK = threading.Lock()
+RUNTIME_STATUS: dict[str, Any] = {
+    "refreshing": False,
+    "started_at": None,
+    "finished_at": None,
+    "trigger": None,
+    "last_error": None,
+}
+
+
+def log(message: str) -> None:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    with LOG_PATH.open("a", encoding="utf-8") as handle:
+        handle.write(f"{stamp} {message}\n")
+
+
+def load_json(path: Path, default: Any) -> Any:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return default
+
+
+def atomic_write_json(path: Path, payload: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False),
+        encoding="utf-8",
+    )
+    temporary.replace(path)
+
+
+def now_utc() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def parse_datetime(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def number(value: Any) -> float | None:
+    if value is None:
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    cleaned = str(value).replace(",", "").replace("%", "").strip()
+    if cleaned in {"", "-", "N/A", "null"}:
+        return None
+    try:
+        return float(cleaned)
+    except ValueError:
+        return None
+
+
+def clamp(value: float, low: float = 0.0, high: float = 100.0) -> float:
+    return max(low, min(high, value))
+
+
+def http_get(url: str, timeout: int = 14) -> bytes:
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/json,text/plain,application/xml,text/xml,*/*",
+        "Accept-Language": "en-US,en;q=0.8,ko;q=0.6",
+        "Referer": "https://finance.naver.com/",
+    }
+    last_error: Exception | None = None
+    for attempt in range(3):
+        request = urllib.request.Request(url, headers=headers)
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return response.read()
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as error:
+            last_error = error
+            if attempt < 2:
+                time.sleep(0.6 * (attempt + 1))
+    raise RuntimeError(f"request failed: {url}: {last_error}")
+
+
+def fetch_json(url: str) -> dict[str, Any]:
+    return json.loads(http_get(url).decode("utf-8"))
+
+
+def fetch_naver_history(url: str) -> list[dict[str, Any]]:
+    content = http_get(url).decode("euc-kr", errors="replace")
+    root = ElementTree.fromstring(content)
+    rows: list[dict[str, Any]] = []
+    for item in root.findall(".//item"):
+        values = item.attrib.get("data", "").split("|")
+        if len(values) != 6:
+            continue
+        day, open_, high, low, close, volume = values
+        rows.append(
+            {
+                "date": day,
+                "open": float(open_),
+                "high": float(high),
+                "low": float(low),
+                "close": float(close),
+                "volume": float(volume),
+            }
+        )
+    if len(rows) < 30:
+        raise RuntimeError(f"insufficient history: {len(rows)} rows")
+    return rows
+
+
+def fetch_krx_realtime(url: str) -> dict[str, Any]:
+    payload = fetch_json(url)
+    rows = payload.get("datas") or []
+    if not rows:
+        raise RuntimeError("empty Korean quote")
+    row = rows[0]
+    return {
+        "symbol": row.get("itemCode"),
+        "name": row.get("stockName"),
+        "price": number(row.get("closePrice")),
+        "previous_close_change": number(row.get("compareToPreviousClosePrice")),
+        "change_pct": number(row.get("fluctuationsRatio")),
+        "open": number(row.get("openPrice")),
+        "high": number(row.get("highPrice")),
+        "low": number(row.get("lowPrice")),
+        "volume": number(row.get("accumulatedTradingVolume")),
+        "market_status": row.get("marketStatus"),
+        "traded_at": row.get("localTradedAt"),
+        "exchange": (row.get("stockExchangeType") or {}).get("nameEng"),
+    }
+
+
+def fetch_world_realtime(url: str) -> dict[str, Any]:
+    row = fetch_json(url)
+    value = number(row.get("closePrice"))
+    if value is None:
+        raise RuntimeError(f"empty world quote: {url}")
+    return {
+        "symbol": row.get("symbolCode") or row.get("reutersCode"),
+        "name": row.get("stockNameEng") or row.get("indexNameEng"),
+        "price": value,
+        "change": number(row.get("compareToPreviousClosePrice")),
+        "change_pct": number(row.get("fluctuationsRatio")),
+        "traded_at": row.get("localTradedAt"),
+        "market_status": row.get("marketStatus"),
+        "exchange": (row.get("stockExchangeType") or {}).get("nameEng"),
+        "delay_name": row.get("delayTimeName"),
+    }
+
+
+def fetch_fx(url: str) -> dict[str, Any]:
+    row = fetch_json(url)
+    rate = number((row.get("rates") or {}).get("KRW"))
+    if rate is None:
+        raise RuntimeError("empty USD/KRW quote")
+    return {
+        "symbol": "USDKRW",
+        "price": rate,
+        "traded_at": f"{row.get('date')}T16:00:00+00:00",
+        "base": row.get("base"),
+    }
+
+
+def merge_realtime_bar(
+    history: list[dict[str, Any]], quote: dict[str, Any]
+) -> list[dict[str, Any]]:
+    if not history or quote.get("price") is None:
+        return history
+    traded_at = parse_datetime(quote.get("traded_at"))
+    quote_day = traded_at.strftime("%Y%m%d") if traded_at else history[-1]["date"]
+    bar = {
+        "date": quote_day,
+        "open": quote.get("open") or quote["price"],
+        "high": quote.get("high") or quote["price"],
+        "low": quote.get("low") or quote["price"],
+        "close": quote["price"],
+        "volume": quote.get("volume") or 0,
+    }
+    merged = list(history)
+    if merged[-1]["date"] == quote_day:
+        merged[-1] = bar
+    elif merged[-1]["date"] < quote_day:
+        merged.append(bar)
+    return merged
+
+
+def daily_returns(history: list[dict[str, Any]]) -> dict[str, float]:
+    result: dict[str, float] = {}
+    for previous, current in zip(history, history[1:]):
+        if previous["close"] > 0 and current["close"] > 0:
+            result[current["date"]] = math.log(current["close"] / previous["close"])
+    return result
+
+
+def simple_moving_average(values: list[float], window: int) -> float | None:
+    if len(values) < window:
+        return None
+    return sum(values[-window:]) / window
+
+
+def rolling_series(values: list[float], window: int) -> list[float | None]:
+    output: list[float | None] = []
+    running = 0.0
+    for index, value in enumerate(values):
+        running += value
+        if index >= window:
+            running -= values[index - window]
+        output.append(running / window if index >= window - 1 else None)
+    return output
+
+
+def rsi(values: list[float], window: int = 14) -> float | None:
+    if len(values) <= window:
+        return None
+    changes = [right - left for left, right in zip(values, values[1:])]
+    sample = changes[-window:]
+    average_gain = sum(max(change, 0.0) for change in sample) / window
+    average_loss = sum(max(-change, 0.0) for change in sample) / window
+    if average_loss == 0:
+        return 100.0
+    relative_strength = average_gain / average_loss
+    return 100.0 - 100.0 / (1.0 + relative_strength)
+
+
+def ewma_volatility(returns: list[float], decay: float = 0.94) -> float | None:
+    if len(returns) < 20:
+        return None
+    variance = returns[0] ** 2
+    for value in returns[1:]:
+        variance = decay * variance + (1.0 - decay) * value**2
+    return math.sqrt(max(variance, 0.0) * 252.0) * 100.0
+
+
+def percentile(values: list[float], probability: float) -> float | None:
+    if not values:
+        return None
+    ordered = sorted(values)
+    position = (len(ordered) - 1) * probability
+    lower = math.floor(position)
+    upper = math.ceil(position)
+    if lower == upper:
+        return ordered[lower]
+    weight = position - lower
+    return ordered[lower] * (1.0 - weight) + ordered[upper] * weight
+
+
+def historical_var_cvar(returns: list[float]) -> tuple[float | None, float | None]:
+    sample = returns[-252:]
+    threshold = percentile(sample, 0.05)
+    if threshold is None:
+        return None, None
+    tail = [value for value in sample if value <= threshold]
+    cvar = statistics.fmean(tail) if tail else threshold
+    return -threshold * 100.0, -cvar * 100.0
+
+
+def beta_and_correlation(
+    asset: dict[str, float], benchmark: dict[str, float], lookback: int = 120
+) -> tuple[float | None, float | None]:
+    dates = sorted(set(asset).intersection(benchmark))[-lookback:]
+    if len(dates) < 30:
+        return None, None
+    left = [asset[day] for day in dates]
+    right = [benchmark[day] for day in dates]
+    left_mean = statistics.fmean(left)
+    right_mean = statistics.fmean(right)
+    covariance = statistics.fmean(
+        (x - left_mean) * (y - right_mean) for x, y in zip(left, right)
+    )
+    benchmark_variance = statistics.fmean((y - right_mean) ** 2 for y in right)
+    asset_variance = statistics.fmean((x - left_mean) ** 2 for x in left)
+    beta = covariance / benchmark_variance if benchmark_variance > 0 else None
+    denominator = math.sqrt(asset_variance * benchmark_variance)
+    correlation = covariance / denominator if denominator > 0 else None
+    return beta, correlation
+
+
+def signal(
+    identifier: str,
+    pillar: str,
+    label: str,
+    value: float,
+    display: str,
+    status: str,
+    threshold: str,
+    interpretation: str,
+) -> dict[str, Any]:
+    if status not in {"alert", "watch", "neutral", "support"}:
+        raise ValueError(f"invalid signal status: {status}")
+    return {
+        "id": identifier,
+        "pillar": pillar,
+        "label": label,
+        "value": round(value, 4),
+        "display": display,
+        "status": status,
+        "threshold": threshold,
+        "interpretation": interpretation,
+    }
+
+
+def build_state(
+    config: dict[str, Any],
+    datasets: dict[str, Any],
+    source_meta: dict[str, Any],
+    trigger: str,
+    previous_state: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    slow = config["slow_factors"]
+    krx_quote = datasets["krx_quote"]
+    krx_history = merge_realtime_bar(datasets["krx_history"], krx_quote)
+    kospi_history = datasets["kospi_history"]
+    samsung_history = datasets["samsung_history"]
+    adr = datasets["adr"]
+    fx = datasets["fx"]
+    closes = [row["close"] for row in krx_history]
+    returns_by_date = daily_returns(krx_history)
+    returns = list(returns_by_date.values())
+    kospi_returns = daily_returns(kospi_history)
+    beta, correlation = beta_and_correlation(returns_by_date, kospi_returns)
+
+    current = krx_quote.get("price") or closes[-1]
+    sma20 = simple_moving_average(closes, 20)
+    sma60 = simple_moving_average(closes, 60)
+    sma120 = simple_moving_average(closes, 120)
+    sma200 = simple_moving_average(closes, 200)
+    rsi14 = rsi(closes, 14)
+    ewma_vol = ewma_volatility(returns[-252:])
+    var95, cvar95 = historical_var_cvar(returns)
+    high_252 = max(closes[-252:])
+    low_252 = min(closes[-252:])
+    drawdown = current / high_252 - 1.0
+    momentum_20 = current / closes[-21] - 1.0 if len(closes) > 21 else 0.0
+    momentum_60 = current / closes[-61] - 1.0 if len(closes) > 61 else 0.0
+    max_drawdown = 0.0
+    peak = closes[-252]
+    for value in closes[-252:]:
+        peak = max(peak, value)
+        max_drawdown = min(max_drawdown, value / peak - 1.0)
+    volumes = [row["volume"] for row in krx_history if row.get("volume")]
+    volume_ratio = (
+        volumes[-1] / statistics.fmean(volumes[-20:])
+        if len(volumes) >= 20 and statistics.fmean(volumes[-20:]) > 0
+        else 1.0
+    )
+
+    ads_per_share = config["security"]["ads_per_common_share"]
+    adr_parity = current / fx["price"] / ads_per_share
+    adr_premium = adr["price"] / adr_parity - 1.0
+    krx_change = krx_quote.get("change_pct") or 0.0
+    adr_change = adr.get("change_pct") or 0.0
+    overnight_spread = adr_change - krx_change
+    previous_premium = (
+        (previous_state or {}).get("market", {}).get("adr_premium_pct")
+    )
+    premium_change = (
+        adr_premium * 100.0 - float(previous_premium)
+        if previous_premium is not None
+        else None
+    )
+    trend_distance = (current / sma200 - 1.0) * 100.0 if sma200 else 0.0
+
+    market_signals = [
+        signal(
+            "trend_200d",
+            "market_regime",
+            "200日趋势距离",
+            current / sma200 * 100.0 if sma200 else 100.0,
+            f"{trend_distance:+.1f}%" if sma200 else "数据不足",
+            "alert" if trend_distance <= -10 else "watch" if trend_distance < -5 or trend_distance > 50 else "support" if 0 <= trend_distance <= 30 else "neutral",
+            "低于200日线10%触发警戒；高于50%提示过热",
+            "趋势破位和极端偏离分开观察，不把上涨本身视为风险。",
+        ),
+        signal(
+            "drawdown_52w",
+            "market_regime",
+            "距52周高点",
+            drawdown * 100.0,
+            f"{drawdown * 100:.1f}%",
+            "alert" if drawdown <= -0.35 else "watch" if drawdown <= -0.20 else "support" if drawdown > -0.10 else "neutral",
+            "回撤超过20%进入注意，超过35%触发警戒",
+            "衡量当前价格处在一年周期的哪个位置。",
+        ),
+        signal(
+            "ewma_vol",
+            "market_regime",
+            "EWMA年化波动率",
+            ewma_vol or 0.0,
+            f"{ewma_vol:.1f}%" if ewma_vol is not None else "数据不足",
+            "alert" if (ewma_vol or 0.0) >= 80 else "watch" if (ewma_vol or 0.0) >= 50 else "support" if (ewma_vol or 0.0) < 30 else "neutral",
+            "50%以上进入注意，80%以上触发警戒；RiskMetrics λ=0.94",
+            "近期收益率获得更高权重，适合捕捉财报后波动跃迁。",
+        ),
+        signal(
+            "rsi14",
+            "market_regime",
+            "RSI 14",
+            rsi14 or 50.0,
+            f"{rsi14:.1f}" if rsi14 is not None else "数据不足",
+            "alert" if (rsi14 or 50.0) < 20 or (rsi14 or 50.0) > 80 else "watch" if (rsi14 or 50.0) < 30 or (rsi14 or 50.0) > 70 else "neutral",
+            "低于20或高于80触发警戒；30/70为注意线",
+            "极端超买和超卖都意味着一年期投资者需要控制入场节奏。",
+        ),
+        signal(
+            "cvar95",
+            "market_regime",
+            "历史CVaR 95%",
+            cvar95 or 0.0,
+            f"{cvar95:.2f}%/日" if cvar95 is not None else "数据不足",
+            "alert" if (cvar95 or 0.0) >= 8 else "watch" if (cvar95 or 0.0) >= 5 else "support" if (cvar95 or 0.0) < 3 else "neutral",
+            "最差5%交易日的平均损失超过5%进入注意，8%以上警戒",
+            "比单一VaR更关注尾部损失的平均严重程度。",
+        ),
+    ]
+
+    consensus = slow["market_consensus"]
+    house = slow["house_model"]
+    quarter = slow["latest_quarter"]
+    profit_gap = (
+        consensus["operating_profit_2028_trn_krw"]
+        / house["operating_profit_2028_trn_krw"]
+        - 1.0
+    ) * 100.0
+    earnings_surprise = (
+        quarter["operating_profit_trn_krw"]
+        / quarter["pre_result_consensus_operating_profit_trn_krw"]
+        - 1.0
+    ) * 100.0
+    targets = slow["analyst_targets"]
+    target_upside = (targets["average_krw"] / current - 1.0) * 100.0
+    target_dispersion = (targets["high_krw"] - targets["low_krw"]) / targets["average_krw"] * 100.0
+    expectations_signals = [
+        signal(
+            "consensus_house_gap",
+            "expectations",
+            "2028一致预期溢价",
+            profit_gap,
+            f"{profit_gap:.1f}%",
+            "alert" if profit_gap >= 30 else "watch" if profit_gap >= 20 else "support" if profit_gap <= 0 else "neutral",
+            "一致预期高于基准分析20%进入注意，30%以上警戒",
+            "利润预期越领先于供给与折旧模型，失望风险越大。",
+        ),
+        signal(
+            "earnings_surprise",
+            "expectations",
+            "最新营业利润惊喜",
+            earnings_surprise,
+            f"{earnings_surprise:+.1f}%",
+            "alert" if earnings_surprise <= -10 else "watch" if earnings_surprise < -5 else "support" if earnings_surprise >= 5 else "neutral",
+            "低于会前一致预期5%进入注意，10%以上警戒",
+            "绝对利润创新高不等于超过市场已经抬高的预期。",
+        ),
+        signal(
+            "target_upside",
+            "expectations",
+            "平均目标价空间",
+            target_upside,
+            f"{target_upside:+.1f}%",
+            "alert" if target_upside < 0 else "watch" if target_upside < 20 else "support" if target_upside >= 50 else "neutral",
+            "平均目标价低于现价警戒；空间不足20%时注意",
+            "目标价只能作为预期温度计，不能替代内在价值。",
+        ),
+        signal(
+            "target_dispersion",
+            "expectations",
+            "目标价离散度",
+            target_dispersion,
+            f"{target_dispersion:.0f}%",
+            "alert" if target_dispersion >= 100 else "watch" if target_dispersion >= 50 else "neutral",
+            "高低目标价区间超过平均目标价50%时注意，100%以上警戒",
+            "分析师一致评级可能掩盖目标价分布的巨大不确定性。",
+        ),
+    ]
+
+    cross_signals = [
+        signal(
+            "adr_premium",
+            "cross_market",
+            "ADR相对韩股平价",
+            adr_premium * 100.0,
+            f"{adr_premium * 100:+.1f}%",
+            "alert" if adr_premium <= -0.10 else "watch" if adr_premium <= -0.05 or (premium_change is not None and premium_change <= -3) else "support" if adr_premium >= 0.05 and adr_change > 0 else "neutral",
+            "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
+            "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。",
+        ),
+        signal(
+            "overnight_lead",
+            "cross_market",
+            "ADR美国时段方向",
+            adr_change,
+            f"{adr_change:+.1f}%",
+            "alert" if adr_change <= -5 else "watch" if adr_change < 0 else "support" if adr_change >= 3 else "neutral",
+            "ADR日跌幅超过5%触发次日韩股压力警戒；上涨3%以上为正向线索",
+            "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。",
+        ),
+    ]
+
+    peer_changes = [
+        datasets["nvidia"].get("change_pct") or 0.0,
+        datasets["micron"].get("change_pct") or 0.0,
+        datasets["sox"].get("change_pct") or 0.0,
+    ]
+    peer_breadth = statistics.fmean(peer_changes)
+    samsung_close = samsung_history[-1]["close"]
+    samsung_change = (
+        (samsung_close / samsung_history[-2]["close"] - 1.0) * 100.0
+        if len(samsung_history) > 1
+        else 0.0
+    )
+    cycle_signals = [
+        signal(
+            "us_semis_breadth",
+            "ai_memory_cycle",
+            "美股AI与存储代理",
+            peer_breadth,
+            f"{peer_breadth:+.2f}%",
+            "alert" if peer_breadth <= -3 else "watch" if peer_breadth < 0 else "support" if peer_breadth >= 3 else "neutral",
+            "MU、NVDA和SOX平均日跌幅超过3%触发警戒",
+            "用跨市场同行捕捉韩国收盘后的产业风险变化。",
+        ),
+        signal(
+            "samsung_peer",
+            "ai_memory_cycle",
+            "三星电子同步性",
+            samsung_change,
+            f"{samsung_change:+.2f}%",
+            "alert" if samsung_change <= -5 else "watch" if samsung_change < 0 else "support" if samsung_change >= 5 else "neutral",
+            "韩国存储同业跌幅超过5%触发警戒",
+            "区分海力士个股问题与韩国存储板块共同波动。",
+        ),
+        signal(
+            "ai_capex",
+            "ai_memory_cycle",
+            "四大云厂资本开支",
+            slow["ai_capex"]["big_four_2026_midpoint_usd_bn"],
+            f"${slow['ai_capex']['big_four_2026_midpoint_usd_bn']:.0f}B",
+            "support" if slow["ai_capex"]["direction"] == "expanding" else "alert" if slow["ai_capex"]["direction"] == "contracting" else "neutral",
+            "主要云厂连续下调未来12个月指引时转为警戒",
+            "当前资本开支仍在扩张，属于需求侧支持；但合计口径包含非AI设施与租赁，不应等同于HBM订单。",
+        ),
+        signal(
+            "supply_release",
+            "ai_memory_cycle",
+            "2028供给释放",
+            0.0,
+            slow["memory_cycle"]["supply_release_window"],
+            "watch",
+            "永仁、ID1、Tongluo等产能出货提前或良率快于预期时转为警戒",
+            "一年持有期覆盖2027下半年，因此需要提前计入2028供给风险。",
+        ),
+    ]
+
+    fundamental_signals = [
+        signal(
+            "net_cash",
+            "fundamentals",
+            "净现金缓冲",
+            quarter["net_cash_trn_krw"],
+            f"₩{quarter['net_cash_trn_krw']:.1f}T",
+            "alert" if quarter["net_cash_trn_krw"] < 20 else "watch" if quarter["net_cash_trn_krw"] < 50 else "support",
+            "净现金低于20万亿韩元时显著提高风险",
+            "强资产负债表降低资本开支周期中的融资与流动性风险。",
+        ),
+        signal(
+            "lta_coverage",
+            "fundamentals",
+            "长期协议客户",
+            quarter["long_term_agreement_customers"],
+            f"约{quarter['long_term_agreement_customers']}家",
+            "alert" if quarter["long_term_agreement_customers"] < 3 else "watch" if quarter["long_term_agreement_customers"] < 6 else "support",
+            "长期协议客户少于6家时提高需求可见性风险",
+            "多年供货协议抬高盈利底部，但不能消除价格与客户集中风险。",
+        ),
+        signal(
+            "peak_margin",
+            "fundamentals",
+            "峰值利润率依赖",
+            quarter["operating_margin_pct"],
+            f"{quarter['operating_margin_pct']:.1f}%",
+            "alert" if quarter["operating_margin_pct"] >= 80 else "watch" if quarter["operating_margin_pct"] >= 60 else "neutral",
+            "营业利润率超过60%后注意均值回归，80%以上触发警戒",
+            "高利润率本身是好消息，但一年期收益取决于市场是否已完全计价。",
+        ),
+    ]
+
+    pillars = {
+        "market_regime": market_signals,
+        "expectations": expectations_signals,
+        "cross_market": cross_signals,
+        "ai_memory_cycle": cycle_signals,
+        "fundamentals": fundamental_signals,
+    }
+    pillar_labels = {
+        "market_regime": "市场与波动",
+        "expectations": "估值与预期",
+        "cross_market": "ADR跨市场",
+        "ai_memory_cycle": "AI与内存周期",
+        "fundamentals": "财务韧性",
+    }
+    pillar_states: dict[str, Any] = {}
+    all_signals: list[dict[str, Any]] = []
+    for pillar, items in pillars.items():
+        counts = {
+            status: sum(item["status"] == status for item in items)
+            for status in ("alert", "watch", "neutral", "support")
+        }
+        if counts["alert"]:
+            status = "alert"
+        elif counts["watch"]:
+            status = "watch"
+        elif counts["support"]:
+            status = "support"
+        else:
+            status = "neutral"
+        pillar_states[pillar] = {
+            "label": pillar_labels[pillar],
+            "status": status,
+            "counts": counts,
+            "signal_count": len(items),
+        }
+        all_signals.extend(items)
+
+    failed_sources = [
+        key for key, meta in source_meta.items() if meta.get("status") == "failed"
+    ]
+    cached_sources = [
+        key for key, meta in source_meta.items() if meta.get("status") == "cached"
+    ]
+    slow_as_of = date.fromisoformat(slow["as_of"])
+    slow_age_days = max(0, (date.today() - slow_as_of).days)
+    quality = 100.0 - 12.0 * len(failed_sources) - 5.0 * len(cached_sources)
+    max_slow_age = config["schedule"]["max_slow_data_age_days"]
+    if slow_age_days > max_slow_age:
+        quality -= min(30.0, (slow_age_days - max_slow_age) / 5.0)
+    quality = clamp(quality)
+    status_counts = {
+        status: sum(item["status"] == status for item in all_signals)
+        for status in ("alert", "watch", "neutral", "support")
+    }
+    severity_order = {"alert": 0, "watch": 1, "neutral": 2, "support": 3}
+    sorted_signals = sorted(all_signals, key=lambda item: severity_order[item["status"]])
+    sorted_risks = [
+        item for item in sorted_signals if item["status"] in {"alert", "watch"}
+    ]
+    sorted_offsets = [item for item in all_signals if item["status"] == "support"]
+    key_risks = [
+        {
+            "label": item["label"],
+            "display": item["display"],
+            "status": item["status"],
+            "interpretation": item["interpretation"],
+        }
+        for item in sorted_risks[:5]
+    ]
+    risk_ids = {item["label"] for item in key_risks}
+    offsets = [
+        {
+            "label": item["label"],
+            "display": item["display"],
+            "status": item["status"],
+            "interpretation": item["interpretation"],
+        }
+        for item in sorted_offsets
+        if item["label"] not in risk_ids
+    ][:3]
+
+    sma60_series = rolling_series(closes, 60)
+    sma200_series = rolling_series(closes, 200)
+    chart_start = max(0, len(krx_history) - 260)
+    price_chart = [
+        {
+            "date": row["date"],
+            "close": row["close"],
+            "sma60": (
+                round(sma60_series[index], 2)
+                if sma60_series[index] is not None
+                else None
+            ),
+            "sma200": (
+                round(sma200_series[index], 2)
+                if sma200_series[index] is not None
+                else None
+            ),
+        }
+        for index, row in enumerate(krx_history)
+        if index >= chart_start
+    ]
+
+    generated = now_utc()
+    seoul = generated.astimezone(ZoneInfo("Asia/Seoul"))
+    next_refresh = seoul.replace(
+        hour=config["schedule"]["daily_refresh_hour"],
+        minute=config["schedule"]["daily_refresh_minute"],
+        second=0,
+        microsecond=0,
+    )
+    if next_refresh <= seoul:
+        next_refresh += timedelta(days=1)
+    while next_refresh.weekday() >= 5:
+        next_refresh += timedelta(days=1)
+
+    return {
+        "schema_version": 2,
+        "generated_at": generated.isoformat(timespec="seconds"),
+        "generated_at_seoul": seoul.isoformat(timespec="seconds"),
+        "trigger": trigger,
+        "summary": {
+            "status_counts": status_counts,
+            "headline": "存在需处理的警戒信号" if status_counts["alert"] else "存在需跟踪的注意信号" if status_counts["watch"] else "尚未触发明确风险条件",
+            "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
+            "data_completeness_pct": round(quality, 0),
+            "holding_horizon_months": config["security"]["holding_horizon_months"],
+            "key_risks": key_risks,
+            "offsets": offsets,
+        },
+        "market": {
+            "krx": krx_quote,
+            "adr": adr,
+            "fx_usdkrw": fx,
+            "adr_parity_usd": round(adr_parity, 2),
+            "adr_premium_pct": round(adr_premium * 100.0, 2),
+            "adr_premium_change_pct_points": round(premium_change, 2) if premium_change is not None else None,
+            "overnight_spread_pct_points": round(overnight_spread, 2),
+            "nvidia": datasets["nvidia"],
+            "micron": datasets["micron"],
+            "sox": datasets["sox"],
+            "samsung": {
+                "price": samsung_close,
+                "change_pct": round(samsung_change, 2),
+                "traded_at": samsung_history[-1]["date"],
+            },
+        },
+        "technicals": {
+            "sma20": round(sma20, 2) if sma20 else None,
+            "sma60": round(sma60, 2) if sma60 else None,
+            "sma120": round(sma120, 2) if sma120 else None,
+            "sma200": round(sma200, 2) if sma200 else None,
+            "rsi14": round(rsi14, 2) if rsi14 is not None else None,
+            "ewma_volatility_pct": round(ewma_vol, 2) if ewma_vol else None,
+            "var95_pct": round(var95, 2) if var95 else None,
+            "cvar95_pct": round(cvar95, 2) if cvar95 else None,
+            "drawdown_52w_pct": round(drawdown * 100.0, 2),
+            "max_drawdown_1y_pct": round(max_drawdown * 100.0, 2),
+            "high_52w": high_252,
+            "low_52w": low_252,
+            "momentum_20d_pct": round(momentum_20 * 100.0, 2),
+            "momentum_60d_pct": round(momentum_60 * 100.0, 2),
+            "volume_ratio_20d": round(volume_ratio, 2),
+            "beta_120d": round(beta, 2) if beta is not None else None,
+            "correlation_kospi_120d": (
+                round(correlation, 2) if correlation is not None else None
+            ),
+        },
+        "pillars": pillar_states,
+        "signals": all_signals,
+        "chart": {"price": price_chart},
+        "slow_factors": {
+            "as_of": slow["as_of"],
+            "age_days": slow_age_days,
+            "market_consensus": consensus,
+            "house_model": house,
+            "latest_quarter": quarter,
+            "ai_capex": slow["ai_capex"],
+            "memory_cycle": slow["memory_cycle"],
+            "analyst_targets": targets,
+        },
+        "evidence_data": config.get("evidence_data", {}),
+        "industry_voices": config.get("industry_voices", []),
+        "data_quality": {
+            "completeness_pct": round(quality, 0),
+            "failed_sources": failed_sources,
+            "cached_sources": cached_sources,
+            "sources": source_meta,
+            "slow_data_age_days": slow_age_days,
+            "next_scheduled_refresh": next_refresh.isoformat(timespec="minutes"),
+            "policy": "韩国交易时段每15分钟检查，韩国收盘后每日固化；慢变量按财报与产业数据更新。",
+            "source_urls": config["sources"],
+        },
+        "methodology": {
+            "description": "无总分、无隐含权重的条件型预警。每个指标只显示实际值、触发条件、数据时点和解释，状态分为警戒、注意、中性和支持。",
+            "limitations": [
+                "这不是经过未来收益率拟合的预测模型，不输出伪精确概率或目标回报。",
+                "ADR和韩股交易时段不同；对韩股而言，正溢价不直接构成风险，ADR折价或美国时段走弱才是下行线索。",
+                "AI资本开支、HBM价格和供给投产是慢变量，无法可靠地按分钟更新。",
+                "预警用于仓位与尽调纪律，不构成证券买卖建议。",
+            ],
+        },
+    }
+
+
+def refresh_data(trigger: str = "manual") -> dict[str, Any]:
+    if not REFRESH_LOCK.acquire(blocking=False):
+        state = load_json(STATE_PATH, {})
+        state["runtime"] = dict(RUNTIME_STATUS)
+        return state
+    with STATUS_LOCK:
+        RUNTIME_STATUS.update(
+            {
+                "refreshing": True,
+                "started_at": now_utc().isoformat(timespec="seconds"),
+                "trigger": trigger,
+                "last_error": None,
+            }
+        )
+    try:
+        config = load_json(CONFIG_PATH, None)
+        if not config:
+            raise RuntimeError("config.json is missing or invalid")
+        sources = config["sources"]
+        fetchers: dict[str, Callable[[], Any]] = {
+            "krx_quote": lambda: fetch_krx_realtime(sources["krx_realtime"]),
+            "krx_history": lambda: fetch_naver_history(sources["krx_history"]),
+            "kospi_history": lambda: fetch_naver_history(sources["kospi_history"]),
+            "samsung_history": lambda: fetch_naver_history(
+                sources["samsung_history"]
+            ),
+            "adr": lambda: fetch_world_realtime(sources["adr_realtime"]),
+            "nvidia": lambda: fetch_world_realtime(sources["nvidia_realtime"]),
+            "micron": lambda: fetch_world_realtime(sources["micron_realtime"]),
+            "sox": lambda: fetch_world_realtime(sources["sox_realtime"]),
+            "fx": lambda: fetch_fx(sources["fx_daily"]),
+        }
+        cache = load_json(RAW_CACHE_PATH, {})
+        datasets: dict[str, Any] = {}
+        source_meta: dict[str, Any] = {}
+        fresh_cache = dict(cache)
+        fetched_at = now_utc().isoformat(timespec="seconds")
+        with ThreadPoolExecutor(max_workers=len(fetchers)) as executor:
+            futures = {executor.submit(fetcher): name for name, fetcher in fetchers.items()}
+            for future in as_completed(futures):
+                name = futures[future]
+                try:
+                    data = future.result()
+                    datasets[name] = data
+                    fresh_cache[name] = {"fetched_at": fetched_at, "data": data}
+                    source_meta[name] = {
+                        "status": "fresh",
+                        "fetched_at": fetched_at,
+                        "error": None,
+                    }
+                except Exception as error:
+                    cached = cache.get(name)
+                    if cached and cached.get("data") is not None:
+                        datasets[name] = cached["data"]
+                        source_meta[name] = {
+                            "status": "cached",
+                            "fetched_at": cached.get("fetched_at"),
+                            "error": str(error),
+                        }
+                    else:
+                        source_meta[name] = {
+                            "status": "failed",
+                            "fetched_at": None,
+                            "error": str(error),
+                        }
+        missing = [name for name in fetchers if name not in datasets]
+        if missing:
+            raise RuntimeError("missing required datasets: " + ", ".join(missing))
+        atomic_write_json(RAW_CACHE_PATH, fresh_cache)
+        previous_state = load_json(STATE_PATH, {})
+        state = build_state(config, datasets, source_meta, trigger, previous_state)
+        history = load_json(EVIDENCE_HISTORY_PATH, [])
+        history_row = {
+            "date": state["market"]["krx"].get("traded_at", state["generated_at"])[:10],
+            "generated_at": state["generated_at"],
+            "price": state["market"]["krx"]["price"],
+            "status_counts": state["summary"]["status_counts"],
+            "adr_premium_pct": state["market"]["adr_premium_pct"],
+        }
+        if history and history[-1].get("date") == history_row["date"]:
+            history[-1] = history_row
+        else:
+            history.append(history_row)
+        history = history[-400:]
+        state["chart"]["evidence_history"] = history
+        atomic_write_json(EVIDENCE_HISTORY_PATH, history)
+        atomic_write_json(STATE_PATH, state)
+        with STATUS_LOCK:
+            RUNTIME_STATUS.update(
+                {
+                    "refreshing": False,
+                    "finished_at": now_utc().isoformat(timespec="seconds"),
+                    "last_error": None,
+                }
+            )
+        counts = state["summary"]["status_counts"]
+        log(
+            f"refresh success trigger={trigger} alerts={counts['alert']} "
+            f"watches={counts['watch']} supports={counts['support']}"
+        )
+        state["runtime"] = dict(RUNTIME_STATUS)
+        return state
+    except Exception as error:
+        with STATUS_LOCK:
+            RUNTIME_STATUS.update(
+                {
+                    "refreshing": False,
+                    "finished_at": now_utc().isoformat(timespec="seconds"),
+                    "last_error": str(error),
+                }
+            )
+        log(f"refresh failed trigger={trigger} error={error}")
+        state = load_json(STATE_PATH, {})
+        if not state:
+            state = {
+                "schema_version": 1,
+                "generated_at": now_utc().isoformat(timespec="seconds"),
+                "error": str(error),
+                "summary": None,
+            }
+        state["runtime"] = dict(RUNTIME_STATUS)
+        return state
+    finally:
+        REFRESH_LOCK.release()
+
+
+def scheduler_loop() -> None:
+    config = load_json(CONFIG_PATH, {})
+    schedule = config.get("schedule", {})
+    seoul_zone = ZoneInfo(schedule.get("timezone", "Asia/Seoul"))
+    last_intraday: datetime | None = None
+    last_daily: date | None = None
+    time.sleep(2)
+    state = load_json(STATE_PATH, {})
+    generated = parse_datetime(state.get("generated_at"))
+    if generated is None or now_utc() - generated > timedelta(hours=4):
+        refresh_data("startup")
+    while True:
+        try:
+            current = now_utc().astimezone(seoul_zone)
+            weekday = current.weekday() < 5
+            minute_of_day = current.hour * 60 + current.minute
+            market_open = 9 * 60
+            market_close = 15 * 60 + 35
+            interval = int(schedule.get("intraday_refresh_minutes", 15))
+            if weekday and market_open <= minute_of_day <= market_close:
+                if last_intraday is None or current - last_intraday >= timedelta(
+                    minutes=interval
+                ):
+                    refresh_data("intraday")
+                    last_intraday = current
+            daily_minute = int(schedule.get("daily_refresh_hour", 16)) * 60 + int(
+                schedule.get("daily_refresh_minute", 40)
+            )
+            if weekday and minute_of_day >= daily_minute and last_daily != current.date():
+                refresh_data("daily_close")
+                last_daily = current.date()
+        except Exception as error:
+            log(f"scheduler error={error}")
+        time.sleep(30)
+
+
+class MonitorHandler(SimpleHTTPRequestHandler):
+    server_version = "SKHynixRiskMonitor/1.0"
+
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__(*args, directory=str(ROOT), **kwargs)
+
+    def log_message(self, format_: str, *args: Any) -> None:
+        log("http " + (format_ % args))
+
+    def end_headers(self) -> None:
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("X-Frame-Options", "SAMEORIGIN")
+        self.send_header("Referrer-Policy", "no-referrer")
+        if self.path.startswith("/api/") or self.path.endswith(".json"):
+            self.send_header("Cache-Control", "no-store, max-age=0")
+        super().end_headers()
+
+    def send_json(self, payload: Any, status: int = 200) -> None:
+        body = json.dumps(payload, ensure_ascii=False, allow_nan=False).encode("utf-8")
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def do_GET(self) -> None:
+        path = urlparse(self.path).path
+        if path == "/api/state":
+            state = load_json(STATE_PATH, {})
+            state["runtime"] = dict(RUNTIME_STATUS)
+            self.send_json(state if state else {"summary": None, "runtime": RUNTIME_STATUS})
+            return
+        if path == "/api/health":
+            self.send_json(
+                {
+                    "ok": True,
+                    "time": now_utc().isoformat(timespec="seconds"),
+                    "runtime": RUNTIME_STATUS,
+                    "has_state": STATE_PATH.exists(),
+                }
+            )
+            return
+        if path == "/":
+            self.path = "/index.html"
+        super().do_GET()
+
+    def do_POST(self) -> None:
+        path = urlparse(self.path).path
+        if path != "/api/refresh":
+            self.send_json({"error": "not found"}, HTTPStatus.NOT_FOUND)
+            return
+        state = refresh_data("manual")
+        status = (
+            HTTPStatus.OK
+            if state.get("summary") is not None
+            else HTTPStatus.SERVICE_UNAVAILABLE
+        )
+        self.send_json(state, status)
+
+
+def serve(open_browser: bool = False) -> None:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    scheduler = threading.Thread(target=scheduler_loop, daemon=True)
+    scheduler.start()
+    server = ThreadingHTTPServer((HOST, PORT), MonitorHandler)
+    url = f"http://{HOST}:{PORT}/"
+    log(f"server started url={url}")
+    print(f"SK hynix risk monitor: {url}")
+    if open_browser:
+        threading.Timer(1.0, lambda: webbrowser.open(url)).start()
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        server.server_close()
+        log("server stopped")
+
+
+if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="SK hynix investment risk monitor")
+    parser.add_argument("--refresh-once", action="store_true")
+    parser.add_argument("--open", action="store_true")
+    parser.add_argument("--port", type=int)
+    arguments = parser.parse_args()
+    if arguments.port:
+        PORT = arguments.port
+    if arguments.refresh_once:
+        result = refresh_data("cli")
+        summary = result.get("summary")
+        if summary:
+            print(
+                json.dumps(
+                    {
+                        "status_counts": summary["status_counts"],
+                        "headline": summary["headline"],
+                        "generated_at": result["generated_at"],
+                    },
+                    ensure_ascii=False,
+                )
+            )
+        else:
+            print(json.dumps(result, ensure_ascii=False))
+            raise SystemExit(1)
+    else:
+        serve(open_browser=arguments.open)
