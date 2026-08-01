@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "security": {
+    "krx_code": "000660",
+    "krx_symbol": "000660.KS",
+    "adr_reuters_code": "SKHY.O",
+    "adr_symbol": "SKHY",
+    "ads_per_common_share": 10,
+    "holding_horizon_months": 12
+  },
+  "schedule": {
+    "timezone": "Asia/Seoul",
+    "daily_refresh_hour": 16,
+    "daily_refresh_minute": 40,
+    "intraday_refresh_minutes": 15,
+    "max_intraday_age_minutes": 90,
+    "max_slow_data_age_days": 120
+  },
+  "slow_factors": {
+    "as_of": "2026-07-31",
+    "market_consensus": {
+      "revenue_2027_trn_krw": 533.9,
+      "operating_profit_2027_trn_krw": 418.6,
+      "operating_margin_2027_pct": 78.4,
+      "revenue_2028_trn_krw": 587.9,
+      "operating_profit_2028_trn_krw": 436.2,
+      "operating_margin_2028_pct": 74.2
+    },
+    "house_model": {
+      "revenue_2027_trn_krw": 522.3,
+      "operating_profit_2027_trn_krw": 395.4,
+      "operating_margin_2027_pct": 75.7,
+      "revenue_2028_trn_krw": 523.5,
+      "operating_profit_2028_trn_krw": 339.9,
+      "operating_margin_2028_pct": 64.9
+    },
+    "latest_quarter": {
+      "revenue_trn_krw": 79.3187,
+      "operating_profit_trn_krw": 60.5426,
+      "operating_margin_pct": 76.0,
+      "pre_result_consensus_operating_profit_trn_krw": 64.1,
+      "net_cash_trn_krw": 69.4,
+      "long_term_agreement_customers": 10
+    },
+    "ai_capex": {
+      "big_four_2026_midpoint_usd_bn": 732.5,
+      "direction": "expanding",
+      "components_usd_bn": {
+        "Amazon": 220.0,
+        "Alphabet": 200.0,
+        "Microsoft": 175.0,
+        "Meta": 137.5
+      },
+      "note": "口径包含数据中心、服务器、网络、非AI设施及部分租赁，不等于纯AI或HBM支出。"
+    },
+    "memory_cycle": {
+      "current_state": "shortage",
+      "supply_release_window": "2027H2-2028"
+    },
+    "analyst_targets": {
+      "average_krw": 3205556,
+      "low_krw": 1200000,
+      "high_krw": 5300000,
+      "analyst_count": 37
+    }
+  },
+  "evidence_data": {
+    "company_execution": [
+      {"label": "2Q26营收", "value": "₩79.32T", "change": "环比+51% / 同比+257%", "implication": "需求与ASP同时上行"},
+      {"label": "2Q26营业利润", "value": "₩60.54T", "change": "环比+61% / 同比+557%", "implication": "利润绝对值创高，但低于会前高预期"},
+      {"label": "营业利润率", "value": "76.0%", "change": "上季度约71%", "implication": "产品组合和存储涨价强，均值回归敏感度也上升"},
+      {"label": "DRAM ASP", "value": "环比约+30%", "change": "2Q26", "implication": "当前利润的核心杠杆"},
+      {"label": "NAND ASP", "value": "环比中50%左右", "change": "2Q26", "implication": "eSSD与通用NAND对利润的贡献明显扩大"},
+      {"label": "2026资本开支", "value": "₩40T高位区间", "change": "2025年₩30.2T", "implication": "短期受订单支持，2027年后转为供给与折旧观察项"}
+    ],
+    "forward_indicators": [
+      {"label": "3Q26 DRAM位元出货", "value": "预计环比约+10%", "type": "公司指引"},
+      {"label": "3Q26 NAND位元出货", "value": "预计环比低个位数增长", "type": "公司指引"},
+      {"label": "HBM4", "value": "2Q26已量产出货，下半年爬坡", "type": "执行里程碑"},
+      {"label": "HBM4E", "value": "已送样，2027年量产目标", "type": "产品路线"},
+      {"label": "长期协议", "value": "约10家客户", "type": "需求可见性"},
+      {"label": "新供给窗口", "value": "M15X / 永仁 / Micron ID1与Tongluo自2027年起陆续释放", "type": "供给观察"}
+    ],
+    "expectation_bridge": [
+      {"period": "2H26", "expectation": "盈利动能仍有支撑", "basis": "HBM4爬坡、DRAM/NAND ASP上行、3Q出货指引为正", "invalidation": "ADR美国时段走弱且MU/SOX同步转负，或公司下调位元出货"},
+      {"period": "2027", "expectation": "高景气延续，但超预期难度上升", "basis": "云厂资本开支扩张、LTA、HBM4E与存储供给紧张", "invalidation": "主要云厂连续下调指引，或三家存储厂同时上调供给并出现ASP环比下跌"},
+      {"period": "2028", "expectation": "预期差和供给比需求绝对量更重要", "basis": "市场一致营业利润高于基准分析约28%，新产能与折旧开始影响边际利润", "invalidation": "高强度LTA覆盖与AI收入回报证明需求增速继续高于有效供给"}
+    ]
+  },
+  "industry_voices": [
+    {"group": "存储", "company": "SK hynix", "speaker": "公司管理层", "date": "2026-07-29", "capex_direction": "增加", "capex": "2026年₩40T高位区间", "expectation": "AI基础设施投资与供给请求仍增长，M15X与永仁扩产会按客户可见需求分阶段执行。", "roi_evidence": "约10家LTA客户；HBM4已出货；净现金₩69.4T", "transmission": "短期支持海力士订单与定价，2027年后需核对扩产速度。", "source": "https://news.skhynix.com/en/q2-2026-business-results/"},
+    {"group": "存储", "company": "Micron", "speaker": "Sanjay Mehrotra / Mark Murphy", "date": "2026-06-24", "capex_direction": "增加", "capex": "FY26约$27B；FY27单季将高于FY4Q26", "expectation": "DRAM与NAND供需紧张预计持续到2027年之后，2028年供给才逐步改善。", "roi_evidence": "16份战略客户协议；HBM4收入已超$1B", "transmission": "需求证据支持行业景气，但ID1、Tongluo和新加坡封装从2027年开始增加竞争供给。", "source": "https://investors.micron.com/static-files/631b1a32-5537-46ae-8f40-82e42fc79dfe"},
+    {"group": "存储", "company": "Samsung Electronics", "speaker": "Memory Business", "date": "2026-07-30", "capex_direction": "增加产出", "capex": "未单独披露HBM资本开支", "expectation": "2H26服务器DRAM、eSSD与HBM需求加速，供给仍不足。", "roi_evidence": "存储营收与利润创新高；HBM4放量；HBM4E已送样", "transmission": "验证AI存储需求，但三星HBM4追赶可能压缩海力士份额溢价。", "source": "https://news.samsung.com/global/samsung-electronics-announces-second-quarter-2026-results"},
+    {"group": "AI买方", "company": "Microsoft", "speaker": "Satya Nadella / Amy Hood", "date": "2026-07-29", "capex_direction": "继续增加", "capex": "CY2026调整口径后约$175B；FY27预计同比增长", "expectation": "需求仍高于可用供给，服务器与网络投资可随需求调整。", "roi_evidence": "Azure年收入首次超$100B；商业剩余履约义务$678B", "transmission": "对HBM与服务器存储是支持；短周期设备占比高也意味着需求转弱时可快速减速。", "source": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"},
+    {"group": "AI买方", "company": "Alphabet", "speaker": "Sundar Pichai / Anat Ashkenazi", "date": "2026-07-22", "capex_direction": "上调", "capex": "2026年$195-205B；2027年预计显著增长", "expectation": "为满足内外部AI计算需求加速交付产能，仍处于供给受限环境。", "roi_evidence": "Google Cloud收入同比+82%；积压订单$514B", "transmission": "对HBM需求是强支持，同时TPU占比与服务器采购结构会影响单位内存需求。", "source": "https://abc.xyz/investor/events/event-details/2026/2026-Q2-Earnings-Call-2026-GgTAq7Is0z/default.aspx"},
+    {"group": "AI买方", "company": "Meta", "speaker": "Mark Zuckerberg / Susan Li", "date": "2026-07-29", "capex_direction": "维持高位扩张", "capex": "2026年$130-145B；未给2027年精确指引", "expectation": "2026至2027年仍计划最大化计算产能，2028年设备采购保留灵活性。", "roi_evidence": "广告收入+27%；AI推荐改善互动和转化；管理层称仍有多个ROI为正的计算用途", "transmission": "2026-2027支持需求；2028年硬件决策未锁定，是需持续跟踪的拐点。", "source": "https://s21.q4cdn.com/399680738/files/doc_financials/2026/q2/META-Q2-2026-Earnings-Call-Transcript.pdf"},
+    {"group": "AI买方", "company": "Amazon", "speaker": "Andy Jassy / Brian Olsavsky", "date": "2026-07-30", "capex_direction": "上调", "capex": "2026年约$220B，前值约$200B", "expectation": "2026年仍无法满足全部需求，2027年也可能供给不足。", "roi_evidence": "AWS收入+36.7%；AI业务年化收入超$25B；服务器投资平均不足3年回本，多数AI产能合约期至少5年", "transmission": "是当前最明确的AI资本回报证据，但TTM自由现金流已转为-$7.6B，短期资金压力上升。", "source": "https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report"}
+  ],
+  "sources": {
+    "krx_realtime": "https://polling.finance.naver.com/api/realtime/domestic/stock/000660",
+    "krx_history": "https://fchart.stock.naver.com/sise.nhn?symbol=000660&timeframe=day&count=620&requestType=0",
+    "kospi_history": "https://fchart.stock.naver.com/sise.nhn?symbol=KOSPI&timeframe=day&count=620&requestType=0",
+    "samsung_history": "https://fchart.stock.naver.com/sise.nhn?symbol=005930&timeframe=day&count=620&requestType=0",
+    "adr_realtime": "https://api.stock.naver.com/stock/SKHY.O/basic",
+    "nvidia_realtime": "https://api.stock.naver.com/stock/NVDA.O/basic",
+    "micron_realtime": "https://api.stock.naver.com/stock/MU.O/basic",
+    "sox_realtime": "https://api.stock.naver.com/index/.SOX/basic",
+    "fx_daily": "https://api.frankfurter.app/latest?from=USD&to=KRW",
+    "adr_ratio_filing": "https://www.sec.gov/Archives/edgar/data/2120882/000119312526299963/d32785d424b4.htm",
+    "company_results": "https://news.skhynix.com/en/q2-2026-business-results/",
+    "market_consensus": "https://www.marketscreener.com/quote/stock/SK-HYNIX-INC-212463554/finances/",
+    "analyst_targets": "https://stockanalysis.com/quote/krx/000660/forecast/",
+    "micron_results": "https://investors.micron.com/static-files/631b1a32-5537-46ae-8f40-82e42fc79dfe",
+    "samsung_results": "https://news.samsung.com/global/samsung-electronics-announces-second-quarter-2026-results",
+    "microsoft_results": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+    "alphabet_results": "https://abc.xyz/investor/events/event-details/2026/2026-Q2-Earnings-Call-2026-GgTAq7Is0z/default.aspx",
+    "meta_results": "https://s21.q4cdn.com/399680738/files/doc_financials/2026/q2/META-Q2-2026-Earnings-Call-Transcript.pdf",
+    "amazon_results": "https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report"
+  }
+}

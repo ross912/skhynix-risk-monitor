@@ -11,6 +11,7 @@ import json
 import math
 import os
 import statistics
+import subprocess
 import threading
 import time
 import urllib.error
@@ -58,6 +59,49 @@ def log(message: str) -> None:
     stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
     with LOG_PATH.open("a", encoding="utf-8") as handle:
         handle.write(f"{stamp} {message}\n")
+
+
+PUBLIC_DEPLOY_SCRIPT = os.environ.get(
+    "SKHYNIX_DEPLOY_SCRIPT",
+    "/Users/midongkeji/Library/Application Support/SKHynixRiskMonitor/public-site/deploy.sh",
+)
+DEPLOY_LOCK = threading.Lock()
+
+
+def trigger_public_deploy(trigger: str) -> None:
+    """Fire-and-forget: publish the latest snapshot to the public static site."""
+    script = Path(PUBLIC_DEPLOY_SCRIPT)
+    if not script.exists():
+        log(f"public deploy skipped: script missing at {script}")
+        return
+    if not DEPLOY_LOCK.acquire(blocking=False):
+        log("public deploy skipped: previous deploy still running")
+        return
+
+    def _run() -> None:
+        try:
+            result = subprocess.run(
+                ["/bin/bash", str(script)],
+                capture_output=True,
+                text=True,
+                timeout=600,
+            )
+            if result.returncode == 0:
+                log(
+                    f"public deploy ok trigger={trigger} "
+                    f"out={result.stdout.strip()[-160:]}"
+                )
+            else:
+                log(
+                    f"public deploy failed trigger={trigger} rc={result.returncode} "
+                    f"err={result.stderr.strip()[-200:]}"
+                )
+        except Exception as error:
+            log(f"public deploy error trigger={trigger} error={error}")
+        finally:
+            DEPLOY_LOCK.release()
+
+    threading.Thread(target=_run, daemon=True).start()
 
 
 def load_json(path: Path, default: Any) -> Any:
@@ -936,6 +980,7 @@ def refresh_data(trigger: str = "manual") -> dict[str, Any]:
             f"refresh success trigger={trigger} alerts={counts['alert']} "
             f"watches={counts['watch']} supports={counts['support']}"
         )
+        trigger_public_deploy(trigger)
         state["runtime"] = dict(RUNTIME_STATUS)
         return state
     except Exception as error:

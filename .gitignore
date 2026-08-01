@@ -1,0 +1,4 @@
+__pycache__/
+*.tmp
+backups/
+monitor/data/monitor.log
