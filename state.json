@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-03T22:17:33+00:00",
-  "generated_at_seoul": "2026-08-04T07:17:33+09:00",
+  "generated_at": "2026-08-03T23:30:21+00:00",
+  "generated_at_seoul": "2026-08-04T08:30:21+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -23,7 +23,7 @@
       },
       {
         "label": "EWMA年化波动率",
-        "display": "159.7%",
+        "display": "154.9%",
         "status": "alert",
         "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
       },
@@ -72,14 +72,14 @@
       "symbol": "000660",
       "name": "SK하이닉스",
       "price": 1567000.0,
-      "previous_close_change": -151000.0,
-      "change_pct": -8.79,
-      "open": 1642000.0,
-      "high": 1645000.0,
-      "low": 1562000.0,
-      "volume": 5429182.0,
-      "market_status": "CLOSE",
-      "traded_at": "2026-08-03T15:30:00+09:00",
+      "previous_close_change": 0.0,
+      "change_pct": 0.0,
+      "open": null,
+      "high": null,
+      "low": null,
+      "volume": null,
+      "market_status": "PREOPEN",
+      "traded_at": "2026-08-04T08:30:21.054939+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -102,7 +102,7 @@
     "adr_parity_usd": 109.81,
     "adr_premium_pct": 29.97,
     "adr_premium_change_pct_points": 0.0,
-    "overnight_spread_pct_points": 8.09,
+    "overnight_spread_pct_points": -0.7,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corp",
@@ -143,20 +143,20 @@
     }
   },
   "technicals": {
-    "sma20": 1857500.0,
-    "sma60": 2105800.0,
-    "sma120": 1560733.33,
-    "sma200": 1181007.5,
-    "rsi14": 42.98,
-    "ewma_volatility_pct": 159.75,
+    "sma20": 1818700.0,
+    "sma60": 2104350.0,
+    "sma120": 1566291.67,
+    "sma200": 1186702.5,
+    "rsi14": 40.95,
+    "ewma_volatility_pct": 154.88,
     "var95_pct": 8.98,
     "cvar95_pct": 11.86,
     "drawdown_52w_pct": -46.32,
     "max_drawdown_1y_pct": -54.71,
     "high_52w": 2919000.0,
     "low_52w": 245000.0,
-    "momentum_20d_pct": -35.38,
-    "momentum_60d_pct": -2.12,
+    "momentum_20d_pct": -33.12,
+    "momentum_60d_pct": -5.26,
     "volume_ratio_20d": 0.82,
     "beta_120d": 1.47,
     "correlation_kospi_120d": 0.94
@@ -223,8 +223,8 @@
       "id": "trend_200d",
       "pillar": "market_regime",
       "label": "200日趋势距离",
-      "value": 132.6833,
-      "display": "+32.7%",
+      "value": 132.0466,
+      "display": "+32.0%",
       "status": "neutral",
       "threshold": "低于200日线10%触发警戒；高于50%提示过热",
       "interpretation": "趋势破位和极端偏离分开观察，不把上涨本身视为风险。"
@@ -243,8 +243,8 @@
       "id": "ewma_vol",
       "pillar": "market_regime",
       "label": "EWMA年化波动率",
-      "value": 159.7467,
-      "display": "159.7%",
+      "value": 154.8802,
+      "display": "154.9%",
       "status": "alert",
       "threshold": "50%以上进入注意，80%以上触发警戒；RiskMetrics λ=0.94",
       "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
@@ -253,8 +253,8 @@
       "id": "rsi14",
       "pillar": "market_regime",
       "label": "RSI 14",
-      "value": 42.9798,
-      "display": "43.0",
+      "value": 40.9519,
+      "display": "41.0",
       "status": "neutral",
       "threshold": "低于20或高于80触发警戒；30/70为注意线",
       "interpretation": "极端超买和超卖都意味着一年期投资者需要控制入场节奏。"
@@ -402,12 +402,6 @@
   ],
   "chart": {
     "price": [
-      {
-        "date": "20250710",
-        "close": 297000.0,
-        "sma60": 221575.0,
-        "sma200": 198077.5
-      },
       {
         "date": "20250711",
         "close": 294500.0,
@@ -1961,6 +1955,12 @@
         "close": 1567000.0,
         "sma60": 2105800.0,
         "sma200": 1181007.5
+      },
+      {
+        "date": "20260804",
+        "close": 1567000.0,
+        "sma60": 2104350.0,
+        "sma200": 1186702.5
       }
     ],
     "evidence_history": [
@@ -1979,6 +1979,18 @@
       {
         "date": "2026-08-03",
         "generated_at": "2026-08-03T22:17:33+00:00",
+        "price": 1567000.0,
+        "status_counts": {
+          "alert": 5,
+          "watch": 5,
+          "neutral": 4,
+          "support": 4
+        },
+        "adr_premium_pct": 29.97
+      },
+      {
+        "date": "2026-08-04",
+        "generated_at": "2026-08-03T23:30:21+00:00",
         "price": 1567000.0,
         "status_counts": {
           "alert": 5,
@@ -2224,47 +2236,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-03T22:17:32+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-03T22:17:32+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-03T22:17:32+00:00",
+        "fetched_at": "2026-08-03T23:30:19+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-03T22:17:32+00:00",
+        "fetched_at": "2026-08-03T23:30:19+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-08-03T23:30:19+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-03T22:17:32+00:00",
+        "fetched_at": "2026-08-03T23:30:19+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-08-03T23:30:19+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-03T22:17:32+00:00",
+        "fetched_at": "2026-08-03T23:30:19+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-03T22:17:32+00:00",
+        "fetched_at": "2026-08-03T23:30:19+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-03T22:17:32+00:00",
+        "fetched_at": "2026-08-03T23:30:19+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-03T22:17:32+00:00",
+        "fetched_at": "2026-08-03T23:30:19+00:00",
         "error": null
       }
     },
