@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-04T11:39:51+00:00",
-  "generated_at_seoul": "2026-08-04T20:39:51+09:00",
+  "generated_at": "2026-08-04T13:21:26+00:00",
+  "generated_at_seoul": "2026-08-04T22:21:26+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -116,7 +116,7 @@
     },
     "micron": {
       "symbol": "MU",
-      "name": "Micron Technology Inc",
+      "name": "Micron Technology  Inc.",
       "price": 829.5,
       "change": 6.47,
       "change_pct": 0.79,
@@ -129,10 +129,10 @@
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
       "price": 11430.35,
-      "change": 119.28,
-      "change_pct": 1.06,
-      "traded_at": "2026-08-03T17:15:59-04:00",
-      "market_status": "CLOSE",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "traded_at": "2026-08-04T09:21:26-04:00",
+      "market_status": "PREOPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -333,8 +333,8 @@
       "id": "us_semis_breadth",
       "pillar": "ai_memory_cycle",
       "label": "美股AI与存储代理",
-      "value": 1.5933,
-      "display": "+1.59%",
+      "value": 1.24,
+      "display": "+1.24%",
       "status": "neutral",
       "threshold": "MU、NVDA和SOX平均日跌幅超过3%触发警戒",
       "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
@@ -1990,7 +1990,7 @@
       },
       {
         "date": "2026-08-04",
-        "generated_at": "2026-08-04T11:39:51+00:00",
+        "generated_at": "2026-08-04T13:21:26+00:00",
         "price": 1577000.0,
         "status_counts": {
           "alert": 4,
@@ -2236,47 +2236,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-04T11:39:50+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-08-04T11:39:50+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-04T11:39:50+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-08-04T11:39:50+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-04T11:39:50+00:00",
-        "error": null
-      },
-      "samsung_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-04T11:39:50+00:00",
+        "fetched_at": "2026-08-04T13:21:24+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-04T11:39:50+00:00",
+        "fetched_at": "2026-08-04T13:21:24+00:00",
         "error": null
       },
-      "krx_history": {
+      "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-04T11:39:50+00:00",
+        "fetched_at": "2026-08-04T13:21:24+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-08-04T13:21:24+00:00",
+        "error": null
+      },
+      "samsung_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-04T13:21:24+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-08-04T13:21:24+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-08-04T13:21:24+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-04T11:39:50+00:00",
+        "fetched_at": "2026-08-04T13:21:24+00:00",
+        "error": null
+      },
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-04T13:21:24+00:00",
         "error": null
       }
     },
