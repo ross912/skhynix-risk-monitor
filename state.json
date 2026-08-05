@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-05T10:00:51+00:00",
-  "generated_at_seoul": "2026-08-05T19:00:51+09:00",
+  "generated_at": "2026-08-05T12:01:49+00:00",
+  "generated_at_seoul": "2026-08-05T21:01:49+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -2002,7 +2002,7 @@
       },
       {
         "date": "2026-08-05",
-        "generated_at": "2026-08-05T10:00:51+00:00",
+        "generated_at": "2026-08-05T12:01:49+00:00",
         "price": 1668000.0,
         "status_counts": {
           "alert": 4,
@@ -2246,49 +2246,49 @@
     "failed_sources": [],
     "cached_sources": [],
     "sources": {
-      "adr": {
+      "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T10:00:21+00:00",
+        "fetched_at": "2026-08-05T12:01:23+00:00",
         "error": null
       },
-      "sox": {
+      "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T10:00:21+00:00",
+        "fetched_at": "2026-08-05T12:01:23+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T10:00:21+00:00",
+        "fetched_at": "2026-08-05T12:01:23+00:00",
         "error": null
       },
-      "micron": {
+      "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T10:00:21+00:00",
+        "fetched_at": "2026-08-05T12:01:23+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T10:00:21+00:00",
+        "fetched_at": "2026-08-05T12:01:23+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T10:00:21+00:00",
-        "error": null
-      },
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-05T10:00:21+00:00",
+        "fetched_at": "2026-08-05T12:01:23+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T10:00:21+00:00",
+        "fetched_at": "2026-08-05T12:01:23+00:00",
+        "error": null
+      },
+      "kospi_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-05T12:01:23+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T10:00:21+00:00",
+        "fetched_at": "2026-08-05T12:01:23+00:00",
         "error": null
       }
     },
