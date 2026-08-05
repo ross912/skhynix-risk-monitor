@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-05T03:55:18+00:00",
-  "generated_at_seoul": "2026-08-05T12:55:18+09:00",
+  "generated_at": "2026-08-05T04:05:26+00:00",
+  "generated_at_seoul": "2026-08-05T13:05:26+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -77,9 +77,9 @@
       "open": 1693000.0,
       "high": 1701000.0,
       "low": 1647000.0,
-      "volume": 2391933.0,
+      "volume": 2434472.0,
       "market_status": "OPEN",
-      "traded_at": "2026-08-05T12:55:17.546928+09:00",
+      "traded_at": "2026-08-05T13:05:24.908586+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 118.0,
     "adr_premium_pct": 30.83,
-    "adr_premium_change_pct_points": 0.08,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": 1.38,
     "nvidia": {
       "symbol": "NVDA",
@@ -137,8 +137,8 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 249500.0,
-      "change_pct": 3.96,
+      "price": 248500.0,
+      "change_pct": 3.54,
       "traded_at": "20260805"
     }
   },
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": 3.9583,
-      "display": "+3.96%",
+      "value": 3.5417,
+      "display": "+3.54%",
       "status": "neutral",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -2002,7 +2002,7 @@
       },
       {
         "date": "2026-08-05",
-        "generated_at": "2026-08-05T03:55:18+00:00",
+        "generated_at": "2026-08-05T04:05:26+00:00",
         "price": 1684000.0,
         "status_counts": {
           "alert": 4,
@@ -2246,49 +2246,49 @@
     "failed_sources": [],
     "cached_sources": [],
     "sources": {
-      "krx_quote": {
-        "status": "fresh",
-        "fetched_at": "2026-08-05T03:55:13+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-05T03:55:13+00:00",
-        "error": null
-      },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T03:55:13+00:00",
+        "fetched_at": "2026-08-05T04:05:20+00:00",
         "error": null
       },
-      "nvidia": {
+      "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T03:55:13+00:00",
+        "fetched_at": "2026-08-05T04:05:20+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T03:55:13+00:00",
+        "fetched_at": "2026-08-05T04:05:20+00:00",
         "error": null
       },
-      "krx_history": {
+      "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T03:55:13+00:00",
+        "fetched_at": "2026-08-05T04:05:20+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-08-05T04:05:20+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T03:55:13+00:00",
+        "fetched_at": "2026-08-05T04:05:20+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T03:55:13+00:00",
+        "fetched_at": "2026-08-05T04:05:20+00:00",
+        "error": null
+      },
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-05T04:05:20+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-05T03:55:13+00:00",
+        "fetched_at": "2026-08-05T04:05:20+00:00",
         "error": null
       }
     },
