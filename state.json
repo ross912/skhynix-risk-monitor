@@ -95,8 +95,8 @@
     },
     "fx_usdkrw": {
       "symbol": "USDKRW",
-      "price": 1427.05,
-      "traded_at": "2026-08-03T16:00:00+00:00",
+      "price": 1427.11,
+      "traded_at": "2026-08-04T16:00:00+00:00",
       "base": "USD"
     },
     "adr_parity_usd": 118.01,
@@ -1990,13 +1990,13 @@
       },
       {
         "date": "2026-08-04",
-        "generated_at": "2026-08-04T07:40:21+00:00",
+        "generated_at": "2026-08-04T22:47:02+00:00",
         "price": 1577000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 6,
-          "support": 4
+          "neutral": 3,
+          "support": 7
         },
         "adr_premium_pct": 29.15
       },
@@ -2253,7 +2253,7 @@
         "fetched_at": "2026-08-05T00:00:16+00:00",
         "error": null
       },
-      "nvidia": {
+      "krx_quote": {
         "status": "fresh",
         "fetched_at": "2026-08-05T00:00:16+00:00",
         "error": null
