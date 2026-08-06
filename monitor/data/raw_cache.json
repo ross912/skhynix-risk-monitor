@@ -1,6 +1,6 @@
 {
   "sox": {
-    "fetched_at": "2026-08-06T04:21:32+00:00",
+    "fetched_at": "2026-08-06T09:48:20+00:00",
     "data": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
@@ -14,7 +14,7 @@
     }
   },
   "micron": {
-    "fetched_at": "2026-08-06T04:21:32+00:00",
+    "fetched_at": "2026-08-06T09:48:20+00:00",
     "data": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
@@ -28,7 +28,7 @@
     }
   },
   "adr": {
-    "fetched_at": "2026-08-06T04:21:32+00:00",
+    "fetched_at": "2026-08-06T09:48:20+00:00",
     "data": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
@@ -42,7 +42,7 @@
     }
   },
   "nvidia": {
-    "fetched_at": "2026-08-06T04:21:32+00:00",
+    "fetched_at": "2026-08-06T09:48:20+00:00",
     "data": {
       "symbol": "NVDA",
       "name": "NVIDIA Corp",
@@ -56,7 +56,7 @@
     }
   },
   "samsung_history": {
-    "fetched_at": "2026-08-06T04:21:32+00:00",
+    "fetched_at": "2026-08-06T09:48:20+00:00",
     "data": [
       {
         "date": "20240118",
@@ -5014,14 +5014,14 @@
         "date": "20260806",
         "open": 241500.0,
         "high": 246000.0,
-        "low": 229500.0,
-        "close": 231000.0,
-        "volume": 16702801.0
+        "low": 228000.0,
+        "close": 230500.0,
+        "volume": 26095404.0
       }
     ]
   },
   "krx_history": {
-    "fetched_at": "2026-08-06T04:21:32+00:00",
+    "fetched_at": "2026-08-06T09:48:20+00:00",
     "data": [
       {
         "date": "20240118",
@@ -9979,14 +9979,14 @@
         "date": "20260806",
         "open": 1600000.0,
         "high": 1606000.0,
-        "low": 1503000.0,
-        "close": 1505000.0,
-        "volume": 3143134.0
+        "low": 1481000.0,
+        "close": 1495000.0,
+        "volume": 5295745.0
       }
     ]
   },
   "kospi_history": {
-    "fetched_at": "2026-08-06T04:21:32+00:00",
+    "fetched_at": "2026-08-06T09:48:20+00:00",
     "data": [
       {
         "date": "20240118",
@@ -14945,13 +14945,13 @@
         "open": 6478.75,
         "high": 6550.94,
         "low": 6238.32,
-        "close": 6292.77,
-        "volume": 206460.0
+        "close": 6296.38,
+        "volume": 284501.0
       }
     ]
   },
   "fx": {
-    "fetched_at": "2026-08-06T04:21:32+00:00",
+    "fetched_at": "2026-08-06T09:48:20+00:00",
     "data": {
       "symbol": "USDKRW",
       "price": 1423.72,
@@ -14960,19 +14960,19 @@
     }
   },
   "krx_quote": {
-    "fetched_at": "2026-08-06T04:21:32+00:00",
+    "fetched_at": "2026-08-06T09:48:20+00:00",
     "data": {
       "symbol": "000660",
       "name": "SK하이닉스",
-      "price": 1504000.0,
-      "previous_close_change": -164000.0,
-      "change_pct": -9.83,
+      "price": 1495000.0,
+      "previous_close_change": -173000.0,
+      "change_pct": -10.37,
       "open": 1600000.0,
       "high": 1606000.0,
-      "low": 1503000.0,
-      "volume": 3144425.0,
-      "market_status": "OPEN",
-      "traded_at": "2026-08-06T13:21:33.783673+09:00",
+      "low": 1481000.0,
+      "volume": 5295745.0,
+      "market_status": "CLOSE",
+      "traded_at": "2026-08-06T15:30:00+09:00",
       "exchange": "KOSPI"
     }
   }
