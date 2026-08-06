@@ -95,8 +95,8 @@
     },
     "fx_usdkrw": {
       "symbol": "USDKRW",
-      "price": 1427.11,
-      "traded_at": "2026-08-04T16:00:00+00:00",
+      "price": 1423.72,
+      "traded_at": "2026-08-05T16:00:00+00:00",
       "base": "USD"
     },
     "adr_parity_usd": 116.88,
@@ -1995,19 +1995,19 @@
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 6,
-          "support": 4
+          "neutral": 3,
+          "support": 7
         },
-        "adr_premium_pct": 29.15
+        "adr_premium_pct": 39.71
       },
       {
         "date": "2026-08-05",
-        "generated_at": "2026-08-05T07:40:21+00:00",
+        "generated_at": "2026-08-05T22:45:06+00:00",
         "price": 1668000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 6,
+          "watch": 5,
+          "neutral": 5,
           "support": 4
         },
         "adr_premium_pct": 32.08
