@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-06T00:47:45+00:00",
-  "generated_at_seoul": "2026-08-06T09:47:45+09:00",
+  "generated_at": "2026-08-06T01:25:44+00:00",
+  "generated_at_seoul": "2026-08-06T10:25:44+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -2014,7 +2014,7 @@
       },
       {
         "date": "2026-08-06",
-        "generated_at": "2026-08-06T00:47:45+00:00",
+        "generated_at": "2026-08-06T01:25:44+00:00",
         "price": 1565000.0,
         "status_counts": {
           "alert": 4,
@@ -2257,46 +2257,31 @@
     "completeness_pct": 55.0,
     "failed_sources": [],
     "cached_sources": [
-      "fx",
       "kospi_history",
-      "krx_history",
-      "nvidia",
       "samsung_history",
-      "adr",
+      "nvidia",
       "krx_quote",
       "micron",
-      "sox"
+      "krx_history",
+      "sox",
+      "adr",
+      "fx"
     ],
     "sources": {
-      "fx": {
-        "status": "cached",
-        "fetched_at": "2026-08-06T00:21:47+00:00",
-        "error": "request failed: https://api.frankfurter.app/latest?from=USD&to=KRW: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-      },
       "kospi_history": {
         "status": "cached",
         "fetched_at": "2026-08-06T00:21:47+00:00",
         "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=KOSPI&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-      },
-      "krx_history": {
-        "status": "cached",
-        "fetched_at": "2026-08-06T00:21:47+00:00",
-        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=000660&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-      },
-      "nvidia": {
-        "status": "cached",
-        "fetched_at": "2026-08-06T00:21:47+00:00",
-        "error": "request failed: https://api.stock.naver.com/stock/NVDA.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "samsung_history": {
         "status": "cached",
         "fetched_at": "2026-08-06T00:21:47+00:00",
         "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=005930&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
-      "adr": {
+      "nvidia": {
         "status": "cached",
         "fetched_at": "2026-08-06T00:21:47+00:00",
-        "error": "request failed: https://api.stock.naver.com/stock/SKHY.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error": "request failed: https://api.stock.naver.com/stock/NVDA.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "krx_quote": {
         "status": "cached",
@@ -2308,10 +2293,25 @@
         "fetched_at": "2026-08-06T00:21:47+00:00",
         "error": "request failed: https://api.stock.naver.com/stock/MU.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
+      "krx_history": {
+        "status": "cached",
+        "fetched_at": "2026-08-06T00:21:47+00:00",
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=000660&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
       "sox": {
         "status": "cached",
         "fetched_at": "2026-08-06T00:21:47+00:00",
         "error": "request failed: https://api.stock.naver.com/index/.SOX/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "adr": {
+        "status": "cached",
+        "fetched_at": "2026-08-06T00:21:47+00:00",
+        "error": "request failed: https://api.stock.naver.com/stock/SKHY.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "fx": {
+        "status": "cached",
+        "fetched_at": "2026-08-06T00:21:47+00:00",
+        "error": "request failed: https://api.frankfurter.app/latest?from=USD&to=KRW: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       }
     },
     "slow_data_age_days": 6,
