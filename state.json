@@ -29,7 +29,7 @@
       },
       {
         "label": "历史CVaR 95%",
-        "display": "11.86%/日",
+        "display": "11.88%/日",
         "status": "alert",
         "interpretation": "比单一VaR更关注尾部损失的平均严重程度。"
       },
@@ -48,6 +48,12 @@
     ],
     "offsets": [
       {
+        "label": "200日趋势距离",
+        "display": "+26.7%",
+        "status": "support",
+        "interpretation": "趋势破位和极端偏离分开观察，不把上涨本身视为风险。"
+      },
+      {
         "label": "平均目标价空间",
         "display": "+104.8%",
         "status": "support",
@@ -58,12 +64,6 @@
         "display": "$732B",
         "status": "support",
         "interpretation": "当前资本开支仍在扩张，属于需求侧支持；但合计口径包含非AI设施与租赁，不应等同于HBM订单。"
-      },
-      {
-        "label": "净现金缓冲",
-        "display": "₩69.4T",
-        "status": "support",
-        "interpretation": "强资产负债表降低资本开支周期中的融资与流动性风险。"
       }
     ]
   },
@@ -168,8 +168,8 @@
       "counts": {
         "alert": 3,
         "watch": 0,
-        "neutral": 2,
-        "support": 0
+        "neutral": 1,
+        "support": 1
       },
       "signal_count": 5
     },
@@ -263,8 +263,8 @@
       "id": "cvar95",
       "pillar": "market_regime",
       "label": "历史CVaR 95%",
-      "value": 11.8575,
-      "display": "11.86%/日",
+      "value": 11.8779,
+      "display": "11.88%/日",
       "status": "alert",
       "threshold": "最差5%交易日的平均损失超过5%进入注意，8%以上警戒",
       "interpretation": "比单一VaR更关注尾部损失的平均严重程度。"
@@ -1966,7 +1966,7 @@
     "evidence_history": [
       {
         "date": "2026-07-31",
-        "generated_at": "2026-08-01T13:43:02+00:00",
+        "generated_at": "2026-08-02T22:30:36+00:00",
         "price": 1718000.0,
         "status_counts": {
           "alert": 4,
@@ -1978,19 +1978,19 @@
       },
       {
         "date": "2026-08-03",
-        "generated_at": "2026-08-03T07:40:06+00:00",
+        "generated_at": "2026-08-03T22:17:33+00:00",
         "price": 1567000.0,
         "status_counts": {
           "alert": 5,
-          "watch": 4,
-          "neutral": 5,
+          "watch": 5,
+          "neutral": 4,
           "support": 4
         },
-        "adr_premium_pct": 32.41
+        "adr_premium_pct": 29.97
       },
       {
         "date": "2026-08-04",
-        "generated_at": "2026-08-04T07:40:21+00:00",
+        "generated_at": "2026-08-04T22:47:02+00:00",
         "price": 1577000.0,
         "status_counts": {
           "alert": 4,
@@ -2010,7 +2010,7 @@
           "neutral": 6,
           "support": 4
         },
-        "adr_premium_pct": 32.08
+        "adr_premium_pct": 28.91
       },
       {
         "date": "2026-08-06",
