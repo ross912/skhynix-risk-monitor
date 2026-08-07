@@ -1,6 +1,6 @@
 {
   "sox": {
-    "fetched_at": "2026-08-07T08:58:39+00:00",
+    "fetched_at": "2026-08-07T10:01:46+00:00",
     "data": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
@@ -14,7 +14,7 @@
     }
   },
   "micron": {
-    "fetched_at": "2026-08-07T08:58:39+00:00",
+    "fetched_at": "2026-08-07T10:01:46+00:00",
     "data": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
@@ -28,7 +28,7 @@
     }
   },
   "adr": {
-    "fetched_at": "2026-08-07T08:58:39+00:00",
+    "fetched_at": "2026-08-07T10:01:46+00:00",
     "data": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
@@ -42,7 +42,7 @@
     }
   },
   "nvidia": {
-    "fetched_at": "2026-08-07T08:58:39+00:00",
+    "fetched_at": "2026-08-07T10:01:46+00:00",
     "data": {
       "symbol": "NVDA",
       "name": "NVIDIA Corp",
@@ -56,7 +56,7 @@
     }
   },
   "samsung_history": {
-    "fetched_at": "2026-08-07T08:58:39+00:00",
+    "fetched_at": "2026-08-07T10:01:46+00:00",
     "data": [
       {
         "date": "20240119",
@@ -5021,7 +5021,7 @@
     ]
   },
   "krx_history": {
-    "fetched_at": "2026-08-07T08:58:39+00:00",
+    "fetched_at": "2026-08-07T10:01:46+00:00",
     "data": [
       {
         "date": "20240119",
@@ -9986,7 +9986,7 @@
     ]
   },
   "kospi_history": {
-    "fetched_at": "2026-08-07T08:58:39+00:00",
+    "fetched_at": "2026-08-07T10:01:46+00:00",
     "data": [
       {
         "date": "20240119",
@@ -14946,12 +14946,12 @@
         "high": 6415.6,
         "low": 6158.73,
         "close": 6258.77,
-        "volume": 297183.0
+        "volume": 299377.0
       }
     ]
   },
   "fx": {
-    "fetched_at": "2026-08-07T08:58:39+00:00",
+    "fetched_at": "2026-08-07T10:01:46+00:00",
     "data": {
       "symbol": "USDKRW",
       "price": 1423.57,
@@ -14960,7 +14960,7 @@
     }
   },
   "krx_quote": {
-    "fetched_at": "2026-08-07T08:58:39+00:00",
+    "fetched_at": "2026-08-07T10:01:46+00:00",
     "data": {
       "symbol": "000660",
       "name": "SK하이닉스",
