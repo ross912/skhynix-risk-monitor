@@ -1,18 +1,18 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-10T02:43:25+00:00",
-  "generated_at_seoul": "2026-08-10T11:43:25+09:00",
+  "generated_at": "2026-08-10T02:55:01+00:00",
+  "generated_at_seoul": "2026-08-10T11:55:01+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
       "alert": 4,
-      "watch": 6,
-      "neutral": 3,
+      "watch": 5,
+      "neutral": 4,
       "support": 5
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 100.0,
+    "data_completeness_pct": 95.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 101.49,
     "adr_premium_pct": 35.89,
-    "adr_premium_change_pct_points": -0.76,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": -4.97,
     "nvidia": {
       "symbol": "NVDA",
@@ -137,8 +137,8 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 230250.0,
-      "change_pct": -0.32,
+      "price": 231500.0,
+      "change_pct": 0.22,
       "traded_at": "20260810"
     }
   },
@@ -200,8 +200,8 @@
       "status": "watch",
       "counts": {
         "alert": 0,
-        "watch": 2,
-        "neutral": 1,
+        "watch": 1,
+        "neutral": 2,
         "support": 1
       },
       "signal_count": 4
@@ -343,9 +343,9 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": -0.3247,
-      "display": "-0.32%",
-      "status": "watch",
+      "value": 0.2165,
+      "display": "+0.22%",
+      "status": "neutral",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
     },
@@ -2038,12 +2038,12 @@
       },
       {
         "date": "2026-08-10",
-        "generated_at": "2026-08-10T02:43:25+00:00",
+        "generated_at": "2026-08-10T02:55:01+00:00",
         "price": 1437000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 6,
-          "neutral": 3,
+          "watch": 5,
+          "neutral": 4,
           "support": 5
         },
         "adr_premium_pct": 35.89
@@ -2278,54 +2278,56 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 100.0,
+    "completeness_pct": 95.0,
     "failed_sources": [],
-    "cached_sources": [],
+    "cached_sources": [
+      "krx_quote"
+    ],
     "sources": {
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T02:43:20+00:00",
-        "error": null
-      },
-      "krx_quote": {
-        "status": "fresh",
-        "fetched_at": "2026-08-10T02:43:20+00:00",
+        "fetched_at": "2026-08-10T02:53:28+00:00",
         "error": null
       },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T02:43:20+00:00",
+        "fetched_at": "2026-08-10T02:53:28+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T02:43:20+00:00",
+        "fetched_at": "2026-08-10T02:53:28+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T02:43:20+00:00",
+        "fetched_at": "2026-08-10T02:53:28+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T02:43:20+00:00",
+        "fetched_at": "2026-08-10T02:53:28+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T02:43:20+00:00",
+        "fetched_at": "2026-08-10T02:53:28+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T02:43:20+00:00",
+        "fetched_at": "2026-08-10T02:53:28+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T02:43:20+00:00",
+        "fetched_at": "2026-08-10T02:53:28+00:00",
         "error": null
+      },
+      "krx_quote": {
+        "status": "cached",
+        "fetched_at": "2026-08-10T02:43:20+00:00",
+        "error": "request failed: https://polling.finance.naver.com/api/realtime/domestic/stock/000660: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       }
     },
     "slow_data_age_days": 10,
