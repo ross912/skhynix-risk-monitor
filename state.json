@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-10T19:16:13+00:00",
-  "generated_at_seoul": "2026-08-11T04:16:13+09:00",
+  "generated_at": "2026-08-10T20:05:02+00:00",
+  "generated_at_seoul": "2026-08-11T05:05:02+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -85,11 +85,11 @@
     "adr": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
-      "price": 135.59,
-      "change": -2.32,
-      "change_pct": -1.68,
-      "traded_at": "2026-08-10T15:16:13-04:00",
-      "market_status": "OPEN",
+      "price": 135.29,
+      "change": -2.62,
+      "change_pct": -1.9,
+      "traded_at": "2026-08-10T16:00:00-04:00",
+      "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -100,39 +100,39 @@
       "base": "USD"
     },
     "adr_parity_usd": 100.24,
-    "adr_premium_pct": 35.27,
-    "adr_premium_change_pct_points": -0.5,
-    "overnight_spread_pct_points": -1.54,
+    "adr_premium_pct": 34.97,
+    "adr_premium_change_pct_points": -0.3,
+    "overnight_spread_pct_points": -1.76,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corp",
-      "price": 219.3,
-      "change": -4.66,
-      "change_pct": -2.08,
-      "traded_at": "2026-08-10T15:16:13-04:00",
-      "market_status": "OPEN",
+      "price": 217.55,
+      "change": -6.41,
+      "change_pct": -2.86,
+      "traded_at": "2026-08-10T16:00:00-04:00",
+      "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "micron": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
-      "price": 878.63,
-      "change": 1.06,
-      "change_pct": 0.12,
-      "traded_at": "2026-08-10T15:16:10-04:00",
-      "market_status": "OPEN",
+      "price": 861.0,
+      "change": -16.57,
+      "change_pct": -1.89,
+      "traded_at": "2026-08-10T16:00:00-04:00",
+      "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "sox": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
-      "price": 12147.03,
-      "change": -209.76,
-      "change_pct": -1.7,
-      "traded_at": "2026-08-10T15:16:13-04:00",
-      "market_status": "OPEN",
+      "price": 11993.86,
+      "change": -362.93,
+      "change_pct": -2.94,
+      "traded_at": "2026-08-10T16:04:33-04:00",
+      "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -313,8 +313,8 @@
       "id": "adr_premium",
       "pillar": "cross_market",
       "label": "ADR相对韩股平价",
-      "value": 35.2673,
-      "display": "+35.3%",
+      "value": 34.968,
+      "display": "+35.0%",
       "status": "neutral",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
@@ -323,8 +323,8 @@
       "id": "overnight_lead",
       "pillar": "cross_market",
       "label": "ADR美国时段方向",
-      "value": -1.68,
-      "display": "-1.7%",
+      "value": -1.9,
+      "display": "-1.9%",
       "status": "watch",
       "threshold": "ADR日跌幅超过5%触发次日韩股压力警戒；上涨3%以上为正向线索",
       "interpretation": "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。"
@@ -333,8 +333,8 @@
       "id": "us_semis_breadth",
       "pillar": "ai_memory_cycle",
       "label": "美股AI与存储代理",
-      "value": -1.22,
-      "display": "-1.22%",
+      "value": -2.5633,
+      "display": "-2.56%",
       "status": "watch",
       "threshold": "MU、NVDA和SOX平均日跌幅超过3%触发警戒",
       "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
@@ -2038,7 +2038,7 @@
       },
       {
         "date": "2026-08-10",
-        "generated_at": "2026-08-10T19:16:13+00:00",
+        "generated_at": "2026-08-10T20:05:02+00:00",
         "price": 1420000.0,
         "status_counts": {
           "alert": 4,
@@ -2046,7 +2046,7 @@
           "neutral": 2,
           "support": 5
         },
-        "adr_premium_pct": 35.27
+        "adr_premium_pct": 34.97
       }
     ]
   },
@@ -2282,49 +2282,49 @@
     "failed_sources": [],
     "cached_sources": [],
     "sources": {
-      "fx": {
-        "status": "fresh",
-        "fetched_at": "2026-08-10T19:16:11+00:00",
-        "error": null
-      },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T19:16:11+00:00",
+        "fetched_at": "2026-08-10T20:04:32+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T19:16:11+00:00",
+        "fetched_at": "2026-08-10T20:04:32+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T19:16:11+00:00",
+        "fetched_at": "2026-08-10T20:04:32+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T19:16:11+00:00",
+        "fetched_at": "2026-08-10T20:04:32+00:00",
         "error": null
       },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T19:16:11+00:00",
+        "fetched_at": "2026-08-10T20:04:32+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T19:16:11+00:00",
-        "error": null
-      },
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-10T19:16:11+00:00",
+        "fetched_at": "2026-08-10T20:04:32+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T19:16:11+00:00",
+        "fetched_at": "2026-08-10T20:04:32+00:00",
+        "error": null
+      },
+      "kospi_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-10T20:04:32+00:00",
+        "error": null
+      },
+      "fx": {
+        "status": "fresh",
+        "fetched_at": "2026-08-10T20:04:32+00:00",
         "error": null
       }
     },
