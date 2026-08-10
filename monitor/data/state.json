@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-10T20:05:02+00:00",
-  "generated_at_seoul": "2026-08-11T05:05:02+09:00",
+  "generated_at": "2026-08-10T20:58:09+00:00",
+  "generated_at_seoul": "2026-08-11T05:58:09+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 100.24,
     "adr_premium_pct": 34.97,
-    "adr_premium_change_pct_points": -0.3,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": -1.76,
     "nvidia": {
       "symbol": "NVDA",
@@ -131,7 +131,7 @@
       "price": 11993.86,
       "change": -362.93,
       "change_pct": -2.94,
-      "traded_at": "2026-08-10T16:04:33-04:00",
+      "traded_at": "2026-08-10T16:58:08-04:00",
       "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
@@ -2038,7 +2038,7 @@
       },
       {
         "date": "2026-08-10",
-        "generated_at": "2026-08-10T20:05:02+00:00",
+        "generated_at": "2026-08-10T20:58:09+00:00",
         "price": 1420000.0,
         "status_counts": {
           "alert": 4,
@@ -2282,49 +2282,49 @@
     "failed_sources": [],
     "cached_sources": [],
     "sources": {
-      "krx_quote": {
+      "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T20:04:32+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-08-10T20:04:32+00:00",
+        "fetched_at": "2026-08-10T20:58:08+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T20:04:32+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-10T20:04:32+00:00",
+        "fetched_at": "2026-08-10T20:58:08+00:00",
         "error": null
       },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T20:04:32+00:00",
+        "fetched_at": "2026-08-10T20:58:08+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-08-10T20:58:08+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-08-10T20:58:08+00:00",
+        "error": null
+      },
+      "krx_quote": {
+        "status": "fresh",
+        "fetched_at": "2026-08-10T20:58:08+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T20:04:32+00:00",
-        "error": null
-      },
-      "krx_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-10T20:04:32+00:00",
+        "fetched_at": "2026-08-10T20:58:08+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T20:04:32+00:00",
+        "fetched_at": "2026-08-10T20:58:08+00:00",
         "error": null
       },
-      "fx": {
+      "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-10T20:04:32+00:00",
+        "fetched_at": "2026-08-10T20:58:08+00:00",
         "error": null
       }
     },
