@@ -6,8 +6,8 @@
   "summary": {
     "status_counts": {
       "alert": 4,
-      "watch": 6,
-      "neutral": 3,
+      "watch": 5,
+      "neutral": 4,
       "support": 5
     },
     "headline": "存在需处理的警戒信号",
@@ -86,10 +86,10 @@
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
       "price": 137.91,
-      "change": -5.62,
-      "change_pct": -3.92,
-      "traded_at": "2026-08-07T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "traded_at": "2026-08-10T03:47:33-04:00",
+      "market_status": "PREOPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -107,10 +107,10 @@
       "symbol": "NVDA",
       "name": "NVIDIA Corp",
       "price": 223.96,
-      "change": 4.97,
-      "change_pct": 2.27,
-      "traded_at": "2026-08-07T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "traded_at": "2026-08-10T03:47:33-04:00",
+      "market_status": "PREOPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -118,10 +118,10 @@
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
       "price": 877.57,
-      "change": -3.9,
-      "change_pct": -0.44,
-      "traded_at": "2026-08-07T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "traded_at": "2026-08-10T03:47:33-04:00",
+      "market_status": "PREOPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -186,11 +186,11 @@
     },
     "cross_market": {
       "label": "ADR跨市场",
-      "status": "watch",
+      "status": "neutral",
       "counts": {
         "alert": 0,
-        "watch": 1,
-        "neutral": 1,
+        "watch": 0,
+        "neutral": 2,
         "support": 0
       },
       "signal_count": 2
@@ -323,9 +323,9 @@
       "id": "overnight_lead",
       "pillar": "cross_market",
       "label": "ADR美国时段方向",
-      "value": -3.92,
-      "display": "-3.9%",
-      "status": "watch",
+      "value": 0.0,
+      "display": "+0.0%",
+      "status": "neutral",
       "threshold": "ADR日跌幅超过5%触发次日韩股压力警戒；上涨3%以上为正向线索",
       "interpretation": "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。"
     },
@@ -333,8 +333,8 @@
       "id": "us_semis_breadth",
       "pillar": "ai_memory_cycle",
       "label": "美股AI与存储代理",
-      "value": 1.4633,
-      "display": "+1.46%",
+      "value": 0.8533,
+      "display": "+0.85%",
       "status": "neutral",
       "threshold": "MU、NVDA和SOX平均日跌幅超过3%触发警戒",
       "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
@@ -1966,7 +1966,7 @@
     "evidence_history": [
       {
         "date": "2026-07-31",
-        "generated_at": "2026-08-01T13:43:02+00:00",
+        "generated_at": "2026-08-02T22:30:36+00:00",
         "price": 1718000.0,
         "status_counts": {
           "alert": 4,
@@ -1978,63 +1978,63 @@
       },
       {
         "date": "2026-08-03",
-        "generated_at": "2026-08-03T07:40:06+00:00",
+        "generated_at": "2026-08-03T22:17:33+00:00",
         "price": 1567000.0,
         "status_counts": {
           "alert": 5,
-          "watch": 4,
-          "neutral": 5,
+          "watch": 5,
+          "neutral": 4,
           "support": 4
         },
-        "adr_premium_pct": 32.41
+        "adr_premium_pct": 29.97
       },
       {
         "date": "2026-08-04",
-        "generated_at": "2026-08-04T07:40:21+00:00",
+        "generated_at": "2026-08-04T22:47:02+00:00",
         "price": 1577000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 6,
-          "support": 4
+          "neutral": 3,
+          "support": 7
         },
-        "adr_premium_pct": 29.15
+        "adr_premium_pct": 39.71
       },
       {
         "date": "2026-08-05",
-        "generated_at": "2026-08-05T07:40:21+00:00",
+        "generated_at": "2026-08-05T22:45:06+00:00",
         "price": 1668000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 6,
+          "watch": 5,
+          "neutral": 5,
           "support": 4
         },
-        "adr_premium_pct": 32.08
+        "adr_premium_pct": 28.91
       },
       {
         "date": "2026-08-06",
-        "generated_at": "2026-08-06T10:41:52+00:00",
+        "generated_at": "2026-08-06T15:41:49+00:00",
         "price": 1495000.0,
         "status_counts": {
           "alert": 5,
-          "watch": 5,
-          "neutral": 3,
+          "watch": 6,
+          "neutral": 2,
           "support": 5
         },
-        "adr_premium_pct": 43.83
+        "adr_premium_pct": 38.35
       },
       {
         "date": "2026-08-07",
-        "generated_at": "2026-08-08T01:37:09+00:00",
+        "generated_at": "2026-08-09T22:49:49+00:00",
         "price": 1422000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 5,
+          "watch": 5,
+          "neutral": 4,
           "support": 5
         },
-        "adr_premium_pct": 43.69
+        "adr_premium_pct": 37.32
       },
       {
         "date": "2026-08-10",
@@ -2042,8 +2042,8 @@
         "price": 1420000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 6,
-          "neutral": 3,
+          "watch": 5,
+          "neutral": 4,
           "support": 5
         },
         "adr_premium_pct": 37.52
@@ -2317,7 +2317,7 @@
         "fetched_at": "2026-08-10T08:20:12+00:00",
         "error": null
       },
-      "fx": {
+      "krx_quote": {
         "status": "fresh",
         "fetched_at": "2026-08-10T08:20:12+00:00",
         "error": null
