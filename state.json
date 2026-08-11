@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-11T05:47:20+00:00",
-  "generated_at_seoul": "2026-08-11T14:47:20+09:00",
+  "generated_at": "2026-08-11T05:57:26+00:00",
+  "generated_at_seoul": "2026-08-11T14:57:26+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -12,12 +12,12 @@
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 90.0,
+    "data_completeness_pct": 100.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
         "label": "距52周高点",
-        "display": "-50.9%",
+        "display": "-51.0%",
         "status": "alert",
         "interpretation": "衡量当前价格处在一年周期的哪个位置。"
       },
@@ -55,7 +55,7 @@
       },
       {
         "label": "平均目标价空间",
-        "display": "+123.9%",
+        "display": "+124.0%",
         "status": "support",
         "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
       },
@@ -71,15 +71,15 @@
     "krx": {
       "symbol": "000660",
       "name": "SK하이닉스",
-      "price": 1432000.0,
-      "previous_close_change": 12000.0,
-      "change_pct": 0.85,
+      "price": 1431000.0,
+      "previous_close_change": 11000.0,
+      "change_pct": 0.77,
       "open": 1405000.0,
       "high": 1455000.0,
       "low": 1373000.0,
-      "volume": 3125317.0,
+      "volume": 3240363.0,
       "market_status": "OPEN",
-      "traded_at": "2026-08-11T14:36:55.403475+09:00",
+      "traded_at": "2026-08-11T14:57:25.793367+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -99,10 +99,10 @@
       "traded_at": "2026-08-10T16:00:00+00:00",
       "base": "USD"
     },
-    "adr_parity_usd": 101.09,
-    "adr_premium_pct": 33.84,
-    "adr_premium_change_pct_points": -0.0,
-    "overnight_spread_pct_points": -2.75,
+    "adr_parity_usd": 101.02,
+    "adr_premium_pct": 33.93,
+    "adr_premium_change_pct_points": 0.09,
+    "overnight_spread_pct_points": -2.67,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corp",
@@ -137,27 +137,27 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 240000.0,
-      "change_pct": 4.35,
+      "price": 240250.0,
+      "change_pct": 4.46,
       "traded_at": "20260811"
     }
   },
   "technicals": {
-    "sma20": 1666650.0,
-    "sma60": 2072683.33,
-    "sma120": 1592483.33,
-    "sma200": 1213102.5,
-    "rsi14": 38.35,
-    "ewma_volatility_pct": 140.83,
+    "sma20": 1666600.0,
+    "sma60": 2072666.67,
+    "sma120": 1592475.0,
+    "sma200": 1213097.5,
+    "rsi14": 38.31,
+    "ewma_volatility_pct": 140.82,
     "var95_pct": 9.12,
     "cvar95_pct": 12.0,
-    "drawdown_52w_pct": -50.94,
+    "drawdown_52w_pct": -50.98,
     "max_drawdown_1y_pct": -54.71,
     "high_52w": 2919000.0,
     "low_52w": 245000.0,
-    "momentum_20d_pct": -22.38,
-    "momentum_60d_pct": -27.31,
-    "volume_ratio_20d": 0.51,
+    "momentum_20d_pct": -22.44,
+    "momentum_60d_pct": -27.36,
+    "volume_ratio_20d": 0.53,
     "beta_120d": 1.48,
     "correlation_kospi_120d": 0.94
   },
@@ -223,7 +223,7 @@
       "id": "trend_200d",
       "pillar": "market_regime",
       "label": "200日趋势距离",
-      "value": 118.0444,
+      "value": 117.9625,
       "display": "+18.0%",
       "status": "support",
       "threshold": "低于200日线10%触发警戒；高于50%提示过热",
@@ -233,8 +233,8 @@
       "id": "drawdown_52w",
       "pillar": "market_regime",
       "label": "距52周高点",
-      "value": -50.9421,
-      "display": "-50.9%",
+      "value": -50.9764,
+      "display": "-51.0%",
       "status": "alert",
       "threshold": "回撤超过20%进入注意，超过35%触发警戒",
       "interpretation": "衡量当前价格处在一年周期的哪个位置。"
@@ -243,7 +243,7 @@
       "id": "ewma_vol",
       "pillar": "market_regime",
       "label": "EWMA年化波动率",
-      "value": 140.8276,
+      "value": 140.8215,
       "display": "140.8%",
       "status": "alert",
       "threshold": "50%以上进入注意，80%以上触发警戒；RiskMetrics λ=0.94",
@@ -253,7 +253,7 @@
       "id": "rsi14",
       "pillar": "market_regime",
       "label": "RSI 14",
-      "value": 38.3489,
+      "value": 38.3128,
       "display": "38.3",
       "status": "neutral",
       "threshold": "低于20或高于80触发警戒；30/70为注意线",
@@ -293,8 +293,8 @@
       "id": "target_upside",
       "pillar": "expectations",
       "label": "平均目标价空间",
-      "value": 123.8517,
-      "display": "+123.9%",
+      "value": 124.0081,
+      "display": "+124.0%",
       "status": "support",
       "threshold": "平均目标价低于现价警戒；空间不足20%时注意",
       "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
@@ -313,8 +313,8 @@
       "id": "adr_premium",
       "pillar": "cross_market",
       "label": "ADR相对韩股平价",
-      "value": 33.837,
-      "display": "+33.8%",
+      "value": 33.9305,
+      "display": "+33.9%",
       "status": "neutral",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": 4.3478,
-      "display": "+4.35%",
+      "value": 4.4565,
+      "display": "+4.46%",
       "status": "neutral",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -1958,9 +1958,9 @@
       },
       {
         "date": "20260811",
-        "close": 1432000.0,
-        "sma60": 2072683.33,
-        "sma200": 1213102.5
+        "close": 1431000.0,
+        "sma60": 2072666.67,
+        "sma200": 1213097.5
       }
     ],
     "evidence_history": [
@@ -2050,15 +2050,15 @@
       },
       {
         "date": "2026-08-11",
-        "generated_at": "2026-08-11T05:47:20+00:00",
-        "price": 1432000.0,
+        "generated_at": "2026-08-11T05:57:26+00:00",
+        "price": 1431000.0,
         "status_counts": {
           "alert": 4,
           "watch": 6,
           "neutral": 3,
           "support": 5
         },
-        "adr_premium_pct": 33.84
+        "adr_premium_pct": 33.93
       }
     ]
   },
@@ -2290,57 +2290,54 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 90.0,
+    "completeness_pct": 100.0,
     "failed_sources": [],
-    "cached_sources": [
-      "krx_quote",
-      "kospi_history"
-    ],
+    "cached_sources": [],
     "sources": {
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-11T05:47:02+00:00",
-        "error": null
-      },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-11T05:47:02+00:00",
+        "fetched_at": "2026-08-11T05:57:24+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-11T05:47:02+00:00",
+        "fetched_at": "2026-08-11T05:57:24+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-11T05:47:02+00:00",
+        "fetched_at": "2026-08-11T05:57:24+00:00",
         "error": null
       },
-      "krx_history": {
+      "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-11T05:47:02+00:00",
-        "error": null
-      },
-      "fx": {
-        "status": "fresh",
-        "fetched_at": "2026-08-11T05:47:02+00:00",
+        "fetched_at": "2026-08-11T05:57:24+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-11T05:47:02+00:00",
+        "fetched_at": "2026-08-11T05:57:24+00:00",
+        "error": null
+      },
+      "kospi_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-11T05:57:24+00:00",
         "error": null
       },
       "krx_quote": {
-        "status": "cached",
-        "fetched_at": "2026-08-11T05:36:54+00:00",
-        "error": "The read operation timed out"
+        "status": "fresh",
+        "fetched_at": "2026-08-11T05:57:24+00:00",
+        "error": null
       },
-      "kospi_history": {
-        "status": "cached",
-        "fetched_at": "2026-08-11T05:36:54+00:00",
-        "error": "The read operation timed out"
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-11T05:57:24+00:00",
+        "error": null
+      },
+      "fx": {
+        "status": "fresh",
+        "fetched_at": "2026-08-11T05:57:24+00:00",
+        "error": null
       }
     },
     "slow_data_age_days": 11,
