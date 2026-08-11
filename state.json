@@ -200,8 +200,8 @@
       "status": "watch",
       "counts": {
         "alert": 0,
-        "watch": 2,
-        "neutral": 1,
+        "watch": 3,
+        "neutral": 0,
         "support": 1
       },
       "signal_count": 4
@@ -2038,7 +2038,7 @@
       },
       {
         "date": "2026-08-10",
-        "generated_at": "2026-08-10T08:20:16+00:00",
+        "generated_at": "2026-08-10T22:59:21+00:00",
         "price": 1420000.0,
         "status_counts": {
           "alert": 4,
