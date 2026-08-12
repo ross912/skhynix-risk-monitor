@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-12T21:07:40+00:00",
-  "generated_at_seoul": "2026-08-13T06:07:40+09:00",
+  "generated_at": "2026-08-12T21:59:05+00:00",
+  "generated_at_seoul": "2026-08-13T06:59:05+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -131,7 +131,7 @@
       "price": 12399.38,
       "change": 300.9,
       "change_pct": 2.49,
-      "traded_at": "2026-08-12T17:07:39-04:00",
+      "traded_at": "2026-08-12T17:15:59-04:00",
       "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
@@ -2062,7 +2062,7 @@
       },
       {
         "date": "2026-08-12",
-        "generated_at": "2026-08-12T21:07:40+00:00",
+        "generated_at": "2026-08-12T21:59:05+00:00",
         "price": 1504000.0,
         "status_counts": {
           "alert": 4,
@@ -2308,47 +2308,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-12T21:07:39+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-08-12T21:07:39+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-08-12T21:07:39+00:00",
+        "fetched_at": "2026-08-12T21:59:03+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-12T21:07:39+00:00",
+        "fetched_at": "2026-08-12T21:59:03+00:00",
         "error": null
       },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-12T21:07:39+00:00",
+        "fetched_at": "2026-08-12T21:59:03+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-12T21:07:39+00:00",
+        "fetched_at": "2026-08-12T21:59:03+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-08-12T21:59:03+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-08-12T21:59:03+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-12T21:07:39+00:00",
+        "fetched_at": "2026-08-12T21:59:03+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-12T21:07:39+00:00",
+        "fetched_at": "2026-08-12T21:59:03+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-12T21:07:39+00:00",
+        "fetched_at": "2026-08-12T21:59:03+00:00",
         "error": null
       }
     },
