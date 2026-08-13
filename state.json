@@ -1,18 +1,18 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-13T01:30:12+00:00",
-  "generated_at_seoul": "2026-08-13T10:30:12+09:00",
+  "generated_at": "2026-08-13T01:30:47+00:00",
+  "generated_at_seoul": "2026-08-13T10:30:47+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
       "alert": 4,
-      "watch": 5,
-      "neutral": 4,
-      "support": 5
+      "watch": 4,
+      "neutral": 3,
+      "support": 7
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 90.0,
+    "data_completeness_pct": 100.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -54,16 +54,16 @@
         "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
       },
       {
-        "label": "美股AI与存储代理",
-        "display": "+3.48%",
+        "label": "ADR相对韩股平价",
+        "display": "+36.1%",
         "status": "support",
-        "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
+        "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
       },
       {
-        "label": "四大云厂资本开支",
-        "display": "$732B",
+        "label": "ADR美国时段方向",
+        "display": "+9.0%",
         "status": "support",
-        "interpretation": "当前资本开支仍在扩张，属于需求侧支持；但合计口径包含非AI设施与租赁，不应等同于HBM订单。"
+        "interpretation": "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。"
       }
     ]
   },
@@ -77,9 +77,9 @@
       "open": 1582000.0,
       "high": 1634000.0,
       "low": 1567000.0,
-      "volume": 1674669.0,
+      "volume": 1680170.0,
       "market_status": "OPEN",
-      "traded_at": "2026-08-13T10:30:07.791792+09:00",
+      "traded_at": "2026-08-13T10:30:46.264011+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -100,9 +100,9 @@
       "base": "USD"
     },
     "adr_parity_usd": 113.47,
-    "adr_premium_pct": 24.84,
-    "adr_premium_change_pct_points": -8.16,
-    "overnight_spread_pct_points": -6.91,
+    "adr_premium_pct": 36.08,
+    "adr_premium_change_pct_points": 11.24,
+    "overnight_spread_pct_points": 2.1,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corp",
@@ -137,8 +137,8 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 266250.0,
-      "change_pct": 4.21,
+      "price": 266000.0,
+      "change_pct": 4.11,
       "traded_at": "20260813"
     }
   },
@@ -186,12 +186,12 @@
     },
     "cross_market": {
       "label": "ADR跨市场",
-      "status": "watch",
+      "status": "support",
       "counts": {
         "alert": 0,
-        "watch": 1,
-        "neutral": 1,
-        "support": 0
+        "watch": 0,
+        "neutral": 0,
+        "support": 2
       },
       "signal_count": 2
     },
@@ -313,9 +313,9 @@
       "id": "adr_premium",
       "pillar": "cross_market",
       "label": "ADR相对韩股平价",
-      "value": 24.8361,
-      "display": "+24.8%",
-      "status": "watch",
+      "value": 36.0815,
+      "display": "+36.1%",
+      "status": "support",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
     },
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": 4.2074,
-      "display": "+4.21%",
+      "value": 4.1096,
+      "display": "+4.11%",
       "status": "neutral",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -2062,27 +2062,27 @@
       },
       {
         "date": "2026-08-12",
-        "generated_at": "2026-08-12T22:40:22+00:00",
+        "generated_at": "2026-08-12T07:40:35+00:00",
         "price": 1504000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 1,
-          "support": 9
+          "neutral": 4,
+          "support": 6
         },
         "adr_premium_pct": 33.0
       },
       {
         "date": "2026-08-13",
-        "generated_at": "2026-08-13T01:30:12+00:00",
+        "generated_at": "2026-08-13T01:30:47+00:00",
         "price": 1608000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 5,
-          "neutral": 4,
-          "support": 5
+          "watch": 4,
+          "neutral": 3,
+          "support": 7
         },
-        "adr_premium_pct": 24.84
+        "adr_premium_pct": 36.08
       }
     ]
   },
@@ -2314,56 +2314,53 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 90.0,
+    "completeness_pct": 100.0,
     "failed_sources": [],
-    "cached_sources": [
-      "krx_history",
-      "adr"
-    ],
+    "cached_sources": [],
     "sources": {
-      "krx_history": {
-        "status": "cached",
-        "fetched_at": "2026-08-12T07:40:18+00:00",
-        "error": "Remote end closed connection without response"
-      },
-      "adr": {
-        "status": "cached",
-        "fetched_at": "2026-08-12T07:40:18+00:00",
-        "error": "Remote end closed connection without response"
-      },
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-13T00:37:38+00:00",
-        "error": null
-      },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-13T00:37:38+00:00",
-        "error": null
-      },
-      "fx": {
-        "status": "fresh",
-        "fetched_at": "2026-08-13T00:37:38+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-13T00:37:38+00:00",
+        "fetched_at": "2026-08-13T01:30:44+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-13T00:37:38+00:00",
+        "fetched_at": "2026-08-13T01:30:44+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-08-13T01:30:44+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-13T00:37:38+00:00",
+        "fetched_at": "2026-08-13T01:30:44+00:00",
+        "error": null
+      },
+      "samsung_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-13T01:30:44+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-13T00:37:38+00:00",
+        "fetched_at": "2026-08-13T01:30:44+00:00",
+        "error": null
+      },
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-13T01:30:44+00:00",
+        "error": null
+      },
+      "kospi_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-13T01:30:44+00:00",
+        "error": null
+      },
+      "fx": {
+        "status": "fresh",
+        "fetched_at": "2026-08-13T01:30:44+00:00",
         "error": null
       }
     },
