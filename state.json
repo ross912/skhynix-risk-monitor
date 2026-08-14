@@ -64,6 +64,12 @@
         "display": "+7.3%",
         "status": "support",
         "interpretation": "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。"
+      },
+      {
+        "label": "四大云厂资本开支",
+        "display": "$732B",
+        "status": "support",
+        "interpretation": "当前资本开支仍在扩张，属于需求侧支持；但合计口径包含非AI设施与租赁，不应等同于HBM订单。"
       }
     ]
   },
@@ -186,12 +192,12 @@
     },
     "cross_market": {
       "label": "ADR跨市场",
-      "status": "support",
+      "status": "watch",
       "counts": {
         "alert": 0,
-        "watch": 0,
+        "watch": 1,
         "neutral": 0,
-        "support": 2
+        "support": 1
       },
       "signal_count": 2
     },
@@ -2345,7 +2351,7 @@
         "fetched_at": "2026-08-14T01:03:15+00:00",
         "error": null
       },
-      "fx": {
+      "krx_history": {
         "status": "fresh",
         "fetched_at": "2026-08-14T01:03:15+00:00",
         "error": null
