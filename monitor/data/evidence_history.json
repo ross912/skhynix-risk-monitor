@@ -121,13 +121,13 @@
   },
   {
     "date": "2026-08-14",
-    "generated_at": "2026-08-17T07:52:54+00:00",
+    "generated_at": "2026-08-17T08:26:43+00:00",
     "price": 1645000.0,
     "status_counts": {
       "alert": 4,
-      "watch": 5,
+      "watch": 4,
       "neutral": 5,
-      "support": 4
+      "support": 5
     },
     "adr_premium_pct": 42.7
   }
