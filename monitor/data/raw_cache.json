@@ -1,20 +1,20 @@
 {
   "sox": {
-    "fetched_at": "2026-08-17T20:59:29+00:00",
+    "fetched_at": "2026-08-17T21:26:37+00:00",
     "data": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
       "price": 12621.01,
       "change": 203.95,
       "change_pct": 1.64,
-      "traded_at": "2026-08-17T16:59:29-04:00",
+      "traded_at": "2026-08-17T17:15:59-04:00",
       "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     }
   },
   "micron": {
-    "fetched_at": "2026-08-17T20:59:29+00:00",
+    "fetched_at": "2026-08-17T21:26:37+00:00",
     "data": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
@@ -28,7 +28,7 @@
     }
   },
   "adr": {
-    "fetched_at": "2026-08-17T20:59:29+00:00",
+    "fetched_at": "2026-08-17T21:26:37+00:00",
     "data": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
@@ -42,7 +42,7 @@
     }
   },
   "nvidia": {
-    "fetched_at": "2026-08-17T20:59:29+00:00",
+    "fetched_at": "2026-08-17T21:26:37+00:00",
     "data": {
       "symbol": "NVDA",
       "name": "NVIDIA Corp",
@@ -56,7 +56,7 @@
     }
   },
   "samsung_history": {
-    "fetched_at": "2026-08-17T20:59:29+00:00",
+    "fetched_at": "2026-08-17T21:26:37+00:00",
     "data": [
       {
         "date": "20240126",
@@ -5021,7 +5021,7 @@
     ]
   },
   "krx_history": {
-    "fetched_at": "2026-08-17T20:59:29+00:00",
+    "fetched_at": "2026-08-17T21:26:37+00:00",
     "data": [
       {
         "date": "20240126",
@@ -9986,7 +9986,7 @@
     ]
   },
   "kospi_history": {
-    "fetched_at": "2026-08-17T20:59:29+00:00",
+    "fetched_at": "2026-08-17T21:26:37+00:00",
     "data": [
       {
         "date": "20240126",
@@ -14951,7 +14951,7 @@
     ]
   },
   "fx": {
-    "fetched_at": "2026-08-17T20:59:29+00:00",
+    "fetched_at": "2026-08-17T21:26:37+00:00",
     "data": {
       "symbol": "USDKRW",
       "price": 1411.91,
@@ -14960,7 +14960,7 @@
     }
   },
   "krx_quote": {
-    "fetched_at": "2026-08-17T20:59:29+00:00",
+    "fetched_at": "2026-08-17T21:26:37+00:00",
     "data": {
       "symbol": "000660",
       "name": "SK하이닉스",
