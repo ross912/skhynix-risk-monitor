@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-17T18:00:43+00:00",
-  "generated_at_seoul": "2026-08-18T03:00:43+09:00",
+  "generated_at": "2026-08-17T18:42:51+00:00",
+  "generated_at_seoul": "2026-08-18T03:42:51+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -55,13 +55,13 @@
       },
       {
         "label": "ADR相对韩股平价",
-        "display": "+50.6%",
+        "display": "+48.3%",
         "status": "support",
         "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
       },
       {
         "label": "ADR美国时段方向",
-        "display": "+5.5%",
+        "display": "+3.9%",
         "status": "support",
         "interpretation": "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。"
       }
@@ -85,10 +85,10 @@
     "adr": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
-      "price": 175.44,
-      "change": 9.11,
-      "change_pct": 5.48,
-      "traded_at": "2026-08-17T14:00:14-04:00",
+      "price": 172.83,
+      "change": 6.5,
+      "change_pct": 3.91,
+      "traded_at": "2026-08-17T14:42:50-04:00",
       "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
@@ -100,16 +100,16 @@
       "base": "USD"
     },
     "adr_parity_usd": 116.51,
-    "adr_premium_pct": 50.58,
-    "adr_premium_change_pct_points": 0.22,
-    "overnight_spread_pct_points": 2.22,
+    "adr_premium_pct": 48.34,
+    "adr_premium_change_pct_points": -2.24,
+    "overnight_spread_pct_points": 0.65,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corp",
-      "price": 225.89,
-      "change": 0.73,
-      "change_pct": 0.32,
-      "traded_at": "2026-08-17T14:00:14-04:00",
+      "price": 225.63,
+      "change": 0.47,
+      "change_pct": 0.21,
+      "traded_at": "2026-08-17T14:42:50-04:00",
       "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
@@ -117,10 +117,10 @@
     "micron": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
-      "price": 1020.61,
-      "change": 48.95,
-      "change_pct": 5.04,
-      "traded_at": "2026-08-17T14:00:14-04:00",
+      "price": 1019.69,
+      "change": 48.03,
+      "change_pct": 4.94,
+      "traded_at": "2026-08-17T14:42:50-04:00",
       "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
@@ -128,10 +128,10 @@
     "sox": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
-      "price": 12711.22,
-      "change": 294.17,
-      "change_pct": 2.37,
-      "traded_at": "2026-08-17T14:00:14-04:00",
+      "price": 12685.26,
+      "change": 268.21,
+      "change_pct": 2.16,
+      "traded_at": "2026-08-17T14:42:50-04:00",
       "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
@@ -313,8 +313,8 @@
       "id": "adr_premium",
       "pillar": "cross_market",
       "label": "ADR相对韩股平价",
-      "value": 50.5808,
-      "display": "+50.6%",
+      "value": 48.3407,
+      "display": "+48.3%",
       "status": "support",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
@@ -323,8 +323,8 @@
       "id": "overnight_lead",
       "pillar": "cross_market",
       "label": "ADR美国时段方向",
-      "value": 5.48,
-      "display": "+5.5%",
+      "value": 3.91,
+      "display": "+3.9%",
       "status": "support",
       "threshold": "ADR日跌幅超过5%触发次日韩股压力警戒；上涨3%以上为正向线索",
       "interpretation": "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。"
@@ -333,8 +333,8 @@
       "id": "us_semis_breadth",
       "pillar": "ai_memory_cycle",
       "label": "美股AI与存储代理",
-      "value": 2.5767,
-      "display": "+2.58%",
+      "value": 2.4367,
+      "display": "+2.44%",
       "status": "neutral",
       "threshold": "MU、NVDA和SOX平均日跌幅超过3%触发警戒",
       "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
@@ -2086,7 +2086,7 @@
       },
       {
         "date": "2026-08-14",
-        "generated_at": "2026-08-17T18:00:43+00:00",
+        "generated_at": "2026-08-17T18:42:51+00:00",
         "price": 1645000.0,
         "status_counts": {
           "alert": 4,
@@ -2094,7 +2094,7 @@
           "neutral": 4,
           "support": 6
         },
-        "adr_premium_pct": 50.58
+        "adr_premium_pct": 48.34
       }
     ]
   },
@@ -2330,49 +2330,49 @@
     "failed_sources": [],
     "cached_sources": [],
     "sources": {
-      "adr": {
+      "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T18:00:13+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-08-17T18:00:13+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-17T18:00:13+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-08-17T18:00:13+00:00",
+        "fetched_at": "2026-08-17T18:42:50+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T18:00:13+00:00",
+        "fetched_at": "2026-08-17T18:42:50+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-08-17T18:42:50+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-08-17T18:42:50+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-08-17T18:42:50+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-08-17T18:42:50+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T18:00:13+00:00",
+        "fetched_at": "2026-08-17T18:42:50+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T18:00:13+00:00",
+        "fetched_at": "2026-08-17T18:42:50+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T18:00:13+00:00",
-        "error": null
-      },
-      "fx": {
-        "status": "fresh",
-        "fetched_at": "2026-08-17T18:00:13+00:00",
+        "fetched_at": "2026-08-17T18:42:50+00:00",
         "error": null
       }
     },
