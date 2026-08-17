@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-17T00:20:22+00:00",
-  "generated_at_seoul": "2026-08-17T09:20:22+09:00",
-  "trigger": "intraday",
+  "generated_at": "2026-08-17T00:24:29+00:00",
+  "generated_at_seoul": "2026-08-17T09:24:29+09:00",
+  "trigger": "github-actions",
   "summary": {
     "status_counts": {
       "alert": 4,
@@ -1966,7 +1966,7 @@
     "evidence_history": [
       {
         "date": "2026-07-31",
-        "generated_at": "2026-08-01T13:43:02+00:00",
+        "generated_at": "2026-08-02T22:30:36+00:00",
         "price": 1718000.0,
         "status_counts": {
           "alert": 4,
@@ -1978,115 +1978,115 @@
       },
       {
         "date": "2026-08-03",
-        "generated_at": "2026-08-03T07:40:06+00:00",
+        "generated_at": "2026-08-03T22:17:33+00:00",
         "price": 1567000.0,
         "status_counts": {
           "alert": 5,
-          "watch": 4,
-          "neutral": 5,
+          "watch": 5,
+          "neutral": 4,
           "support": 4
         },
-        "adr_premium_pct": 32.41
+        "adr_premium_pct": 29.97
       },
       {
         "date": "2026-08-04",
-        "generated_at": "2026-08-04T07:40:21+00:00",
+        "generated_at": "2026-08-04T22:47:02+00:00",
         "price": 1577000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 6,
-          "support": 4
+          "neutral": 3,
+          "support": 7
         },
-        "adr_premium_pct": 29.15
+        "adr_premium_pct": 39.71
       },
       {
         "date": "2026-08-05",
-        "generated_at": "2026-08-05T07:40:21+00:00",
+        "generated_at": "2026-08-05T22:45:06+00:00",
         "price": 1668000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 6,
+          "watch": 5,
+          "neutral": 5,
           "support": 4
         },
-        "adr_premium_pct": 32.08
+        "adr_premium_pct": 28.91
       },
       {
         "date": "2026-08-06",
-        "generated_at": "2026-08-06T10:41:52+00:00",
+        "generated_at": "2026-08-06T15:41:49+00:00",
         "price": 1495000.0,
         "status_counts": {
           "alert": 5,
-          "watch": 5,
-          "neutral": 3,
+          "watch": 6,
+          "neutral": 2,
           "support": 5
         },
-        "adr_premium_pct": 43.83
+        "adr_premium_pct": 38.35
       },
       {
         "date": "2026-08-07",
-        "generated_at": "2026-08-08T01:37:09+00:00",
+        "generated_at": "2026-08-09T22:49:49+00:00",
         "price": 1422000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 5,
+          "watch": 5,
+          "neutral": 4,
           "support": 5
         },
-        "adr_premium_pct": 43.69
+        "adr_premium_pct": 37.32
       },
       {
         "date": "2026-08-10",
-        "generated_at": "2026-08-10T08:20:16+00:00",
+        "generated_at": "2026-08-10T22:59:21+00:00",
         "price": 1420000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 6,
-          "neutral": 3,
+          "watch": 7,
+          "neutral": 2,
           "support": 5
         },
-        "adr_premium_pct": 37.52
+        "adr_premium_pct": 34.97
       },
       {
         "date": "2026-08-11",
-        "generated_at": "2026-08-11T07:41:51+00:00",
-        "price": 1430000.0,
+        "generated_at": "2026-08-11T22:25:56+00:00",
+        "price": 1425000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 6,
+          "watch": 4,
           "neutral": 3,
-          "support": 5
+          "support": 7
         },
-        "adr_premium_pct": 34.02
+        "adr_premium_pct": 40.37
       },
       {
         "date": "2026-08-12",
-        "generated_at": "2026-08-12T07:40:35+00:00",
+        "generated_at": "2026-08-12T22:40:22+00:00",
         "price": 1504000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 4,
+          "neutral": 1,
+          "support": 9
+        },
+        "adr_premium_pct": 45.49
+      },
+      {
+        "date": "2026-08-13",
+        "generated_at": "2026-08-13T22:59:14+00:00",
+        "price": 1593000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
           "neutral": 4,
           "support": 6
         },
-        "adr_premium_pct": 33.0
-      },
-      {
-        "date": "2026-08-13",
-        "generated_at": "2026-08-13T07:41:35+00:00",
-        "price": 1587000.0,
-        "status_counts": {
-          "alert": 4,
-          "watch": 4,
-          "neutral": 2,
-          "support": 8
-        },
-        "adr_premium_pct": 37.88
+        "adr_premium_pct": 47.71
       },
       {
         "date": "2026-08-14",
-        "generated_at": "2026-08-17T00:20:22+00:00",
+        "generated_at": "2026-08-17T00:24:29+00:00",
         "price": 1645000.0,
         "status_counts": {
           "alert": 4,
@@ -2330,49 +2330,49 @@
     "failed_sources": [],
     "cached_sources": [],
     "sources": {
-      "krx_quote": {
+      "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T00:20:18+00:00",
+        "fetched_at": "2026-08-17T00:24:27+00:00",
         "error": null
       },
-      "adr": {
+      "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T00:20:18+00:00",
+        "fetched_at": "2026-08-17T00:24:27+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T00:20:18+00:00",
+        "fetched_at": "2026-08-17T00:24:27+00:00",
         "error": null
       },
-      "krx_history": {
+      "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T00:20:18+00:00",
+        "fetched_at": "2026-08-17T00:24:27+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T00:20:18+00:00",
+        "fetched_at": "2026-08-17T00:24:27+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T00:20:18+00:00",
+        "fetched_at": "2026-08-17T00:24:27+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T00:20:18+00:00",
+        "fetched_at": "2026-08-17T00:24:27+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T00:20:18+00:00",
+        "fetched_at": "2026-08-17T00:24:27+00:00",
         "error": null
       },
-      "fx": {
+      "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-17T00:20:18+00:00",
+        "fetched_at": "2026-08-17T00:24:27+00:00",
         "error": null
       }
     },
