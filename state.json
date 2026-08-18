@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-18T06:51:42+00:00",
-  "generated_at_seoul": "2026-08-18T15:51:42+09:00",
-  "trigger": "intraday",
+  "generated_at": "2026-08-18T07:42:00+00:00",
+  "generated_at_seoul": "2026-08-18T16:42:00+09:00",
+  "trigger": "daily_close",
   "summary": {
     "status_counts": {
       "alert": 4,
@@ -2098,7 +2098,7 @@
       },
       {
         "date": "2026-08-18",
-        "generated_at": "2026-08-18T06:51:42+00:00",
+        "generated_at": "2026-08-18T07:42:00+00:00",
         "price": 1659000.0,
         "status_counts": {
           "alert": 4,
@@ -2341,36 +2341,21 @@
     "completeness_pct": 55.0,
     "failed_sources": [],
     "cached_sources": [
-      "nvidia",
       "krx_quote",
-      "adr",
-      "micron",
       "krx_history",
       "samsung_history",
-      "fx",
+      "adr",
       "kospi_history",
-      "sox"
+      "sox",
+      "micron",
+      "nvidia",
+      "fx"
     ],
     "sources": {
-      "nvidia": {
-        "status": "cached",
-        "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": "request failed: https://api.stock.naver.com/stock/NVDA.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-      },
       "krx_quote": {
         "status": "cached",
         "fetched_at": "2026-08-18T06:19:35+00:00",
         "error": "request failed: https://polling.finance.naver.com/api/realtime/domestic/stock/000660: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-      },
-      "adr": {
-        "status": "cached",
-        "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": "request failed: https://api.stock.naver.com/stock/SKHY.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-      },
-      "micron": {
-        "status": "cached",
-        "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": "request failed: https://api.stock.naver.com/stock/MU.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "krx_history": {
         "status": "cached",
@@ -2382,10 +2367,10 @@
         "fetched_at": "2026-08-18T06:19:35+00:00",
         "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=005930&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
-      "fx": {
+      "adr": {
         "status": "cached",
         "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": "request failed: https://api.frankfurter.app/latest?from=USD&to=KRW: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error": "request failed: https://api.stock.naver.com/stock/SKHY.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "kospi_history": {
         "status": "cached",
@@ -2396,10 +2381,25 @@
         "status": "cached",
         "fetched_at": "2026-08-18T06:19:35+00:00",
         "error": "request failed: https://api.stock.naver.com/index/.SOX/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "micron": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T06:19:35+00:00",
+        "error": "request failed: https://api.stock.naver.com/stock/MU.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "nvidia": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T06:19:35+00:00",
+        "error": "request failed: https://api.stock.naver.com/stock/NVDA.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "fx": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T06:19:35+00:00",
+        "error": "request failed: https://api.frankfurter.app/latest?from=USD&to=KRW: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       }
     },
     "slow_data_age_days": 18,
-    "next_scheduled_refresh": "2026-08-18T16:40+09:00",
+    "next_scheduled_refresh": "2026-08-19T16:40+09:00",
     "policy": "韩国交易时段每15分钟检查，韩国收盘后每日固化；慢变量按财报与产业数据更新。",
     "source_urls": {
       "krx_realtime": "https://polling.finance.naver.com/api/realtime/domestic/stock/000660",
