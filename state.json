@@ -1,18 +1,18 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-18T00:10:16+00:00",
-  "generated_at_seoul": "2026-08-18T09:10:16+09:00",
+  "generated_at": "2026-08-18T01:17:47+00:00",
+  "generated_at_seoul": "2026-08-18T10:17:47+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
       "alert": 4,
-      "watch": 5,
+      "watch": 4,
       "neutral": 4,
-      "support": 5
+      "support": 6
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 100.0,
+    "data_completeness_pct": 55.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -54,16 +54,16 @@
         "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
       },
       {
+        "label": "ADR相对韩股平价",
+        "display": "+39.0%",
+        "status": "support",
+        "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
+      },
+      {
         "label": "ADR美国时段方向",
         "display": "+3.0%",
         "status": "support",
         "interpretation": "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。"
-      },
-      {
-        "label": "四大云厂资本开支",
-        "display": "$732B",
-        "status": "support",
-        "interpretation": "当前资本开支仍在扩张，属于需求侧支持；但合计口径包含非AI设施与租赁，不应等同于HBM订单。"
       }
     ]
   },
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 123.31,
     "adr_premium_pct": 38.99,
-    "adr_premium_change_pct_points": -8.11,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": -2.8,
     "nvidia": {
       "symbol": "NVDA",
@@ -186,12 +186,12 @@
     },
     "cross_market": {
       "label": "ADR跨市场",
-      "status": "watch",
+      "status": "support",
       "counts": {
         "alert": 0,
-        "watch": 1,
+        "watch": 0,
         "neutral": 0,
-        "support": 1
+        "support": 2
       },
       "signal_count": 2
     },
@@ -315,7 +315,7 @@
       "label": "ADR相对韩股平价",
       "value": 38.9851,
       "display": "+39.0%",
-      "status": "watch",
+      "status": "support",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
     },
@@ -2098,13 +2098,13 @@
       },
       {
         "date": "2026-08-18",
-        "generated_at": "2026-08-18T00:10:16+00:00",
+        "generated_at": "2026-08-18T01:17:47+00:00",
         "price": 1741000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 5,
+          "watch": 4,
           "neutral": 4,
-          "support": 5
+          "support": 6
         },
         "adr_premium_pct": 38.99
       }
@@ -2338,54 +2338,64 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 100.0,
+    "completeness_pct": 55.0,
     "failed_sources": [],
-    "cached_sources": [],
+    "cached_sources": [
+      "nvidia",
+      "krx_history",
+      "kospi_history",
+      "samsung_history",
+      "krx_quote",
+      "adr",
+      "fx",
+      "micron",
+      "sox"
+    ],
     "sources": {
-      "fx": {
-        "status": "fresh",
-        "fetched_at": "2026-08-18T00:10:12+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-08-18T00:10:12+00:00",
-        "error": null
-      },
       "nvidia": {
-        "status": "fresh",
+        "status": "cached",
         "fetched_at": "2026-08-18T00:10:12+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-18T00:10:12+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-18T00:10:12+00:00",
-        "error": null
+        "error": "request failed: https://api.stock.naver.com/stock/NVDA.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "krx_history": {
-        "status": "fresh",
+        "status": "cached",
         "fetched_at": "2026-08-18T00:10:12+00:00",
-        "error": null
-      },
-      "samsung_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-18T00:10:12+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-08-18T00:10:12+00:00",
-        "error": null
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=000660&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "kospi_history": {
-        "status": "fresh",
+        "status": "cached",
         "fetched_at": "2026-08-18T00:10:12+00:00",
-        "error": null
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=KOSPI&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "samsung_history": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T00:10:12+00:00",
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=005930&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "krx_quote": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T00:10:12+00:00",
+        "error": "request failed: https://polling.finance.naver.com/api/realtime/domestic/stock/000660: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "adr": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T00:10:12+00:00",
+        "error": "request failed: https://api.stock.naver.com/stock/SKHY.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "fx": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T00:10:12+00:00",
+        "error": "request failed: https://api.frankfurter.app/latest?from=USD&to=KRW: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "micron": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T00:10:12+00:00",
+        "error": "request failed: https://api.stock.naver.com/stock/MU.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "sox": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T00:10:12+00:00",
+        "error": "request failed: https://api.stock.naver.com/index/.SOX/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       }
     },
     "slow_data_age_days": 18,
