@@ -2342,7 +2342,7 @@
     "failed_sources": [],
     "cached_sources": [],
     "sources": {
-      "krx_quote": {
+      "fx": {
         "status": "fresh",
         "fetched_at": "2026-08-18T00:10:12+00:00",
         "error": null
@@ -2377,7 +2377,7 @@
         "fetched_at": "2026-08-18T00:10:12+00:00",
         "error": null
       },
-      "fx": {
+      "micron": {
         "status": "fresh",
         "fetched_at": "2026-08-18T00:10:12+00:00",
         "error": null
