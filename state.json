@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-18T06:19:55+00:00",
-  "generated_at_seoul": "2026-08-18T15:19:55+09:00",
+  "generated_at": "2026-08-18T06:51:42+00:00",
+  "generated_at_seoul": "2026-08-18T15:51:42+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -12,7 +12,7 @@
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 100.0,
+    "data_completeness_pct": 55.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 117.5,
     "adr_premium_pct": 45.85,
-    "adr_premium_change_pct_points": -0.98,
+    "adr_premium_change_pct_points": 0.0,
     "overnight_spread_pct_points": 2.19,
     "nvidia": {
       "symbol": "NVDA",
@@ -1966,7 +1966,7 @@
     "evidence_history": [
       {
         "date": "2026-07-31",
-        "generated_at": "2026-08-02T22:30:36+00:00",
+        "generated_at": "2026-08-01T13:43:02+00:00",
         "price": 1718000.0,
         "status_counts": {
           "alert": 4,
@@ -1978,127 +1978,127 @@
       },
       {
         "date": "2026-08-03",
-        "generated_at": "2026-08-03T22:17:33+00:00",
+        "generated_at": "2026-08-03T07:40:06+00:00",
         "price": 1567000.0,
         "status_counts": {
           "alert": 5,
-          "watch": 5,
-          "neutral": 4,
+          "watch": 4,
+          "neutral": 5,
           "support": 4
         },
-        "adr_premium_pct": 29.97
+        "adr_premium_pct": 32.41
       },
       {
         "date": "2026-08-04",
-        "generated_at": "2026-08-04T22:47:02+00:00",
+        "generated_at": "2026-08-04T07:40:21+00:00",
         "price": 1577000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 3,
-          "support": 7
+          "neutral": 6,
+          "support": 4
         },
-        "adr_premium_pct": 39.71
+        "adr_premium_pct": 29.15
       },
       {
         "date": "2026-08-05",
-        "generated_at": "2026-08-05T22:45:06+00:00",
+        "generated_at": "2026-08-05T07:40:21+00:00",
         "price": 1668000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 4,
+          "neutral": 6,
+          "support": 4
+        },
+        "adr_premium_pct": 32.08
+      },
+      {
+        "date": "2026-08-06",
+        "generated_at": "2026-08-06T10:41:52+00:00",
+        "price": 1495000.0,
+        "status_counts": {
+          "alert": 5,
+          "watch": 5,
+          "neutral": 3,
+          "support": 5
+        },
+        "adr_premium_pct": 43.83
+      },
+      {
+        "date": "2026-08-07",
+        "generated_at": "2026-08-08T01:37:09+00:00",
+        "price": 1422000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 4,
+          "neutral": 5,
+          "support": 5
+        },
+        "adr_premium_pct": 43.69
+      },
+      {
+        "date": "2026-08-10",
+        "generated_at": "2026-08-10T08:20:16+00:00",
+        "price": 1420000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 6,
+          "neutral": 3,
+          "support": 5
+        },
+        "adr_premium_pct": 37.52
+      },
+      {
+        "date": "2026-08-11",
+        "generated_at": "2026-08-11T07:41:51+00:00",
+        "price": 1430000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 6,
+          "neutral": 3,
+          "support": 5
+        },
+        "adr_premium_pct": 34.02
+      },
+      {
+        "date": "2026-08-12",
+        "generated_at": "2026-08-12T07:40:35+00:00",
+        "price": 1504000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 4,
+          "neutral": 4,
+          "support": 6
+        },
+        "adr_premium_pct": 33.0
+      },
+      {
+        "date": "2026-08-13",
+        "generated_at": "2026-08-13T07:41:35+00:00",
+        "price": 1587000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 4,
+          "neutral": 2,
+          "support": 8
+        },
+        "adr_premium_pct": 37.88
+      },
+      {
+        "date": "2026-08-14",
+        "generated_at": "2026-08-17T07:40:25+00:00",
+        "price": 1645000.0,
         "status_counts": {
           "alert": 4,
           "watch": 5,
           "neutral": 5,
           "support": 4
         },
-        "adr_premium_pct": 28.91
-      },
-      {
-        "date": "2026-08-06",
-        "generated_at": "2026-08-06T15:41:49+00:00",
-        "price": 1495000.0,
-        "status_counts": {
-          "alert": 5,
-          "watch": 6,
-          "neutral": 2,
-          "support": 5
-        },
-        "adr_premium_pct": 38.35
-      },
-      {
-        "date": "2026-08-07",
-        "generated_at": "2026-08-09T22:49:49+00:00",
-        "price": 1422000.0,
-        "status_counts": {
-          "alert": 4,
-          "watch": 5,
-          "neutral": 4,
-          "support": 5
-        },
-        "adr_premium_pct": 37.32
-      },
-      {
-        "date": "2026-08-10",
-        "generated_at": "2026-08-10T22:59:21+00:00",
-        "price": 1420000.0,
-        "status_counts": {
-          "alert": 4,
-          "watch": 7,
-          "neutral": 2,
-          "support": 5
-        },
-        "adr_premium_pct": 34.97
-      },
-      {
-        "date": "2026-08-11",
-        "generated_at": "2026-08-11T22:25:56+00:00",
-        "price": 1425000.0,
-        "status_counts": {
-          "alert": 4,
-          "watch": 4,
-          "neutral": 3,
-          "support": 7
-        },
-        "adr_premium_pct": 40.37
-      },
-      {
-        "date": "2026-08-12",
-        "generated_at": "2026-08-12T22:40:22+00:00",
-        "price": 1504000.0,
-        "status_counts": {
-          "alert": 4,
-          "watch": 4,
-          "neutral": 1,
-          "support": 9
-        },
-        "adr_premium_pct": 45.49
-      },
-      {
-        "date": "2026-08-13",
-        "generated_at": "2026-08-13T22:59:14+00:00",
-        "price": 1593000.0,
-        "status_counts": {
-          "alert": 4,
-          "watch": 4,
-          "neutral": 4,
-          "support": 6
-        },
-        "adr_premium_pct": 47.71
-      },
-      {
-        "date": "2026-08-14",
-        "generated_at": "2026-08-17T22:53:34+00:00",
-        "price": 1645000.0,
-        "status_counts": {
-          "alert": 4,
-          "watch": 4,
-          "neutral": 4,
-          "support": 6
-        },
-        "adr_premium_pct": 47.1
+        "adr_premium_pct": 42.7
       },
       {
         "date": "2026-08-18",
-        "generated_at": "2026-08-18T06:19:55+00:00",
+        "generated_at": "2026-08-18T06:51:42+00:00",
         "price": 1659000.0,
         "status_counts": {
           "alert": 4,
@@ -2338,54 +2338,64 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 100.0,
+    "completeness_pct": 55.0,
     "failed_sources": [],
-    "cached_sources": [],
+    "cached_sources": [
+      "nvidia",
+      "krx_quote",
+      "adr",
+      "micron",
+      "krx_history",
+      "samsung_history",
+      "fx",
+      "kospi_history",
+      "sox"
+    ],
     "sources": {
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": null
-      },
-      "krx_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": null
-      },
-      "samsung_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": null
-      },
       "nvidia": {
-        "status": "fresh",
+        "status": "cached",
         "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": null
+        "error": "request failed: https://api.stock.naver.com/stock/NVDA.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "krx_quote": {
-        "status": "fresh",
+        "status": "cached",
         "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": null
+        "error": "request failed: https://polling.finance.naver.com/api/realtime/domestic/stock/000660: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
-      "sox": {
-        "status": "fresh",
+      "adr": {
+        "status": "cached",
         "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": null
+        "error": "request failed: https://api.stock.naver.com/stock/SKHY.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "micron": {
-        "status": "fresh",
+        "status": "cached",
         "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": null
+        "error": "request failed: https://api.stock.naver.com/stock/MU.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "krx_history": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T06:19:35+00:00",
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=000660&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "samsung_history": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T06:19:35+00:00",
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=005930&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "fx": {
-        "status": "fresh",
+        "status": "cached",
         "fetched_at": "2026-08-18T06:19:35+00:00",
-        "error": null
+        "error": "request failed: https://api.frankfurter.app/latest?from=USD&to=KRW: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "kospi_history": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T06:19:35+00:00",
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=KOSPI&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "sox": {
+        "status": "cached",
+        "fetched_at": "2026-08-18T06:19:35+00:00",
+        "error": "request failed: https://api.stock.naver.com/index/.SOX/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       }
     },
     "slow_data_age_days": 18,
