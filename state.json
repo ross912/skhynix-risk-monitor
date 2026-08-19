@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-19T03:05:17+00:00",
-  "generated_at_seoul": "2026-08-19T12:05:17+09:00",
+  "generated_at": "2026-08-19T03:15:36+00:00",
+  "generated_at_seoul": "2026-08-19T12:15:36+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -77,9 +77,9 @@
       "open": 1545000.0,
       "high": 1559000.0,
       "low": 1501000.0,
-      "volume": 2297906.0,
+      "volume": 2338561.0,
       "market_status": "OPEN",
-      "traded_at": "2026-08-19T12:05:18.160115+09:00",
+      "traded_at": "2026-08-19T12:15:32.900641+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 108.08,
     "adr_premium_pct": 43.99,
-    "adr_premium_change_pct_points": -0.38,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": -0.9,
     "nvidia": {
       "symbol": "NVDA",
@@ -137,8 +137,8 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 249500.0,
-      "change_pct": -7.08,
+      "price": 249000.0,
+      "change_pct": -7.26,
       "traded_at": "20260819"
     }
   },
@@ -157,7 +157,7 @@
     "low_52w": 245000.0,
     "momentum_20d_pct": -16.99,
     "momentum_60d_pct": -21.44,
-    "volume_ratio_20d": 0.41,
+    "volume_ratio_20d": 0.42,
     "beta_120d": 1.48,
     "correlation_kospi_120d": 0.94
   },
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": -7.0764,
-      "display": "-7.08%",
+      "value": -7.2626,
+      "display": "-7.26%",
       "status": "alert",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -2110,7 +2110,7 @@
       },
       {
         "date": "2026-08-19",
-        "generated_at": "2026-08-19T03:05:17+00:00",
+        "generated_at": "2026-08-19T03:15:36+00:00",
         "price": 1524000.0,
         "status_counts": {
           "alert": 7,
@@ -2356,47 +2356,47 @@
     "sources": {
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-19T03:05:08+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-19T03:05:08+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-08-19T03:05:08+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-08-19T03:05:08+00:00",
-        "error": null
-      },
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-19T03:05:08+00:00",
-        "error": null
-      },
-      "krx_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-19T03:05:08+00:00",
+        "fetched_at": "2026-08-19T03:15:21+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-19T03:05:08+00:00",
+        "fetched_at": "2026-08-19T03:15:21+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-08-19T03:15:21+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-08-19T03:15:21+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-08-19T03:15:21+00:00",
+        "error": null
+      },
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-19T03:15:21+00:00",
+        "error": null
+      },
+      "kospi_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-19T03:15:21+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-19T03:05:08+00:00",
+        "fetched_at": "2026-08-19T03:15:21+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-19T03:05:08+00:00",
+        "fetched_at": "2026-08-19T03:15:21+00:00",
         "error": null
       }
     },
