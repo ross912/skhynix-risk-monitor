@@ -2101,10 +2101,10 @@
         "generated_at": "2026-08-18T07:42:00+00:00",
         "price": 1659000.0,
         "status_counts": {
-          "alert": 4,
+          "alert": 6,
           "watch": 5,
           "neutral": 3,
-          "support": 6
+          "support": 4
         },
         "adr_premium_pct": 45.85
       },
@@ -2364,7 +2364,7 @@
         "fetched_at": "2026-08-19T00:00:29+00:00",
         "error": null
       },
-      "sox": {
+      "nvidia": {
         "status": "fresh",
         "fetched_at": "2026-08-19T00:00:29+00:00",
         "error": null
