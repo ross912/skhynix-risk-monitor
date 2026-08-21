@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-21T01:53:58+00:00",
-  "generated_at_seoul": "2026-08-21T10:53:58+09:00",
+  "generated_at": "2026-08-21T02:04:31+00:00",
+  "generated_at_seoul": "2026-08-21T11:04:31+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -12,7 +12,7 @@
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 95.0,
+    "data_completeness_pct": 100.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -77,9 +77,9 @@
       "open": 1675000.0,
       "high": 1773000.0,
       "low": 1669000.0,
-      "volume": 2132270.0,
+      "volume": 2224844.0,
       "market_status": "OPEN",
-      "traded_at": "2026-08-21T10:53:43.374613+09:00",
+      "traded_at": "2026-08-21T11:04:20.259861+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 124.83,
     "adr_premium_pct": 30.65,
-    "adr_premium_change_pct_points": 0.82,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": 1.35,
     "nvidia": {
       "symbol": "NVDA",
@@ -137,8 +137,8 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 275750.0,
-      "change_pct": 1.75,
+      "price": 278250.0,
+      "change_pct": 2.68,
       "traded_at": "20260821"
     }
   },
@@ -157,7 +157,7 @@
     "low_52w": 245000.0,
     "momentum_20d_pct": -9.17,
     "momentum_60d_pct": -15.06,
-    "volume_ratio_20d": 0.38,
+    "volume_ratio_20d": 0.39,
     "beta_120d": 1.49,
     "correlation_kospi_120d": 0.94
   },
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": 1.7528,
-      "display": "+1.75%",
+      "value": 2.6753,
+      "display": "+2.68%",
       "status": "neutral",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -2134,7 +2134,7 @@
       },
       {
         "date": "2026-08-21",
-        "generated_at": "2026-08-21T01:53:58+00:00",
+        "generated_at": "2026-08-21T02:04:31+00:00",
         "price": 1743000.0,
         "status_counts": {
           "alert": 4,
@@ -2374,56 +2374,54 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 95.0,
+    "completeness_pct": 100.0,
     "failed_sources": [],
-    "cached_sources": [
-      "samsung_history"
-    ],
+    "cached_sources": [],
     "sources": {
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-21T01:53:32+00:00",
-        "error": null
-      },
-      "krx_quote": {
-        "status": "fresh",
-        "fetched_at": "2026-08-21T01:53:32+00:00",
-        "error": null
-      },
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-21T01:53:32+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-21T01:53:32+00:00",
+        "fetched_at": "2026-08-21T02:04:01+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-21T01:53:32+00:00",
+        "fetched_at": "2026-08-21T02:04:01+00:00",
         "error": null
       },
-      "krx_history": {
+      "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-21T01:53:32+00:00",
+        "fetched_at": "2026-08-21T02:04:01+00:00",
         "error": null
       },
-      "sox": {
+      "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-21T01:53:32+00:00",
+        "fetched_at": "2026-08-21T02:04:01+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-21T01:53:32+00:00",
+        "fetched_at": "2026-08-21T02:04:01+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-08-21T02:04:01+00:00",
         "error": null
       },
       "samsung_history": {
-        "status": "cached",
-        "fetched_at": "2026-08-21T01:43:02+00:00",
-        "error": "The read operation timed out"
+        "status": "fresh",
+        "fetched_at": "2026-08-21T02:04:01+00:00",
+        "error": null
+      },
+      "kospi_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-21T02:04:01+00:00",
+        "error": null
+      },
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-21T02:04:01+00:00",
+        "error": null
       }
     },
     "slow_data_age_days": 21,
