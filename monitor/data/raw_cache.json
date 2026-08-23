@@ -1,6 +1,6 @@
 {
   "sox": {
-    "fetched_at": "2026-08-23T23:01:17+00:00",
+    "fetched_at": "2026-08-23T23:26:28+00:00",
     "data": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
@@ -14,7 +14,7 @@
     }
   },
   "micron": {
-    "fetched_at": "2026-08-23T23:01:17+00:00",
+    "fetched_at": "2026-08-23T23:26:28+00:00",
     "data": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
@@ -28,7 +28,7 @@
     }
   },
   "adr": {
-    "fetched_at": "2026-08-23T23:01:17+00:00",
+    "fetched_at": "2026-08-23T23:26:28+00:00",
     "data": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
@@ -42,7 +42,7 @@
     }
   },
   "nvidia": {
-    "fetched_at": "2026-08-23T23:01:17+00:00",
+    "fetched_at": "2026-08-23T23:26:28+00:00",
     "data": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
@@ -56,7 +56,7 @@
     }
   },
   "samsung_history": {
-    "fetched_at": "2026-08-23T23:01:17+00:00",
+    "fetched_at": "2026-08-23T23:26:28+00:00",
     "data": [
       {
         "date": "20240201",
@@ -5021,7 +5021,7 @@
     ]
   },
   "krx_history": {
-    "fetched_at": "2026-08-23T23:01:17+00:00",
+    "fetched_at": "2026-08-23T23:26:28+00:00",
     "data": [
       {
         "date": "20240201",
@@ -9986,7 +9986,7 @@
     ]
   },
   "kospi_history": {
-    "fetched_at": "2026-08-23T23:01:17+00:00",
+    "fetched_at": "2026-08-23T23:26:28+00:00",
     "data": [
       {
         "date": "20240201",
@@ -14951,7 +14951,7 @@
     ]
   },
   "fx": {
-    "fetched_at": "2026-08-23T23:01:17+00:00",
+    "fetched_at": "2026-08-23T23:26:28+00:00",
     "data": {
       "symbol": "USDKRW",
       "price": 1384.23,
@@ -14960,7 +14960,7 @@
     }
   },
   "krx_quote": {
-    "fetched_at": "2026-08-23T23:01:17+00:00",
+    "fetched_at": "2026-08-23T23:26:28+00:00",
     "data": {
       "symbol": "000660",
       "name": "SK하이닉스",
@@ -14972,7 +14972,7 @@
       "low": null,
       "volume": null,
       "market_status": "PREOPEN",
-      "traded_at": "2026-08-24T08:01:18.382891+09:00",
+      "traded_at": "2026-08-24T08:26:30.018574+09:00",
       "exchange": "KOSPI"
     }
   }
