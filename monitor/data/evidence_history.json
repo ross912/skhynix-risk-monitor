@@ -178,5 +178,17 @@
       "support": 5
     },
     "adr_premium_pct": 30.75
+  },
+  {
+    "date": "2026-08-24",
+    "generated_at": "2026-08-23T23:01:18+00:00",
+    "price": 1730000.0,
+    "status_counts": {
+      "alert": 4,
+      "watch": 5,
+      "neutral": 4,
+      "support": 5
+    },
+    "adr_premium_pct": 30.75
   }
 ]
