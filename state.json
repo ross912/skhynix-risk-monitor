@@ -2134,13 +2134,13 @@
       },
       {
         "date": "2026-08-21",
-        "generated_at": "2026-08-21T07:40:29+00:00",
+        "generated_at": "2026-08-23T22:48:18+00:00",
         "price": 1730000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 6,
-          "support": 4
+          "watch": 5,
+          "neutral": 4,
+          "support": 5
         },
         "adr_premium_pct": 31.63
       },
@@ -2415,7 +2415,7 @@
         "fetched_at": "2026-08-24T00:06:23+00:00",
         "error": null
       },
-      "nvidia": {
+      "krx_history": {
         "status": "fresh",
         "fetched_at": "2026-08-24T00:06:23+00:00",
         "error": null
