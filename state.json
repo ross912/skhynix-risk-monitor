@@ -12,7 +12,7 @@
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 95.0,
+    "data_completeness_pct": 100.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -2386,7 +2386,7 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 95.0,
+    "completeness_pct": 100.0,
     "failed_sources": [],
     "cached_sources": [
       "samsung_history"
