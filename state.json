@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-24T03:52:18+00:00",
-  "generated_at_seoul": "2026-08-24T12:52:18+09:00",
+  "generated_at": "2026-08-24T04:02:38+00:00",
+  "generated_at_seoul": "2026-08-24T13:02:38+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -12,7 +12,7 @@
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 100.0,
+    "data_completeness_pct": 95.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -41,7 +41,7 @@
       },
       {
         "label": "三星电子同步性",
-        "display": "-8.79%",
+        "display": "-9.15%",
         "status": "alert",
         "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
       }
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 121.58,
     "adr_premium_pct": 34.4,
-    "adr_premium_change_pct_points": 0.4,
+    "adr_premium_change_pct_points": 0.0,
     "overnight_spread_pct_points": 2.92,
     "nvidia": {
       "symbol": "NVDA",
@@ -137,8 +137,8 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 256750.0,
-      "change_pct": -8.79,
+      "price": 255750.0,
+      "change_pct": -9.15,
       "traded_at": "20260824"
     }
   },
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": -8.7922,
-      "display": "-8.79%",
+      "value": -9.1474,
+      "display": "-9.15%",
       "status": "alert",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -2146,7 +2146,7 @@
       },
       {
         "date": "2026-08-24",
-        "generated_at": "2026-08-24T03:52:18+00:00",
+        "generated_at": "2026-08-24T04:02:38+00:00",
         "price": 1683000.0,
         "status_counts": {
           "alert": 5,
@@ -2386,54 +2386,56 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 100.0,
+    "completeness_pct": 95.0,
     "failed_sources": [],
-    "cached_sources": [],
+    "cached_sources": [
+      "krx_quote"
+    ],
     "sources": {
-      "krx_quote": {
+      "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T03:52:05+00:00",
+        "fetched_at": "2026-08-24T04:02:22+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T03:52:05+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-08-24T03:52:05+00:00",
-        "error": null
-      },
-      "samsung_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-24T03:52:05+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-24T03:52:05+00:00",
-        "error": null
-      },
-      "krx_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-24T03:52:05+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-08-24T03:52:05+00:00",
+        "fetched_at": "2026-08-24T04:02:22+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T03:52:05+00:00",
+        "fetched_at": "2026-08-24T04:02:22+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-08-24T04:02:22+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-08-24T04:02:22+00:00",
+        "error": null
+      },
+      "samsung_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-24T04:02:22+00:00",
+        "error": null
+      },
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-24T04:02:22+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T03:52:05+00:00",
+        "fetched_at": "2026-08-24T04:02:22+00:00",
         "error": null
+      },
+      "krx_quote": {
+        "status": "cached",
+        "fetched_at": "2026-08-24T03:52:05+00:00",
+        "error": "The read operation timed out"
       }
     },
     "slow_data_age_days": 24,
