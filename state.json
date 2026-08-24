@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-24T12:01:41+00:00",
-  "generated_at_seoul": "2026-08-24T21:01:41+09:00",
+  "generated_at": "2026-08-24T13:03:43+00:00",
+  "generated_at_seoul": "2026-08-24T22:03:43+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -129,10 +129,10 @@
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
       "price": 11740.37,
-      "change": -59.65,
-      "change_pct": -0.51,
-      "traded_at": "2026-08-21T17:15:59-04:00",
-      "market_status": "CLOSE",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "traded_at": "2026-08-24T09:03:43-04:00",
+      "market_status": "PREOPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -333,8 +333,8 @@
       "id": "us_semis_breadth",
       "pillar": "ai_memory_cycle",
       "label": "美股AI与存储代理",
-      "value": -0.7533,
-      "display": "-0.75%",
+      "value": -0.5833,
+      "display": "-0.58%",
       "status": "watch",
       "threshold": "MU、NVDA和SOX平均日跌幅超过3%触发警戒",
       "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
@@ -2146,7 +2146,7 @@
       },
       {
         "date": "2026-08-24",
-        "generated_at": "2026-08-24T12:01:41+00:00",
+        "generated_at": "2026-08-24T13:03:43+00:00",
         "price": 1671000.0,
         "status_counts": {
           "alert": 5,
@@ -2392,47 +2392,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T12:01:40+00:00",
+        "fetched_at": "2026-08-24T13:03:42+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T12:01:40+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-24T12:01:40+00:00",
+        "fetched_at": "2026-08-24T13:03:42+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T12:01:40+00:00",
+        "fetched_at": "2026-08-24T13:03:42+00:00",
         "error": null
       },
-      "micron": {
+      "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T12:01:40+00:00",
+        "fetched_at": "2026-08-24T13:03:42+00:00",
         "error": null
       },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T12:01:40+00:00",
+        "fetched_at": "2026-08-24T13:03:42+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T12:01:40+00:00",
+        "fetched_at": "2026-08-24T13:03:42+00:00",
         "error": null
       },
-      "krx_history": {
+      "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T12:01:40+00:00",
+        "fetched_at": "2026-08-24T13:03:42+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-24T12:01:40+00:00",
+        "fetched_at": "2026-08-24T13:03:42+00:00",
+        "error": null
+      },
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-24T13:03:42+00:00",
         "error": null
       }
     },
