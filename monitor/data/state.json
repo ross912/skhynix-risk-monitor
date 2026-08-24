@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-23T23:45:51+00:00",
-  "generated_at_seoul": "2026-08-24T08:45:51+09:00",
+  "generated_at": "2026-08-24T00:00:23+00:00",
+  "generated_at_seoul": "2026-08-24T09:00:23+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -74,12 +74,12 @@
       "price": 1730000.0,
       "previous_close_change": 0.0,
       "change_pct": 0.0,
-      "open": null,
-      "high": null,
-      "low": null,
-      "volume": null,
-      "market_status": "PREOPEN",
-      "traded_at": "2026-08-24T08:45:51.352241+09:00",
+      "open": 1730000.0,
+      "high": 1730000.0,
+      "low": 1730000.0,
+      "volume": 14.0,
+      "market_status": "OPEN",
+      "traded_at": "2026-08-24T09:00:22.689146+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -138,8 +138,8 @@
     },
     "samsung": {
       "price": 281500.0,
-      "change_pct": 3.87,
-      "traded_at": "20260821"
+      "change_pct": 0.0,
+      "traded_at": "20260824"
     }
   },
   "technicals": {
@@ -157,7 +157,7 @@
     "low_52w": 245000.0,
     "momentum_20d_pct": -1.65,
     "momentum_60d_pct": -22.87,
-    "volume_ratio_20d": 0.74,
+    "volume_ratio_20d": 0.0,
     "beta_120d": 1.49,
     "correlation_kospi_120d": 0.94
   },
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": 3.8745,
-      "display": "+3.87%",
+      "value": 0.0,
+      "display": "+0.00%",
       "status": "neutral",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -2146,7 +2146,7 @@
       },
       {
         "date": "2026-08-24",
-        "generated_at": "2026-08-23T23:45:51+00:00",
+        "generated_at": "2026-08-24T00:00:23+00:00",
         "price": 1730000.0,
         "status_counts": {
           "alert": 4,
@@ -2160,7 +2160,7 @@
   },
   "slow_factors": {
     "as_of": "2026-07-31",
-    "age_days": 23,
+    "age_days": 24,
     "market_consensus": {
       "revenue_2027_trn_krw": 533.9,
       "operating_profit_2027_trn_krw": 418.6,
@@ -2392,51 +2392,51 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-23T23:45:50+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-23T23:45:50+00:00",
+        "fetched_at": "2026-08-24T00:00:21+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-23T23:45:50+00:00",
+        "fetched_at": "2026-08-24T00:00:21+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-08-24T00:00:21+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-23T23:45:50+00:00",
+        "fetched_at": "2026-08-24T00:00:21+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-23T23:45:50+00:00",
+        "fetched_at": "2026-08-24T00:00:21+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-23T23:45:50+00:00",
+        "fetched_at": "2026-08-24T00:00:21+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-23T23:45:50+00:00",
+        "fetched_at": "2026-08-24T00:00:21+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-23T23:45:50+00:00",
+        "fetched_at": "2026-08-24T00:00:21+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-23T23:45:50+00:00",
+        "fetched_at": "2026-08-24T00:00:21+00:00",
         "error": null
       }
     },
-    "slow_data_age_days": 23,
+    "slow_data_age_days": 24,
     "next_scheduled_refresh": "2026-08-24T16:40+09:00",
     "policy": "韩国交易时段每15分钟检查，韩国收盘后每日固化；慢变量按财报与产业数据更新。",
     "source_urls": {
