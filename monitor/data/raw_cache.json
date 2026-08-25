@@ -1,6 +1,6 @@
 {
   "sox": {
-    "fetched_at": "2026-08-25T22:43:05+00:00",
+    "fetched_at": "2026-08-25T23:02:19+00:00",
     "data": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
@@ -14,7 +14,7 @@
     }
   },
   "micron": {
-    "fetched_at": "2026-08-25T22:43:05+00:00",
+    "fetched_at": "2026-08-25T23:02:19+00:00",
     "data": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
@@ -28,7 +28,7 @@
     }
   },
   "adr": {
-    "fetched_at": "2026-08-25T22:43:05+00:00",
+    "fetched_at": "2026-08-25T23:02:19+00:00",
     "data": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
@@ -42,7 +42,7 @@
     }
   },
   "nvidia": {
-    "fetched_at": "2026-08-25T22:43:05+00:00",
+    "fetched_at": "2026-08-25T23:02:19+00:00",
     "data": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
@@ -56,7 +56,7 @@
     }
   },
   "samsung_history": {
-    "fetched_at": "2026-08-25T22:43:05+00:00",
+    "fetched_at": "2026-08-25T23:02:19+00:00",
     "data": [
       {
         "date": "20240205",
@@ -5021,7 +5021,7 @@
     ]
   },
   "krx_history": {
-    "fetched_at": "2026-08-25T22:43:05+00:00",
+    "fetched_at": "2026-08-25T23:02:19+00:00",
     "data": [
       {
         "date": "20240205",
@@ -9986,7 +9986,7 @@
     ]
   },
   "kospi_history": {
-    "fetched_at": "2026-08-25T22:43:05+00:00",
+    "fetched_at": "2026-08-25T23:02:19+00:00",
     "data": [
       {
         "date": "20240205",
@@ -14951,7 +14951,7 @@
     ]
   },
   "fx": {
-    "fetched_at": "2026-08-25T22:43:05+00:00",
+    "fetched_at": "2026-08-25T23:02:19+00:00",
     "data": {
       "symbol": "USDKRW",
       "price": 1383.07,
@@ -14960,19 +14960,19 @@
     }
   },
   "krx_quote": {
-    "fetched_at": "2026-08-25T22:43:05+00:00",
+    "fetched_at": "2026-08-25T23:02:19+00:00",
     "data": {
       "symbol": "000660",
       "name": "SK하이닉스",
       "price": 1678000.0,
-      "previous_close_change": 7000.0,
-      "change_pct": 0.42,
-      "open": 1598000.0,
-      "high": 1687000.0,
-      "low": 1557000.0,
-      "volume": 4013938.0,
-      "market_status": "CLOSE",
-      "traded_at": "2026-08-25T15:30:00+09:00",
+      "previous_close_change": 0.0,
+      "change_pct": 0.0,
+      "open": null,
+      "high": null,
+      "low": null,
+      "volume": null,
+      "market_status": "PREOPEN",
+      "traded_at": "2026-08-26T08:02:19.956042+09:00",
       "exchange": "KOSPI"
     }
   }
