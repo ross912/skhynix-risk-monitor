@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-25T02:04:35+00:00",
-  "generated_at_seoul": "2026-08-25T11:04:35+09:00",
+  "generated_at": "2026-08-25T02:15:12+00:00",
+  "generated_at_seoul": "2026-08-25T11:15:12+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -12,7 +12,7 @@
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 100.0,
+    "data_completeness_pct": 95.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 115.37,
     "adr_premium_pct": 34.67,
-    "adr_premium_change_pct_points": 0.5,
+    "adr_premium_change_pct_points": 0.0,
     "overnight_spread_pct_points": -0.49,
     "nvidia": {
       "symbol": "NVDA",
@@ -137,8 +137,8 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 252000.0,
-      "change_pct": -1.95,
+      "price": 250500.0,
+      "change_pct": -2.53,
       "traded_at": "20260825"
     }
   },
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": -1.9455,
-      "display": "-1.95%",
+      "value": -2.5292,
+      "display": "-2.53%",
       "status": "watch",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -2158,7 +2158,7 @@
       },
       {
         "date": "2026-08-25",
-        "generated_at": "2026-08-25T02:04:35+00:00",
+        "generated_at": "2026-08-25T02:15:12+00:00",
         "price": 1597000.0,
         "status_counts": {
           "alert": 5,
@@ -2398,53 +2398,55 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 100.0,
+    "completeness_pct": 95.0,
     "failed_sources": [],
-    "cached_sources": [],
+    "cached_sources": [
+      "krx_quote"
+    ],
     "sources": {
-      "krx_quote": {
+      "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T02:04:10+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T02:04:10+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T02:04:10+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T02:04:10+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T02:04:10+00:00",
+        "fetched_at": "2026-08-25T02:14:38+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T02:04:10+00:00",
-        "error": null
-      },
-      "krx_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T02:04:10+00:00",
+        "fetched_at": "2026-08-25T02:14:38+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
+        "fetched_at": "2026-08-25T02:14:38+00:00",
+        "error": null
+      },
+      "krx_quote": {
+        "status": "cached",
         "fetched_at": "2026-08-25T02:04:10+00:00",
+        "error": "The read operation timed out"
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-08-25T02:14:38+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T02:04:10+00:00",
+        "fetched_at": "2026-08-25T02:14:38+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-08-25T02:14:38+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-08-25T02:14:38+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-08-25T02:14:38+00:00",
         "error": null
       }
     },
