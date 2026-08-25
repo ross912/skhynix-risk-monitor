@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-25T12:01:53+00:00",
-  "generated_at_seoul": "2026-08-25T21:01:53+09:00",
+  "generated_at": "2026-08-25T13:01:23+00:00",
+  "generated_at_seoul": "2026-08-25T22:01:23+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
-      "alert": 5,
-      "watch": 5,
+      "alert": 4,
+      "watch": 6,
       "neutral": 4,
       "support": 4
     },
@@ -40,10 +40,10 @@
         "interpretation": "分析师一致评级可能掩盖目标价分布的巨大不确定性。"
       },
       {
-        "label": "美股AI与存储代理",
-        "display": "-3.81%",
-        "status": "alert",
-        "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
+        "label": "2028一致预期溢价",
+        "display": "28.3%",
+        "status": "watch",
+        "interpretation": "利润预期越领先于供给与折旧模型，失望风险越大。"
       }
     ],
     "offsets": [
@@ -129,10 +129,10 @@
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
       "price": 11423.17,
-      "change": -317.21,
-      "change_pct": -2.7,
-      "traded_at": "2026-08-24T17:15:59-04:00",
-      "market_status": "CLOSE",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "traded_at": "2026-08-25T09:01:23-04:00",
+      "market_status": "PREOPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -197,10 +197,10 @@
     },
     "ai_memory_cycle": {
       "label": "AI与内存周期",
-      "status": "alert",
+      "status": "watch",
       "counts": {
-        "alert": 1,
-        "watch": 1,
+        "alert": 0,
+        "watch": 2,
         "neutral": 1,
         "support": 1
       },
@@ -333,9 +333,9 @@
       "id": "us_semis_breadth",
       "pillar": "ai_memory_cycle",
       "label": "美股AI与存储代理",
-      "value": -3.8133,
-      "display": "-3.81%",
-      "status": "alert",
+      "value": -2.9133,
+      "display": "-2.91%",
+      "status": "watch",
       "threshold": "MU、NVDA和SOX平均日跌幅超过3%触发警戒",
       "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
     },
@@ -2158,11 +2158,11 @@
       },
       {
         "date": "2026-08-25",
-        "generated_at": "2026-08-25T12:01:53+00:00",
+        "generated_at": "2026-08-25T13:01:23+00:00",
         "price": 1678000.0,
         "status_counts": {
-          "alert": 5,
-          "watch": 5,
+          "alert": 4,
+          "watch": 6,
           "neutral": 4,
           "support": 4
         },
@@ -2404,47 +2404,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T12:01:51+00:00",
-        "error": null
-      },
-      "krx_quote": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T12:01:51+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T12:01:51+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T12:01:51+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T12:01:51+00:00",
+        "fetched_at": "2026-08-25T13:01:22+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T12:01:51+00:00",
+        "fetched_at": "2026-08-25T13:01:22+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-08-25T13:01:22+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-08-25T13:01:22+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-08-25T13:01:22+00:00",
+        "error": null
+      },
+      "krx_quote": {
+        "status": "fresh",
+        "fetched_at": "2026-08-25T13:01:22+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T12:01:51+00:00",
+        "fetched_at": "2026-08-25T13:01:22+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T12:01:51+00:00",
+        "fetched_at": "2026-08-25T13:01:22+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T12:01:51+00:00",
+        "fetched_at": "2026-08-25T13:01:22+00:00",
         "error": null
       }
     },
