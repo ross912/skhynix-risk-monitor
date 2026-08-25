@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-25T04:18:51+00:00",
-  "generated_at_seoul": "2026-08-25T13:18:51+09:00",
+  "generated_at": "2026-08-25T04:45:57+00:00",
+  "generated_at_seoul": "2026-08-25T13:45:57+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -12,7 +12,7 @@
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 100.0,
+    "data_completeness_pct": 75.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 117.82,
     "adr_premium_pct": 31.87,
-    "adr_premium_change_pct_points": -0.16,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": -2.53,
     "nvidia": {
       "symbol": "NVDA",
@@ -2158,7 +2158,7 @@
       },
       {
         "date": "2026-08-25",
-        "generated_at": "2026-08-25T04:18:51+00:00",
+        "generated_at": "2026-08-25T04:45:57+00:00",
         "price": 1631000.0,
         "status_counts": {
           "alert": 5,
@@ -2398,53 +2398,59 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 100.0,
+    "completeness_pct": 75.0,
     "failed_sources": [],
-    "cached_sources": [],
+    "cached_sources": [
+      "fx",
+      "krx_quote",
+      "krx_history",
+      "kospi_history",
+      "samsung_history"
+    ],
     "sources": {
-      "samsung_history": {
-        "status": "fresh",
+      "fx": {
+        "status": "cached",
         "fetched_at": "2026-08-25T04:18:40+00:00",
-        "error": null
-      },
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T04:18:40+00:00",
-        "error": null
+        "error": "request failed: https://api.frankfurter.app/latest?from=USD&to=KRW: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "krx_quote": {
-        "status": "fresh",
+        "status": "cached",
         "fetched_at": "2026-08-25T04:18:40+00:00",
-        "error": null
+        "error": "request failed: https://polling.finance.naver.com/api/realtime/domestic/stock/000660: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
-      "micron": {
-        "status": "fresh",
+      "krx_history": {
+        "status": "cached",
         "fetched_at": "2026-08-25T04:18:40+00:00",
-        "error": null
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=000660&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "kospi_history": {
+        "status": "cached",
+        "fetched_at": "2026-08-25T04:18:40+00:00",
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=KOSPI&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "samsung_history": {
+        "status": "cached",
+        "fetched_at": "2026-08-25T04:18:40+00:00",
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=005930&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
       },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T04:18:40+00:00",
-        "error": null
-      },
-      "krx_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T04:18:40+00:00",
+        "fetched_at": "2026-08-25T04:28:54+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T04:18:40+00:00",
+        "fetched_at": "2026-08-25T04:28:54+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-08-25T04:28:54+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-08-25T04:18:40+00:00",
-        "error": null
-      },
-      "fx": {
-        "status": "fresh",
-        "fetched_at": "2026-08-25T04:18:40+00:00",
+        "fetched_at": "2026-08-25T04:28:54+00:00",
         "error": null
       }
     },
