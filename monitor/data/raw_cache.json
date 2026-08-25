@@ -1,6 +1,6 @@
 {
   "sox": {
-    "fetched_at": "2026-08-25T08:56:58+00:00",
+    "fetched_at": "2026-08-25T09:34:51+00:00",
     "data": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
@@ -14,7 +14,7 @@
     }
   },
   "micron": {
-    "fetched_at": "2026-08-25T08:56:58+00:00",
+    "fetched_at": "2026-08-25T09:34:51+00:00",
     "data": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
@@ -28,7 +28,7 @@
     }
   },
   "adr": {
-    "fetched_at": "2026-08-25T08:56:58+00:00",
+    "fetched_at": "2026-08-25T09:34:51+00:00",
     "data": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
@@ -42,7 +42,7 @@
     }
   },
   "nvidia": {
-    "fetched_at": "2026-08-25T08:56:58+00:00",
+    "fetched_at": "2026-08-25T09:34:51+00:00",
     "data": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
@@ -56,7 +56,7 @@
     }
   },
   "samsung_history": {
-    "fetched_at": "2026-08-25T08:56:58+00:00",
+    "fetched_at": "2026-08-25T09:34:51+00:00",
     "data": [
       {
         "date": "20240205",
@@ -5021,7 +5021,7 @@
     ]
   },
   "krx_history": {
-    "fetched_at": "2026-08-25T08:56:58+00:00",
+    "fetched_at": "2026-08-25T09:34:51+00:00",
     "data": [
       {
         "date": "20240205",
@@ -9986,7 +9986,7 @@
     ]
   },
   "kospi_history": {
-    "fetched_at": "2026-08-25T08:56:58+00:00",
+    "fetched_at": "2026-08-25T09:34:51+00:00",
     "data": [
       {
         "date": "20240205",
@@ -14946,12 +14946,12 @@
         "high": 6747.16,
         "low": 6408.82,
         "close": 6742.74,
-        "volume": 282781.0
+        "volume": 286782.0
       }
     ]
   },
   "fx": {
-    "fetched_at": "2026-08-25T08:56:58+00:00",
+    "fetched_at": "2026-08-25T09:34:51+00:00",
     "data": {
       "symbol": "USDKRW",
       "price": 1384.26,
@@ -14960,7 +14960,7 @@
     }
   },
   "krx_quote": {
-    "fetched_at": "2026-08-25T08:56:58+00:00",
+    "fetched_at": "2026-08-25T09:34:51+00:00",
     "data": {
       "symbol": "000660",
       "name": "SK하이닉스",
