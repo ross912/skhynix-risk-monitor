@@ -137,8 +137,8 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 263000.0,
-      "change_pct": 2.33,
+      "price": 263500.0,
+      "change_pct": 2.53,
       "traded_at": "20260826"
     }
   },
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": 2.3346,
-      "display": "+2.33%",
+      "value": 2.5292,
+      "display": "+2.53%",
       "status": "neutral",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -1966,7 +1966,7 @@
     "evidence_history": [
       {
         "date": "2026-07-31",
-        "generated_at": "2026-08-01T13:43:02+00:00",
+        "generated_at": "2026-08-02T22:30:36+00:00",
         "price": 1718000.0,
         "status_counts": {
           "alert": 4,
@@ -1978,187 +1978,187 @@
       },
       {
         "date": "2026-08-03",
-        "generated_at": "2026-08-03T07:40:06+00:00",
+        "generated_at": "2026-08-03T22:17:33+00:00",
         "price": 1567000.0,
         "status_counts": {
           "alert": 5,
-          "watch": 4,
-          "neutral": 5,
+          "watch": 5,
+          "neutral": 4,
           "support": 4
         },
-        "adr_premium_pct": 32.41
+        "adr_premium_pct": 29.97
       },
       {
         "date": "2026-08-04",
-        "generated_at": "2026-08-04T07:40:21+00:00",
+        "generated_at": "2026-08-04T22:47:02+00:00",
         "price": 1577000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 6,
-          "support": 4
+          "neutral": 3,
+          "support": 7
         },
-        "adr_premium_pct": 29.15
+        "adr_premium_pct": 39.71
       },
       {
         "date": "2026-08-05",
-        "generated_at": "2026-08-05T07:40:21+00:00",
+        "generated_at": "2026-08-05T22:45:06+00:00",
         "price": 1668000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 6,
+          "watch": 5,
+          "neutral": 5,
           "support": 4
         },
-        "adr_premium_pct": 32.08
+        "adr_premium_pct": 28.91
       },
       {
         "date": "2026-08-06",
-        "generated_at": "2026-08-06T10:41:52+00:00",
+        "generated_at": "2026-08-06T15:41:49+00:00",
         "price": 1495000.0,
         "status_counts": {
           "alert": 5,
-          "watch": 5,
-          "neutral": 3,
+          "watch": 6,
+          "neutral": 2,
           "support": 5
         },
-        "adr_premium_pct": 43.83
+        "adr_premium_pct": 38.35
       },
       {
         "date": "2026-08-07",
-        "generated_at": "2026-08-08T01:37:09+00:00",
+        "generated_at": "2026-08-09T22:49:49+00:00",
         "price": 1422000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 5,
+          "watch": 5,
+          "neutral": 4,
           "support": 5
         },
-        "adr_premium_pct": 43.69
+        "adr_premium_pct": 37.32
       },
       {
         "date": "2026-08-10",
-        "generated_at": "2026-08-10T08:20:16+00:00",
+        "generated_at": "2026-08-10T22:59:21+00:00",
         "price": 1420000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 6,
-          "neutral": 3,
+          "watch": 7,
+          "neutral": 2,
           "support": 5
         },
-        "adr_premium_pct": 37.52
+        "adr_premium_pct": 34.97
       },
       {
         "date": "2026-08-11",
-        "generated_at": "2026-08-11T07:41:51+00:00",
-        "price": 1430000.0,
+        "generated_at": "2026-08-11T22:25:56+00:00",
+        "price": 1425000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 6,
+          "watch": 4,
           "neutral": 3,
-          "support": 5
+          "support": 7
         },
-        "adr_premium_pct": 34.02
+        "adr_premium_pct": 40.37
       },
       {
         "date": "2026-08-12",
-        "generated_at": "2026-08-12T07:40:35+00:00",
+        "generated_at": "2026-08-12T22:40:22+00:00",
         "price": 1504000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 4,
-          "support": 6
+          "neutral": 1,
+          "support": 9
         },
-        "adr_premium_pct": 33.0
+        "adr_premium_pct": 45.49
       },
       {
         "date": "2026-08-13",
-        "generated_at": "2026-08-13T07:41:35+00:00",
-        "price": 1587000.0,
+        "generated_at": "2026-08-13T22:59:14+00:00",
+        "price": 1593000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 2,
-          "support": 8
+          "neutral": 4,
+          "support": 6
         },
-        "adr_premium_pct": 37.88
+        "adr_premium_pct": 47.71
       },
       {
         "date": "2026-08-14",
-        "generated_at": "2026-08-17T07:40:25+00:00",
+        "generated_at": "2026-08-17T22:53:34+00:00",
         "price": 1645000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 5,
-          "neutral": 5,
-          "support": 4
+          "watch": 4,
+          "neutral": 4,
+          "support": 6
         },
-        "adr_premium_pct": 42.7
+        "adr_premium_pct": 47.1
       },
       {
         "date": "2026-08-18",
-        "generated_at": "2026-08-18T07:42:00+00:00",
-        "price": 1659000.0,
+        "generated_at": "2026-08-18T22:45:44+00:00",
+        "price": 1662000.0,
         "status_counts": {
-          "alert": 4,
+          "alert": 6,
           "watch": 5,
           "neutral": 3,
-          "support": 6
+          "support": 4
         },
-        "adr_premium_pct": 45.85
+        "adr_premium_pct": 32.03
       },
       {
         "date": "2026-08-19",
-        "generated_at": "2026-08-19T08:03:03+00:00",
+        "generated_at": "2026-08-19T22:57:25+00:00",
         "price": 1500000.0,
         "status_counts": {
           "alert": 5,
           "watch": 5,
-          "neutral": 3,
-          "support": 5
+          "neutral": 2,
+          "support": 6
         },
-        "adr_premium_pct": 46.29
+        "adr_premium_pct": 44.86
       },
       {
         "date": "2026-08-20",
-        "generated_at": "2026-08-21T01:32:16+00:00",
+        "generated_at": "2026-08-20T22:57:22+00:00",
         "price": 1691000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 5,
-          "neutral": 5,
-          "support": 4
+          "watch": 4,
+          "neutral": 3,
+          "support": 7
         },
-        "adr_premium_pct": 28.95
+        "adr_premium_pct": 34.66
       },
       {
         "date": "2026-08-21",
-        "generated_at": "2026-08-21T07:40:29+00:00",
+        "generated_at": "2026-08-23T22:48:18+00:00",
         "price": 1730000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 6,
-          "support": 4
+          "watch": 5,
+          "neutral": 4,
+          "support": 5
         },
-        "adr_premium_pct": 31.63
+        "adr_premium_pct": 30.75
       },
       {
         "date": "2026-08-24",
-        "generated_at": "2026-08-24T07:40:44+00:00",
+        "generated_at": "2026-08-24T22:54:00+00:00",
         "price": 1671000.0,
         "status_counts": {
-          "alert": 5,
+          "alert": 6,
           "watch": 5,
-          "neutral": 4,
+          "neutral": 3,
           "support": 4
         },
-        "adr_premium_pct": 35.37
+        "adr_premium_pct": 28.71
       },
       {
         "date": "2026-08-25",
-        "generated_at": "2026-08-25T07:41:01+00:00",
+        "generated_at": "2026-08-25T22:43:07+00:00",
         "price": 1678000.0,
         "status_counts": {
           "alert": 4,
@@ -2454,7 +2454,7 @@
         "fetched_at": "2026-08-26T05:56:52+00:00",
         "error": null
       },
-      "fx": {
+      "krx_history": {
         "status": "fresh",
         "fetched_at": "2026-08-26T05:56:52+00:00",
         "error": null
