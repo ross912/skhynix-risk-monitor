@@ -2454,7 +2454,7 @@
         "fetched_at": "2026-08-26T05:20:40+00:00",
         "error": null
       },
-      "fx": {
+      "krx_history": {
         "status": "fresh",
         "fetched_at": "2026-08-26T05:20:40+00:00",
         "error": null
