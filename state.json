@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-28T03:10:24+00:00",
-  "generated_at_seoul": "2026-08-28T12:10:24+09:00",
+  "generated_at": "2026-08-28T03:20:19+00:00",
+  "generated_at_seoul": "2026-08-28T12:20:19+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -12,7 +12,7 @@
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 95.0,
+    "data_completeness_pct": 100.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -77,9 +77,9 @@
       "open": 1704000.0,
       "high": 1725000.0,
       "low": 1687000.0,
-      "volume": 1212844.0,
+      "volume": 1253886.0,
       "market_status": "OPEN",
-      "traded_at": "2026-08-28T12:10:09.838668+09:00",
+      "traded_at": "2026-08-28T12:20:12.335313+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 122.65,
     "adr_premium_pct": 31.77,
-    "adr_premium_change_pct_points": 0.31,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": 4.41,
     "nvidia": {
       "symbol": "NVDA",
@@ -137,8 +137,8 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 260250.0,
-      "change_pct": -2.16,
+      "price": 260000.0,
+      "change_pct": -2.26,
       "traded_at": "20260828"
     }
   },
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": -2.1617,
-      "display": "-2.16%",
+      "value": -2.2556,
+      "display": "-2.26%",
       "status": "watch",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -2194,7 +2194,7 @@
       },
       {
         "date": "2026-08-28",
-        "generated_at": "2026-08-28T03:10:24+00:00",
+        "generated_at": "2026-08-28T03:20:19+00:00",
         "price": 1693000.0,
         "status_counts": {
           "alert": 4,
@@ -2434,56 +2434,54 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 95.0,
+    "completeness_pct": 100.0,
     "failed_sources": [],
-    "cached_sources": [
-      "kospi_history"
-    ],
+    "cached_sources": [],
     "sources": {
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T03:09:55+00:00",
-        "error": null
-      },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-08-28T03:09:55+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T03:09:55+00:00",
+        "fetched_at": "2026-08-28T03:19:58+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-08-28T03:09:55+00:00",
-        "error": null
-      },
-      "fx": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T03:09:55+00:00",
+        "fetched_at": "2026-08-28T03:19:58+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-08-28T03:09:55+00:00",
+        "fetched_at": "2026-08-28T03:19:58+00:00",
         "error": null
       },
-      "samsung_history": {
+      "adr": {
         "status": "fresh",
-        "fetched_at": "2026-08-28T03:09:55+00:00",
+        "fetched_at": "2026-08-28T03:19:58+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-08-28T03:19:58+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-08-28T03:09:55+00:00",
+        "fetched_at": "2026-08-28T03:19:58+00:00",
+        "error": null
+      },
+      "samsung_history": {
+        "status": "fresh",
+        "fetched_at": "2026-08-28T03:19:58+00:00",
         "error": null
       },
       "kospi_history": {
-        "status": "cached",
-        "fetched_at": "2026-08-28T02:59:41+00:00",
-        "error": "The read operation timed out"
+        "status": "fresh",
+        "fetched_at": "2026-08-28T03:19:58+00:00",
+        "error": null
+      },
+      "fx": {
+        "status": "fresh",
+        "fetched_at": "2026-08-28T03:19:58+00:00",
+        "error": null
       }
     },
     "slow_data_age_days": 28,
