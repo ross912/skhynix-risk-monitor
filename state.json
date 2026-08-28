@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-28T05:39:02+00:00",
-  "generated_at_seoul": "2026-08-28T14:39:02+09:00",
+  "generated_at": "2026-08-28T05:55:50+00:00",
+  "generated_at_seoul": "2026-08-28T14:55:50+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -12,7 +12,7 @@
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 95.0,
+    "data_completeness_pct": 55.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 121.16,
     "adr_premium_pct": 33.38,
-    "adr_premium_change_pct_points": 0.12,
+    "adr_premium_change_pct_points": 0.0,
     "overnight_spread_pct_points": 5.59,
     "nvidia": {
       "symbol": "NVDA",
@@ -2194,7 +2194,7 @@
       },
       {
         "date": "2026-08-28",
-        "generated_at": "2026-08-28T05:39:02+00:00",
+        "generated_at": "2026-08-28T05:55:50+00:00",
         "price": 1672500.0,
         "status_counts": {
           "alert": 4,
@@ -2434,56 +2434,64 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 95.0,
+    "completeness_pct": 55.0,
     "failed_sources": [],
     "cached_sources": [
-      "kospi_history"
+      "kospi_history",
+      "samsung_history",
+      "micron",
+      "krx_quote",
+      "krx_history",
+      "nvidia",
+      "sox",
+      "adr",
+      "fx"
     ],
     "sources": {
-      "krx_quote": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T05:38:39+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T05:38:39+00:00",
-        "error": null
-      },
-      "krx_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T05:38:39+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T05:38:39+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T05:38:39+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T05:38:39+00:00",
-        "error": null
-      },
-      "samsung_history": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T05:38:39+00:00",
-        "error": null
-      },
-      "fx": {
-        "status": "fresh",
-        "fetched_at": "2026-08-28T05:38:39+00:00",
-        "error": null
-      },
       "kospi_history": {
         "status": "cached",
         "fetched_at": "2026-08-28T05:21:14+00:00",
-        "error": "The read operation timed out"
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=KOSPI&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "samsung_history": {
+        "status": "cached",
+        "fetched_at": "2026-08-28T05:38:39+00:00",
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=005930&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "micron": {
+        "status": "cached",
+        "fetched_at": "2026-08-28T05:38:39+00:00",
+        "error": "request failed: https://api.stock.naver.com/stock/MU.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "krx_quote": {
+        "status": "cached",
+        "fetched_at": "2026-08-28T05:38:39+00:00",
+        "error": "request failed: https://polling.finance.naver.com/api/realtime/domestic/stock/000660: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "krx_history": {
+        "status": "cached",
+        "fetched_at": "2026-08-28T05:38:39+00:00",
+        "error": "request failed: https://fchart.stock.naver.com/sise.nhn?symbol=000660&timeframe=day&count=620&requestType=0: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "nvidia": {
+        "status": "cached",
+        "fetched_at": "2026-08-28T05:38:39+00:00",
+        "error": "request failed: https://api.stock.naver.com/stock/NVDA.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "sox": {
+        "status": "cached",
+        "fetched_at": "2026-08-28T05:38:39+00:00",
+        "error": "request failed: https://api.stock.naver.com/index/.SOX/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "adr": {
+        "status": "cached",
+        "fetched_at": "2026-08-28T05:38:39+00:00",
+        "error": "request failed: https://api.stock.naver.com/stock/SKHY.O/basic: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+      },
+      "fx": {
+        "status": "cached",
+        "fetched_at": "2026-08-28T05:38:39+00:00",
+        "error": "request failed: https://api.frankfurter.app/latest?from=USD&to=KRW: <urlopen error _ssl.c:1112: The handshake operation timed out>"
       }
     },
     "slow_data_age_days": 28,
