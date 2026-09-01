@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-01T06:25:45+00:00",
-  "generated_at_seoul": "2026-09-01T15:25:45+09:00",
-  "trigger": "intraday",
+  "generated_at": "2026-09-01T06:35:00+00:00",
+  "generated_at_seoul": "2026-09-01T15:35:00+09:00",
+  "trigger": "github-actions",
   "summary": {
     "status_counts": {
       "alert": 4,
@@ -17,13 +17,13 @@
     "key_risks": [
       {
         "label": "距52周高点",
-        "display": "-41.9%",
+        "display": "-42.0%",
         "status": "alert",
         "interpretation": "衡量当前价格处在一年周期的哪个位置。"
       },
       {
         "label": "EWMA年化波动率",
-        "display": "108.1%",
+        "display": "108.0%",
         "status": "alert",
         "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
       },
@@ -49,13 +49,13 @@
     "offsets": [
       {
         "label": "平均目标价空间",
-        "display": "+88.9%",
+        "display": "+89.3%",
         "status": "support",
         "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
       },
       {
         "label": "ADR相对韩股平价",
-        "display": "+32.7%",
+        "display": "+33.0%",
         "status": "support",
         "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
       },
@@ -71,15 +71,15 @@
     "krx": {
       "symbol": "000660",
       "name": "SK하이닉스",
-      "price": 1697000.0,
-      "previous_close_change": 23000.0,
-      "change_pct": 1.37,
+      "price": 1693000.0,
+      "previous_close_change": 19000.0,
+      "change_pct": 1.14,
       "open": 1666000.0,
       "high": 1713000.0,
       "low": 1652000.0,
-      "volume": 2311008.0,
-      "market_status": "OPEN",
-      "traded_at": "2026-09-01T15:25:40.010979+09:00",
+      "volume": 2481740.0,
+      "market_status": "CLOSE",
+      "traded_at": "2026-09-01T15:30:00+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -99,10 +99,10 @@
       "traded_at": "2026-08-31T16:00:00+00:00",
       "base": "USD"
     },
-    "adr_parity_usd": 124.05,
-    "adr_premium_pct": 32.68,
-    "adr_premium_change_pct_points": -0.39,
-    "overnight_spread_pct_points": 0.83,
+    "adr_parity_usd": 123.75,
+    "adr_premium_pct": 32.99,
+    "adr_premium_change_pct_points": 0.16,
+    "overnight_spread_pct_points": 1.06,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
@@ -137,27 +137,27 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 260250.0,
-      "change_pct": 0.1,
+      "price": 261000.0,
+      "change_pct": 0.38,
       "traded_at": "20260901"
     }
   },
   "technicals": {
-    "sma20": 1606150.0,
-    "sma60": 1973866.67,
-    "sma120": 1674775.0,
-    "sma200": 1290880.0,
-    "rsi14": 65.67,
-    "ewma_volatility_pct": 108.07,
+    "sma20": 1605950.0,
+    "sma60": 1973800.0,
+    "sma120": 1674741.67,
+    "sma200": 1290860.0,
+    "rsi14": 65.51,
+    "ewma_volatility_pct": 108.03,
     "var95_pct": 9.18,
     "cvar95_pct": 12.08,
-    "drawdown_52w_pct": -41.86,
+    "drawdown_52w_pct": -42.0,
     "max_drawdown_1y_pct": -54.71,
     "high_52w": 2919000.0,
     "low_52w": 245000.0,
-    "momentum_20d_pct": 8.3,
-    "momentum_60d_pct": -18.02,
-    "volume_ratio_20d": 0.55,
+    "momentum_20d_pct": 8.04,
+    "momentum_60d_pct": -18.21,
+    "volume_ratio_20d": 0.59,
     "beta_120d": 1.55,
     "correlation_kospi_120d": 0.94
   },
@@ -223,8 +223,8 @@
       "id": "trend_200d",
       "pillar": "market_regime",
       "label": "200日趋势距离",
-      "value": 131.4607,
-      "display": "+31.5%",
+      "value": 131.1529,
+      "display": "+31.2%",
       "status": "neutral",
       "threshold": "低于200日线10%触发警戒；高于50%提示过热",
       "interpretation": "趋势破位和极端偏离分开观察，不把上涨本身视为风险。"
@@ -233,8 +233,8 @@
       "id": "drawdown_52w",
       "pillar": "market_regime",
       "label": "距52周高点",
-      "value": -41.8637,
-      "display": "-41.9%",
+      "value": -42.0007,
+      "display": "-42.0%",
       "status": "alert",
       "threshold": "回撤超过20%进入注意，超过35%触发警戒",
       "interpretation": "衡量当前价格处在一年周期的哪个位置。"
@@ -243,8 +243,8 @@
       "id": "ewma_vol",
       "pillar": "market_regime",
       "label": "EWMA年化波动率",
-      "value": 108.0747,
-      "display": "108.1%",
+      "value": 108.0335,
+      "display": "108.0%",
       "status": "alert",
       "threshold": "50%以上进入注意，80%以上触发警戒；RiskMetrics λ=0.94",
       "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
@@ -253,8 +253,8 @@
       "id": "rsi14",
       "pillar": "market_regime",
       "label": "RSI 14",
-      "value": 65.6682,
-      "display": "65.7",
+      "value": 65.5093,
+      "display": "65.5",
       "status": "neutral",
       "threshold": "低于20或高于80触发警戒；30/70为注意线",
       "interpretation": "极端超买和超卖都意味着一年期投资者需要控制入场节奏。"
@@ -293,8 +293,8 @@
       "id": "target_upside",
       "pillar": "expectations",
       "label": "平均目标价空间",
-      "value": 88.8955,
-      "display": "+88.9%",
+      "value": 89.3418,
+      "display": "+89.3%",
       "status": "support",
       "threshold": "平均目标价低于现价警戒；空间不足20%时注意",
       "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
@@ -313,8 +313,8 @@
       "id": "adr_premium",
       "pillar": "cross_market",
       "label": "ADR相对韩股平价",
-      "value": 32.6755,
-      "display": "+32.7%",
+      "value": 32.989,
+      "display": "+33.0%",
       "status": "support",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": 0.0962,
-      "display": "+0.10%",
+      "value": 0.3846,
+      "display": "+0.38%",
       "status": "neutral",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -1958,15 +1958,15 @@
       },
       {
         "date": "20260901",
-        "close": 1697000.0,
-        "sma60": 1973866.67,
-        "sma200": 1290880.0
+        "close": 1693000.0,
+        "sma60": 1973800.0,
+        "sma200": 1290860.0
       }
     ],
     "evidence_history": [
       {
         "date": "2026-07-31",
-        "generated_at": "2026-08-01T13:43:02+00:00",
+        "generated_at": "2026-08-02T22:30:36+00:00",
         "price": 1718000.0,
         "status_counts": {
           "alert": 4,
@@ -1978,255 +1978,255 @@
       },
       {
         "date": "2026-08-03",
-        "generated_at": "2026-08-03T07:40:06+00:00",
+        "generated_at": "2026-08-03T22:17:33+00:00",
         "price": 1567000.0,
         "status_counts": {
           "alert": 5,
-          "watch": 4,
-          "neutral": 5,
+          "watch": 5,
+          "neutral": 4,
           "support": 4
         },
-        "adr_premium_pct": 32.41
+        "adr_premium_pct": 29.97
       },
       {
         "date": "2026-08-04",
-        "generated_at": "2026-08-04T07:40:21+00:00",
+        "generated_at": "2026-08-04T22:47:02+00:00",
         "price": 1577000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 6,
-          "support": 4
+          "neutral": 3,
+          "support": 7
         },
-        "adr_premium_pct": 29.15
+        "adr_premium_pct": 39.71
       },
       {
         "date": "2026-08-05",
-        "generated_at": "2026-08-05T07:40:21+00:00",
+        "generated_at": "2026-08-05T22:45:06+00:00",
         "price": 1668000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 6,
+          "watch": 5,
+          "neutral": 5,
           "support": 4
         },
-        "adr_premium_pct": 32.08
+        "adr_premium_pct": 28.91
       },
       {
         "date": "2026-08-06",
-        "generated_at": "2026-08-06T10:41:52+00:00",
+        "generated_at": "2026-08-06T15:41:49+00:00",
         "price": 1495000.0,
         "status_counts": {
           "alert": 5,
-          "watch": 5,
-          "neutral": 3,
+          "watch": 6,
+          "neutral": 2,
           "support": 5
         },
-        "adr_premium_pct": 43.83
+        "adr_premium_pct": 38.35
       },
       {
         "date": "2026-08-07",
-        "generated_at": "2026-08-08T01:37:09+00:00",
+        "generated_at": "2026-08-09T22:49:49+00:00",
         "price": 1422000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 5,
+          "watch": 5,
+          "neutral": 4,
           "support": 5
         },
-        "adr_premium_pct": 43.69
+        "adr_premium_pct": 37.32
       },
       {
         "date": "2026-08-10",
-        "generated_at": "2026-08-10T08:20:16+00:00",
+        "generated_at": "2026-08-10T22:59:21+00:00",
         "price": 1420000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 6,
-          "neutral": 3,
+          "watch": 7,
+          "neutral": 2,
           "support": 5
         },
-        "adr_premium_pct": 37.52
+        "adr_premium_pct": 34.97
       },
       {
         "date": "2026-08-11",
-        "generated_at": "2026-08-11T07:41:51+00:00",
-        "price": 1430000.0,
+        "generated_at": "2026-08-11T22:25:56+00:00",
+        "price": 1425000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 6,
+          "watch": 4,
           "neutral": 3,
-          "support": 5
+          "support": 7
         },
-        "adr_premium_pct": 34.02
+        "adr_premium_pct": 40.37
       },
       {
         "date": "2026-08-12",
-        "generated_at": "2026-08-12T07:40:35+00:00",
+        "generated_at": "2026-08-12T22:40:22+00:00",
         "price": 1504000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 4,
-          "support": 6
+          "neutral": 1,
+          "support": 9
         },
-        "adr_premium_pct": 33.0
+        "adr_premium_pct": 45.49
       },
       {
         "date": "2026-08-13",
-        "generated_at": "2026-08-13T07:41:35+00:00",
-        "price": 1587000.0,
+        "generated_at": "2026-08-13T22:59:14+00:00",
+        "price": 1593000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 2,
-          "support": 8
+          "neutral": 4,
+          "support": 6
         },
-        "adr_premium_pct": 37.88
+        "adr_premium_pct": 47.71
       },
       {
         "date": "2026-08-14",
-        "generated_at": "2026-08-17T07:40:25+00:00",
+        "generated_at": "2026-08-17T22:53:34+00:00",
         "price": 1645000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 5,
-          "neutral": 5,
-          "support": 4
+          "watch": 4,
+          "neutral": 4,
+          "support": 6
         },
-        "adr_premium_pct": 42.7
+        "adr_premium_pct": 47.1
       },
       {
         "date": "2026-08-18",
-        "generated_at": "2026-08-18T07:42:00+00:00",
-        "price": 1659000.0,
+        "generated_at": "2026-08-18T22:45:44+00:00",
+        "price": 1662000.0,
         "status_counts": {
-          "alert": 4,
+          "alert": 6,
           "watch": 5,
           "neutral": 3,
-          "support": 6
+          "support": 4
         },
-        "adr_premium_pct": 45.85
+        "adr_premium_pct": 32.03
       },
       {
         "date": "2026-08-19",
-        "generated_at": "2026-08-19T08:03:03+00:00",
+        "generated_at": "2026-08-19T22:57:25+00:00",
         "price": 1500000.0,
         "status_counts": {
           "alert": 5,
           "watch": 5,
-          "neutral": 3,
-          "support": 5
+          "neutral": 2,
+          "support": 6
         },
-        "adr_premium_pct": 46.29
+        "adr_premium_pct": 44.86
       },
       {
         "date": "2026-08-20",
-        "generated_at": "2026-08-21T01:32:16+00:00",
+        "generated_at": "2026-08-20T22:57:22+00:00",
         "price": 1691000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 5,
-          "neutral": 5,
-          "support": 4
+          "watch": 4,
+          "neutral": 3,
+          "support": 7
         },
-        "adr_premium_pct": 28.95
+        "adr_premium_pct": 34.66
       },
       {
         "date": "2026-08-21",
-        "generated_at": "2026-08-21T07:40:29+00:00",
+        "generated_at": "2026-08-23T22:48:18+00:00",
         "price": 1730000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 6,
-          "support": 4
+          "watch": 5,
+          "neutral": 4,
+          "support": 5
         },
-        "adr_premium_pct": 31.63
+        "adr_premium_pct": 30.75
       },
       {
         "date": "2026-08-24",
-        "generated_at": "2026-08-24T07:40:44+00:00",
+        "generated_at": "2026-08-24T22:54:00+00:00",
         "price": 1671000.0,
         "status_counts": {
-          "alert": 5,
+          "alert": 6,
           "watch": 5,
-          "neutral": 4,
+          "neutral": 3,
           "support": 4
         },
-        "adr_premium_pct": 35.37
+        "adr_premium_pct": 28.71
       },
       {
         "date": "2026-08-25",
-        "generated_at": "2026-08-25T07:41:01+00:00",
+        "generated_at": "2026-08-25T22:43:07+00:00",
         "price": 1678000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 5,
+          "watch": 4,
           "neutral": 5,
-          "support": 4
+          "support": 5
         },
-        "adr_premium_pct": 28.17
+        "adr_premium_pct": 31.49
       },
       {
         "date": "2026-08-26",
-        "generated_at": "2026-08-27T00:35:50+00:00",
+        "generated_at": "2026-08-26T20:12:05+00:00",
         "price": 1688000.0,
-        "status_counts": {
-          "alert": 4,
-          "watch": 4,
-          "neutral": 6,
-          "support": 4
-        },
-        "adr_premium_pct": 30.71
-      },
-      {
-        "date": "2026-08-27",
-        "generated_at": "2026-08-27T09:16:56+00:00",
-        "price": 1730000.0,
         "status_counts": {
           "alert": 4,
           "watch": 6,
           "neutral": 4,
           "support": 4
         },
-        "adr_premium_pct": 26.37
+        "adr_premium_pct": 29.51
       },
       {
-        "date": "2026-08-28",
-        "generated_at": "2026-08-28T07:42:05+00:00",
-        "price": 1672500.0,
-        "status_counts": {
-          "alert": 4,
-          "watch": 5,
-          "neutral": 3,
-          "support": 6
-        },
-        "adr_premium_pct": 33.38
-      },
-      {
-        "date": "2026-08-31",
-        "generated_at": "2026-08-31T07:40:56+00:00",
-        "price": 1674000.0,
-        "status_counts": {
-          "alert": 4,
-          "watch": 5,
-          "neutral": 5,
-          "support": 4
-        },
-        "adr_premium_pct": 32.23
-      },
-      {
-        "date": "2026-09-01",
-        "generated_at": "2026-09-01T06:25:45+00:00",
-        "price": 1697000.0,
+        "date": "2026-08-27",
+        "generated_at": "2026-08-27T15:28:52+00:00",
+        "price": 1730000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
           "neutral": 5,
           "support": 5
         },
-        "adr_premium_pct": 32.68
+        "adr_premium_pct": 29.28
+      },
+      {
+        "date": "2026-08-28",
+        "generated_at": "2026-08-30T21:58:01+00:00",
+        "price": 1653000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 7,
+          "neutral": 2,
+          "support": 5
+        },
+        "adr_premium_pct": 33.91
+      },
+      {
+        "date": "2026-08-31",
+        "generated_at": "2026-08-31T22:47:18+00:00",
+        "price": 1674000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 4,
+          "neutral": 5,
+          "support": 5
+        },
+        "adr_premium_pct": 34.5
+      },
+      {
+        "date": "2026-09-01",
+        "generated_at": "2026-09-01T06:35:00+00:00",
+        "price": 1693000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 4,
+          "neutral": 5,
+          "support": 5
+        },
+        "adr_premium_pct": 32.99
       }
     ]
   },
@@ -2462,49 +2462,49 @@
     "failed_sources": [],
     "cached_sources": [],
     "sources": {
-      "micron": {
+      "fx": {
         "status": "fresh",
-        "fetched_at": "2026-09-01T06:25:27+00:00",
+        "fetched_at": "2026-09-01T06:34:58+00:00",
         "error": null
       },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-09-01T06:25:27+00:00",
+        "fetched_at": "2026-09-01T06:34:58+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-09-01T06:25:27+00:00",
+        "fetched_at": "2026-09-01T06:34:58+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-09-01T06:25:27+00:00",
+        "fetched_at": "2026-09-01T06:34:58+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-09-01T06:34:58+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-09-01T06:25:27+00:00",
-        "error": null
-      },
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-09-01T06:25:27+00:00",
+        "fetched_at": "2026-09-01T06:34:58+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-01T06:25:27+00:00",
+        "fetched_at": "2026-09-01T06:34:58+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-01T06:25:27+00:00",
+        "fetched_at": "2026-09-01T06:34:58+00:00",
         "error": null
       },
-      "fx": {
+      "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-01T06:25:27+00:00",
+        "fetched_at": "2026-09-01T06:34:58+00:00",
         "error": null
       }
     },
