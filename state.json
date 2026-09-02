@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-02T06:13:02+00:00",
-  "generated_at_seoul": "2026-09-02T15:13:02+09:00",
+  "generated_at": "2026-09-02T06:23:08+00:00",
+  "generated_at_seoul": "2026-09-02T15:23:08+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -17,13 +17,13 @@
     "key_risks": [
       {
         "label": "距52周高点",
-        "display": "-44.6%",
+        "display": "-44.7%",
         "status": "alert",
         "interpretation": "衡量当前价格处在一年周期的哪个位置。"
       },
       {
         "label": "EWMA年化波动率",
-        "display": "106.3%",
+        "display": "106.4%",
         "status": "alert",
         "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
       },
@@ -49,13 +49,13 @@
     "offsets": [
       {
         "label": "200日趋势距离",
-        "display": "+24.7%",
+        "display": "+24.5%",
         "status": "support",
         "interpretation": "趋势破位和极端偏离分开观察，不把上涨本身视为风险。"
       },
       {
         "label": "平均目标价空间",
-        "display": "+98.4%",
+        "display": "+98.6%",
         "status": "support",
         "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
       },
@@ -71,15 +71,15 @@
     "krx": {
       "symbol": "000660",
       "name": "SK하이닉스",
-      "price": 1616000.0,
-      "previous_close_change": -77000.0,
-      "change_pct": -4.55,
+      "price": 1614000.0,
+      "previous_close_change": -79000.0,
+      "change_pct": -4.67,
       "open": 1630000.0,
       "high": 1661000.0,
       "low": 1612000.0,
-      "volume": 2106754.0,
+      "volume": 2161135.0,
       "market_status": "OPEN",
-      "traded_at": "2026-09-02T15:13:01.127534+09:00",
+      "traded_at": "2026-09-02T15:23:07.267338+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -99,10 +99,10 @@
       "traded_at": "2026-09-01T16:00:00+00:00",
       "base": "USD"
     },
-    "adr_parity_usd": 117.56,
-    "adr_premium_pct": 36.76,
-    "adr_premium_change_pct_points": 0.08,
-    "overnight_spread_pct_points": 2.24,
+    "adr_parity_usd": 117.42,
+    "adr_premium_pct": 36.93,
+    "adr_premium_change_pct_points": 0.17,
+    "overnight_spread_pct_points": 2.36,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
@@ -143,21 +143,21 @@
     }
   },
   "technicals": {
-    "sma20": 1607900.0,
-    "sma60": 1968883.33,
-    "sma120": 1680391.67,
-    "sma200": 1296040.0,
-    "rsi14": 56.5,
-    "ewma_volatility_pct": 106.29,
+    "sma20": 1607800.0,
+    "sma60": 1968850.0,
+    "sma120": 1680375.0,
+    "sma200": 1296030.0,
+    "rsi14": 56.37,
+    "ewma_volatility_pct": 106.38,
     "var95_pct": 9.18,
     "cvar95_pct": 12.08,
-    "drawdown_52w_pct": -44.64,
+    "drawdown_52w_pct": -44.71,
     "max_drawdown_1y_pct": -54.71,
     "high_52w": 2919000.0,
     "low_52w": 245000.0,
-    "momentum_20d_pct": 2.47,
-    "momentum_60d_pct": -15.44,
-    "volume_ratio_20d": 0.52,
+    "momentum_20d_pct": 2.35,
+    "momentum_60d_pct": -15.54,
+    "volume_ratio_20d": 0.53,
     "beta_120d": 1.54,
     "correlation_kospi_120d": 0.94
   },
@@ -223,8 +223,8 @@
       "id": "trend_200d",
       "pillar": "market_regime",
       "label": "200日趋势距离",
-      "value": 124.6875,
-      "display": "+24.7%",
+      "value": 124.5342,
+      "display": "+24.5%",
       "status": "support",
       "threshold": "低于200日线10%触发警戒；高于50%提示过热",
       "interpretation": "趋势破位和极端偏离分开观察，不把上涨本身视为风险。"
@@ -233,8 +233,8 @@
       "id": "drawdown_52w",
       "pillar": "market_regime",
       "label": "距52周高点",
-      "value": -44.6386,
-      "display": "-44.6%",
+      "value": -44.7071,
+      "display": "-44.7%",
       "status": "alert",
       "threshold": "回撤超过20%进入注意，超过35%触发警戒",
       "interpretation": "衡量当前价格处在一年周期的哪个位置。"
@@ -243,8 +243,8 @@
       "id": "ewma_vol",
       "pillar": "market_regime",
       "label": "EWMA年化波动率",
-      "value": 106.2948,
-      "display": "106.3%",
+      "value": 106.3778,
+      "display": "106.4%",
       "status": "alert",
       "threshold": "50%以上进入注意，80%以上触发警戒；RiskMetrics λ=0.94",
       "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
@@ -253,8 +253,8 @@
       "id": "rsi14",
       "pillar": "market_regime",
       "label": "RSI 14",
-      "value": 56.4965,
-      "display": "56.5",
+      "value": 56.3657,
+      "display": "56.4",
       "status": "neutral",
       "threshold": "低于20或高于80触发警戒；30/70为注意线",
       "interpretation": "极端超买和超卖都意味着一年期投资者需要控制入场节奏。"
@@ -293,8 +293,8 @@
       "id": "target_upside",
       "pillar": "expectations",
       "label": "平均目标价空间",
-      "value": 98.3636,
-      "display": "+98.4%",
+      "value": 98.6094,
+      "display": "+98.6%",
       "status": "support",
       "threshold": "平均目标价低于现价警戒；空间不足20%时注意",
       "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
@@ -313,8 +313,8 @@
       "id": "adr_premium",
       "pillar": "cross_market",
       "label": "ADR相对韩股平价",
-      "value": 36.7635,
-      "display": "+36.8%",
+      "value": 36.933,
+      "display": "+36.9%",
       "status": "neutral",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
@@ -1958,9 +1958,9 @@
       },
       {
         "date": "20260902",
-        "close": 1616000.0,
-        "sma60": 1968883.33,
-        "sma200": 1296040.0
+        "close": 1614000.0,
+        "sma60": 1968850.0,
+        "sma200": 1296030.0
       }
     ],
     "evidence_history": [
@@ -2230,15 +2230,15 @@
       },
       {
         "date": "2026-09-02",
-        "generated_at": "2026-09-02T06:13:02+00:00",
-        "price": 1616000.0,
+        "generated_at": "2026-09-02T06:23:08+00:00",
+        "price": 1614000.0,
         "status_counts": {
           "alert": 4,
           "watch": 7,
           "neutral": 2,
           "support": 5
         },
-        "adr_premium_pct": 36.76
+        "adr_premium_pct": 36.93
       }
     ]
   },
@@ -2476,47 +2476,47 @@
     "sources": {
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-09-02T06:12:58+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-09-02T06:12:58+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-09-02T06:12:58+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-09-02T06:12:58+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-09-02T06:12:58+00:00",
-        "error": null
-      },
-      "krx_history": {
-        "status": "fresh",
-        "fetched_at": "2026-09-02T06:12:58+00:00",
+        "fetched_at": "2026-09-02T06:23:04+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-02T06:12:58+00:00",
+        "fetched_at": "2026-09-02T06:23:04+00:00",
+        "error": null
+      },
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-09-02T06:23:04+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-09-02T06:23:04+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-09-02T06:23:04+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-02T06:12:58+00:00",
+        "fetched_at": "2026-09-02T06:23:04+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-09-02T06:23:04+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-09-02T06:23:04+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-09-02T06:12:58+00:00",
+        "fetched_at": "2026-09-02T06:23:04+00:00",
         "error": null
       }
     },
