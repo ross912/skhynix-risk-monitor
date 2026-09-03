@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-03T06:11:07+00:00",
-  "generated_at_seoul": "2026-09-03T15:11:07+09:00",
+  "generated_at": "2026-09-03T06:21:12+00:00",
+  "generated_at_seoul": "2026-09-03T15:21:12+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
       "alert": 4,
-      "watch": 4,
-      "neutral": 4,
+      "watch": 5,
+      "neutral": 3,
       "support": 6
     },
     "headline": "存在需处理的警戒信号",
@@ -77,9 +77,9 @@
       "open": 1643000.0,
       "high": 1649000.0,
       "low": 1558000.0,
-      "volume": 2362420.0,
+      "volume": 2433749.0,
       "market_status": "OPEN",
-      "traded_at": "2026-09-03T15:11:06.579948+09:00",
+      "traded_at": "2026-09-03T15:21:12.172344+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 117.5,
     "adr_premium_pct": 40.41,
-    "adr_premium_change_pct_points": 0.26,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": 3.35,
     "nvidia": {
       "symbol": "NVDA",
@@ -137,8 +137,8 @@
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 250500.0,
-      "change_pct": 0.0,
+      "price": 250000.0,
+      "change_pct": -0.2,
       "traded_at": "20260903"
     }
   },
@@ -157,7 +157,7 @@
     "low_52w": 251000.0,
     "momentum_20d_pct": -4.02,
     "momentum_60d_pct": -27.72,
-    "volume_ratio_20d": 0.59,
+    "volume_ratio_20d": 0.61,
     "beta_120d": 1.54,
     "correlation_kospi_120d": 0.94
   },
@@ -200,8 +200,8 @@
       "status": "watch",
       "counts": {
         "alert": 0,
-        "watch": 1,
-        "neutral": 2,
+        "watch": 2,
+        "neutral": 1,
         "support": 1
       },
       "signal_count": 4
@@ -343,9 +343,9 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": 0.0,
-      "display": "+0.00%",
-      "status": "neutral",
+      "value": -0.1996,
+      "display": "-0.20%",
+      "status": "watch",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
     },
@@ -2242,12 +2242,12 @@
       },
       {
         "date": "2026-09-03",
-        "generated_at": "2026-09-03T06:11:07+00:00",
+        "generated_at": "2026-09-03T06:21:12+00:00",
         "price": 1601000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 4,
-          "neutral": 4,
+          "watch": 5,
+          "neutral": 3,
           "support": 6
         },
         "adr_premium_pct": 40.41
@@ -2486,49 +2486,49 @@
     "failed_sources": [],
     "cached_sources": [],
     "sources": {
+      "krx_quote": {
+        "status": "fresh",
+        "fetched_at": "2026-09-03T06:21:09+00:00",
+        "error": null
+      },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-09-03T06:11:03+00:00",
+        "fetched_at": "2026-09-03T06:21:09+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-09-03T06:11:03+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-09-03T06:11:03+00:00",
+        "fetched_at": "2026-09-03T06:21:09+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-09-03T06:11:03+00:00",
+        "fetched_at": "2026-09-03T06:21:09+00:00",
         "error": null
       },
-      "krx_quote": {
+      "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-09-03T06:11:03+00:00",
-        "error": null
-      },
-      "samsung_history": {
-        "status": "fresh",
-        "fetched_at": "2026-09-03T06:11:03+00:00",
+        "fetched_at": "2026-09-03T06:21:09+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-03T06:11:03+00:00",
+        "fetched_at": "2026-09-03T06:21:09+00:00",
+        "error": null
+      },
+      "samsung_history": {
+        "status": "fresh",
+        "fetched_at": "2026-09-03T06:21:09+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-03T06:11:03+00:00",
+        "fetched_at": "2026-09-03T06:21:09+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-09-03T06:11:03+00:00",
+        "fetched_at": "2026-09-03T06:21:09+00:00",
         "error": null
       }
     },
