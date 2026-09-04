@@ -289,14 +289,14 @@
   },
   {
     "date": "2026-09-04",
-    "generated_at": "2026-09-04T17:03:52+00:00",
+    "generated_at": "2026-09-04T19:25:13+00:00",
     "price": 1647000.0,
     "status_counts": {
       "alert": 4,
       "watch": 4,
-      "neutral": 2,
-      "support": 8
+      "neutral": 3,
+      "support": 7
     },
-    "adr_premium_pct": 41.94
+    "adr_premium_pct": 43.73
   }
 ]
