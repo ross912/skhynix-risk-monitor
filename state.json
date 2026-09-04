@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-04T21:40:07+00:00",
-  "generated_at_seoul": "2026-09-05T06:40:07+09:00",
+  "generated_at": "2026-09-04T23:18:22+00:00",
+  "generated_at_seoul": "2026-09-05T08:18:22+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 121.97,
     "adr_premium_pct": 45.12,
-    "adr_premium_change_pct_points": 1.39,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": 4.94,
     "nvidia": {
       "symbol": "NVDA",
@@ -2254,7 +2254,7 @@
       },
       {
         "date": "2026-09-04",
-        "generated_at": "2026-09-04T21:40:07+00:00",
+        "generated_at": "2026-09-04T23:18:22+00:00",
         "price": 1647000.0,
         "status_counts": {
           "alert": 4,
@@ -2500,47 +2500,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-09-04T21:40:06+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-09-04T21:40:06+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-09-04T21:40:06+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-09-04T21:40:06+00:00",
+        "fetched_at": "2026-09-04T23:18:21+00:00",
         "error": null
       },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-09-04T21:40:06+00:00",
+        "fetched_at": "2026-09-04T23:18:21+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-09-04T23:18:21+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-09-04T23:18:21+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-09-04T23:18:21+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-09-04T21:40:06+00:00",
+        "fetched_at": "2026-09-04T23:18:21+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-04T21:40:06+00:00",
-        "error": null
-      },
-      "krx_history": {
-        "status": "fresh",
-        "fetched_at": "2026-09-04T21:40:06+00:00",
+        "fetched_at": "2026-09-04T23:18:21+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-04T21:40:06+00:00",
+        "fetched_at": "2026-09-04T23:18:21+00:00",
+        "error": null
+      },
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-09-04T23:18:21+00:00",
         "error": null
       }
     },
