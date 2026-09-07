@@ -301,14 +301,14 @@
   },
   {
     "date": "2026-09-07",
-    "generated_at": "2026-09-07T01:19:45+00:00",
-    "price": 1744000.0,
+    "generated_at": "2026-09-07T06:10:24+00:00",
+    "price": 1779000.0,
     "status_counts": {
       "alert": 4,
-      "watch": 5,
-      "neutral": 3,
-      "support": 6
+      "watch": 4,
+      "neutral": 2,
+      "support": 8
     },
-    "adr_premium_pct": 37.05
+    "adr_premium_pct": 34.35
   }
 ]
