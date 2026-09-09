@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-09T21:06:33+00:00",
-  "generated_at_seoul": "2026-09-10T06:06:33+09:00",
+  "generated_at": "2026-09-09T23:11:30+00:00",
+  "generated_at_seoul": "2026-09-10T08:11:30+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -23,7 +23,7 @@
       },
       {
         "label": "EWMA年化波动率",
-        "display": "97.3%",
+        "display": "94.4%",
         "status": "alert",
         "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
       },
@@ -72,14 +72,14 @@
       "symbol": "000660",
       "name": "SK하이닉스",
       "price": 1856000.0,
-      "previous_close_change": 63000.0,
-      "change_pct": 3.51,
-      "open": 1795000.0,
-      "high": 1883000.0,
-      "low": 1795000.0,
-      "volume": 3523439.0,
-      "market_status": "CLOSE",
-      "traded_at": "2026-09-09T15:30:00+09:00",
+      "previous_close_change": 0.0,
+      "change_pct": 0.0,
+      "open": null,
+      "high": null,
+      "low": null,
+      "volume": null,
+      "market_status": "PREOPEN",
+      "traded_at": "2026-09-10T08:11:30.138394+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
@@ -101,8 +101,8 @@
     },
     "adr_parity_usd": 138.9,
     "adr_premium_pct": 43.0,
-    "adr_premium_change_pct_points": 1.46,
-    "overnight_spread_pct_points": 3.54,
+    "adr_premium_change_pct_points": 0.0,
+    "overnight_spread_pct_points": 7.05,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
@@ -131,7 +131,7 @@
       "price": 11931.32,
       "change": 43.45,
       "change_pct": 0.37,
-      "traded_at": "2026-09-09T17:06:30-04:00",
+      "traded_at": "2026-09-09T17:15:59-04:00",
       "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
@@ -143,20 +143,20 @@
     }
   },
   "technicals": {
-    "sma20": 1670000.0,
-    "sma60": 1933383.33,
-    "sma120": 1713166.67,
-    "sma200": 1324330.0,
-    "rsi14": 63.07,
-    "ewma_volatility_pct": 97.34,
+    "sma20": 1687600.0,
+    "sma60": 1924616.67,
+    "sma120": 1719833.33,
+    "sma200": 1330580.0,
+    "rsi14": 60.64,
+    "ewma_volatility_pct": 94.37,
     "var95_pct": 9.18,
     "cvar95_pct": 12.08,
     "drawdown_52w_pct": -36.42,
     "max_drawdown_1y_pct": -54.71,
     "high_52w": 2919000.0,
     "low_52w": 256000.0,
-    "momentum_20d_pct": 30.25,
-    "momentum_60d_pct": -18.88,
+    "momentum_20d_pct": 23.4,
+    "momentum_60d_pct": -22.08,
     "volume_ratio_20d": 0.92,
     "beta_120d": 1.54,
     "correlation_kospi_120d": 0.95
@@ -223,8 +223,8 @@
       "id": "trend_200d",
       "pillar": "market_regime",
       "label": "200日趋势距离",
-      "value": 140.1463,
-      "display": "+40.1%",
+      "value": 139.488,
+      "display": "+39.5%",
       "status": "neutral",
       "threshold": "低于200日线10%触发警戒；高于50%提示过热",
       "interpretation": "趋势破位和极端偏离分开观察，不把上涨本身视为风险。"
@@ -243,8 +243,8 @@
       "id": "ewma_vol",
       "pillar": "market_regime",
       "label": "EWMA年化波动率",
-      "value": 97.3394,
-      "display": "97.3%",
+      "value": 94.374,
+      "display": "94.4%",
       "status": "alert",
       "threshold": "50%以上进入注意，80%以上触发警戒；RiskMetrics λ=0.94",
       "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
@@ -253,8 +253,8 @@
       "id": "rsi14",
       "pillar": "market_regime",
       "label": "RSI 14",
-      "value": 63.0745,
-      "display": "63.1",
+      "value": 60.6419,
+      "display": "60.6",
       "status": "neutral",
       "threshold": "低于20或高于80触发警戒；30/70为注意线",
       "interpretation": "极端超买和超卖都意味着一年期投资者需要控制入场节奏。"
@@ -402,12 +402,6 @@
   ],
   "chart": {
     "price": [
-      {
-        "date": "20250818",
-        "close": 267500.0,
-        "sma60": 257998.33,
-        "sma200": 210566.5
-      },
       {
         "date": "20250819",
         "close": 263000.0,
@@ -1961,6 +1955,12 @@
         "close": 1856000.0,
         "sma60": 1933383.33,
         "sma200": 1324330.0
+      },
+      {
+        "date": "20260910",
+        "close": 1856000.0,
+        "sma60": 1924616.67,
+        "sma200": 1330580.0
       }
     ],
     "evidence_history": [
@@ -2299,6 +2299,18 @@
           "support": 6
         },
         "adr_premium_pct": 43.0
+      },
+      {
+        "date": "2026-09-10",
+        "generated_at": "2026-09-09T23:11:30+00:00",
+        "price": 1856000.0,
+        "status_counts": {
+          "alert": 4,
+          "watch": 4,
+          "neutral": 4,
+          "support": 6
+        },
+        "adr_premium_pct": 43.0
       }
     ]
   },
@@ -2536,47 +2548,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-09-09T21:06:31+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-09-09T21:06:31+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-09-09T21:06:31+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-09-09T21:06:31+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-09-09T21:06:31+00:00",
+        "fetched_at": "2026-09-09T23:11:29+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-09-09T21:06:31+00:00",
+        "fetched_at": "2026-09-09T23:11:29+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-09-09T23:11:29+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-09-09T23:11:29+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-09-09T23:11:29+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-09-09T23:11:29+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-09T21:06:31+00:00",
+        "fetched_at": "2026-09-09T23:11:29+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-09T21:06:31+00:00",
+        "fetched_at": "2026-09-09T23:11:29+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-09T21:06:31+00:00",
+        "fetched_at": "2026-09-09T23:11:29+00:00",
         "error": null
       }
     },
