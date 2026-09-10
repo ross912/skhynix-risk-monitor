@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-10T20:02:18+00:00",
-  "generated_at_seoul": "2026-09-11T05:02:18+09:00",
+  "generated_at": "2026-09-10T22:25:01+00:00",
+  "generated_at_seoul": "2026-09-11T07:25:01+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 137.89,
     "adr_premium_pct": 36.56,
-    "adr_premium_change_pct_points": -1.87,
+    "adr_premium_change_pct_points": -0.0,
     "overnight_spread_pct_points": -5.04,
     "nvidia": {
       "symbol": "NVDA",
@@ -131,7 +131,7 @@
       "price": 11614.17,
       "change": -317.16,
       "change_pct": -2.66,
-      "traded_at": "2026-09-10T16:02:16-04:00",
+      "traded_at": "2026-09-10T17:15:59-04:00",
       "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
@@ -2302,7 +2302,7 @@
       },
       {
         "date": "2026-09-10",
-        "generated_at": "2026-09-10T20:02:18+00:00",
+        "generated_at": "2026-09-10T22:25:01+00:00",
         "price": 1853000.0,
         "status_counts": {
           "alert": 6,
@@ -2548,47 +2548,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-09-10T20:02:17+00:00",
+        "fetched_at": "2026-09-10T22:24:59+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-09-10T20:02:17+00:00",
+        "fetched_at": "2026-09-10T22:24:59+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-09-10T20:02:17+00:00",
+        "fetched_at": "2026-09-10T22:24:59+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-09-10T20:02:17+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-09-10T20:02:17+00:00",
+        "fetched_at": "2026-09-10T22:24:59+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-09-10T20:02:17+00:00",
+        "fetched_at": "2026-09-10T22:24:59+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-09-10T22:24:59+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-10T20:02:17+00:00",
-        "error": null
-      },
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-09-10T20:02:17+00:00",
+        "fetched_at": "2026-09-10T22:24:59+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-10T20:02:17+00:00",
+        "fetched_at": "2026-09-10T22:24:59+00:00",
+        "error": null
+      },
+      "kospi_history": {
+        "status": "fresh",
+        "fetched_at": "2026-09-10T22:24:59+00:00",
         "error": null
       }
     },
