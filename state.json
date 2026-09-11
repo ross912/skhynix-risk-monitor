@@ -2310,7 +2310,7 @@
           "neutral": 5,
           "support": 4
         },
-        "adr_premium_pct": 43.23
+        "adr_premium_pct": 36.56
       },
       {
         "date": "2026-09-11",
@@ -2583,7 +2583,7 @@
         "fetched_at": "2026-09-11T00:22:28+00:00",
         "error": null
       },
-      "kospi_history": {
+      "sox": {
         "status": "fresh",
         "fetched_at": "2026-09-11T00:22:28+00:00",
         "error": null
