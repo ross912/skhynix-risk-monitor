@@ -48,6 +48,12 @@
     ],
     "offsets": [
       {
+        "label": "200日趋势距离",
+        "display": "+26.3%",
+        "status": "support",
+        "interpretation": "趋势破位和极端偏离分开观察，不把上涨本身视为风险。"
+      },
+      {
         "label": "平均目标价空间",
         "display": "+76.9%",
         "status": "support",
@@ -168,8 +174,8 @@
       "counts": {
         "alert": 3,
         "watch": 0,
-        "neutral": 2,
-        "support": 0
+        "neutral": 1,
+        "support": 1
       },
       "signal_count": 5
     },
@@ -402,12 +408,6 @@
   ],
   "chart": {
     "price": [
-      {
-        "date": "20250820",
-        "close": 255500.0,
-        "sma60": 260025.0,
-        "sma200": 211188.0
-      },
       {
         "date": "20250821",
         "close": 245000.0,
