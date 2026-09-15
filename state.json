@@ -49,7 +49,7 @@
     "offsets": [
       {
         "label": "200日趋势距离",
-        "display": "+26.0%",
+        "display": "+25.4%",
         "status": "support",
         "interpretation": "趋势破位和极端偏离分开观察，不把上涨本身视为风险。"
       },
@@ -2329,10 +2329,10 @@
         "generated_at": "2026-09-14T08:09:32+00:00",
         "price": 1692000.0,
         "status_counts": {
-          "alert": 4,
+          "alert": 6,
           "watch": 5,
-          "neutral": 3,
-          "support": 6
+          "neutral": 2,
+          "support": 5
         },
         "adr_premium_pct": 50.84
       },
