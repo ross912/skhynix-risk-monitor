@@ -17,7 +17,7 @@
     "key_risks": [
       {
         "label": "距52周高点",
-        "display": "-40.0%",
+        "display": "-39.8%",
         "status": "alert",
         "interpretation": "衡量当前价格处在一年周期的哪个位置。"
       },
@@ -2338,25 +2338,25 @@
       },
       {
         "date": "2026-09-15",
-        "generated_at": "2026-09-16T00:55:05+00:00",
-        "price": 1690000.0,
+        "generated_at": "2026-09-15T21:39:35+00:00",
+        "price": 1712000.0,
         "status_counts": {
           "alert": 4,
-          "watch": 6,
-          "neutral": 3,
+          "watch": 5,
+          "neutral": 4,
           "support": 5
         },
-        "adr_premium_pct": 39.91
+        "adr_premium_pct": 38.8
       },
       {
         "date": "2026-09-16",
-        "generated_at": "2026-09-16T07:40:09+00:00",
-        "price": 1752000.0,
+        "generated_at": "2026-09-16T22:19:09+00:00",
+        "price": 1757000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 5,
-          "support": 5
+          "neutral": 4,
+          "support": 6
         },
         "adr_premium_pct": 35.63
       },
