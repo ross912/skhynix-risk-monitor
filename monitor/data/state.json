@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-21T07:07:24+00:00",
-  "generated_at_seoul": "2026-09-21T16:07:24+09:00",
+  "generated_at": "2026-09-21T14:01:36+00:00",
+  "generated_at_seoul": "2026-09-21T23:01:36+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -17,13 +17,13 @@
     "key_risks": [
       {
         "label": "距52周高点",
-        "display": "-36.0%",
+        "display": "-35.6%",
         "status": "alert",
         "interpretation": "衡量当前价格处在一年周期的哪个位置。"
       },
       {
         "label": "EWMA年化波动率",
-        "display": "82.9%",
+        "display": "83.0%",
         "status": "alert",
         "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
       },
@@ -49,19 +49,19 @@
     "offsets": [
       {
         "label": "平均目标价空间",
-        "display": "+71.6%",
+        "display": "+70.6%",
         "status": "support",
         "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
       },
       {
         "label": "ADR相对韩股平价",
-        "display": "+39.3%",
+        "display": "+37.4%",
         "status": "support",
         "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
       },
       {
         "label": "三星电子同步性",
-        "display": "+5.00%",
+        "display": "+5.77%",
         "status": "support",
         "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
       }
@@ -71,93 +71,93 @@
     "krx": {
       "symbol": "000660",
       "name": "SK하이닉스",
-      "price": 1868000.0,
-      "previous_close_change": 11000.0,
-      "change_pct": 0.59,
+      "price": 1879000.0,
+      "previous_close_change": 22000.0,
+      "change_pct": 1.18,
       "open": 1872000.0,
       "high": 1888000.0,
       "low": 1847000.0,
-      "volume": 2572130.0,
-      "market_status": "OPEN",
-      "traded_at": "2026-09-21T16:07:24.277408+09:00",
+      "volume": 2716408.0,
+      "market_status": "CLOSE",
+      "traded_at": "2026-09-21T20:00:00+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
-      "price": 187.5,
-      "change": 4.51,
-      "change_pct": 2.46,
-      "traded_at": "2026-09-18T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "price": 188.21,
+      "change": 0.71,
+      "change_pct": 0.38,
+      "traded_at": "2026-09-21T10:01:36-04:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "fx_usdkrw": {
       "symbol": "USDKRW",
-      "price": 1388.1,
-      "traded_at": "2026-09-18T16:00:00+00:00",
+      "price": 1372.18,
+      "traded_at": "2026-09-21T16:00:00+00:00",
       "base": "USD"
     },
-    "adr_parity_usd": 134.57,
-    "adr_premium_pct": 39.33,
-    "adr_premium_change_pct_points": 0.45,
-    "overnight_spread_pct_points": 1.87,
+    "adr_parity_usd": 136.94,
+    "adr_premium_pct": 37.44,
+    "adr_premium_change_pct_points": -1.89,
+    "overnight_spread_pct_points": -0.8,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
-      "price": 222.27,
-      "change": 2.93,
-      "change_pct": 1.34,
-      "traded_at": "2026-09-18T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "price": 223.79,
+      "change": 1.52,
+      "change_pct": 0.68,
+      "traded_at": "2026-09-21T10:01:36-04:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "micron": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
-      "price": 1015.8,
-      "change": 38.3,
-      "change_pct": 3.92,
-      "traded_at": "2026-09-18T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "price": 1045.56,
+      "change": 29.76,
+      "change_pct": 2.93,
+      "traded_at": "2026-09-21T10:01:36-04:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "sox": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
-      "price": 11921.69,
-      "change": 322.19,
-      "change_pct": 2.78,
-      "traded_at": "2026-09-18T17:15:59-04:00",
-      "market_status": "CLOSE",
+      "price": 12198.51,
+      "change": 276.83,
+      "change_pct": 2.32,
+      "traded_at": "2026-09-21T10:01:36-04:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 273000.0,
-      "change_pct": 5.0,
+      "price": 275000.0,
+      "change_pct": 5.77,
       "traded_at": "20260921"
     }
   },
   "technicals": {
-    "sma20": 1735200.0,
-    "sma60": 1816333.33,
-    "sma120": 1766958.33,
-    "sma200": 1373865.0,
-    "rsi14": 62.24,
-    "ewma_volatility_pct": 82.89,
+    "sma20": 1735750.0,
+    "sma60": 1816516.67,
+    "sma120": 1767050.0,
+    "sma200": 1373920.0,
+    "rsi14": 62.81,
+    "ewma_volatility_pct": 83.03,
     "var95_pct": 9.18,
     "cvar95_pct": 12.08,
-    "drawdown_52w_pct": -36.01,
+    "drawdown_52w_pct": -35.63,
     "max_drawdown_1y_pct": -54.71,
     "high_52w": 2919000.0,
     "low_52w": 288000.0,
-    "momentum_20d_pct": 11.79,
-    "momentum_60d_pct": -35.96,
-    "volume_ratio_20d": 0.77,
+    "momentum_20d_pct": 12.45,
+    "momentum_60d_pct": -35.58,
+    "volume_ratio_20d": 0.82,
     "beta_120d": 1.55,
     "correlation_kospi_120d": 0.95
   },
@@ -223,8 +223,8 @@
       "id": "trend_200d",
       "pillar": "market_regime",
       "label": "200日趋势距离",
-      "value": 135.9668,
-      "display": "+36.0%",
+      "value": 136.762,
+      "display": "+36.8%",
       "status": "neutral",
       "threshold": "低于200日线10%触发警戒；高于50%提示过热",
       "interpretation": "趋势破位和极端偏离分开观察，不把上涨本身视为风险。"
@@ -233,8 +233,8 @@
       "id": "drawdown_52w",
       "pillar": "market_regime",
       "label": "距52周高点",
-      "value": -36.0055,
-      "display": "-36.0%",
+      "value": -35.6286,
+      "display": "-35.6%",
       "status": "alert",
       "threshold": "回撤超过20%进入注意，超过35%触发警戒",
       "interpretation": "衡量当前价格处在一年周期的哪个位置。"
@@ -243,8 +243,8 @@
       "id": "ewma_vol",
       "pillar": "market_regime",
       "label": "EWMA年化波动率",
-      "value": 82.8942,
-      "display": "82.9%",
+      "value": 83.035,
+      "display": "83.0%",
       "status": "alert",
       "threshold": "50%以上进入注意，80%以上触发警戒；RiskMetrics λ=0.94",
       "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
@@ -253,8 +253,8 @@
       "id": "rsi14",
       "pillar": "market_regime",
       "label": "RSI 14",
-      "value": 62.2378,
-      "display": "62.2",
+      "value": 62.8099,
+      "display": "62.8",
       "status": "neutral",
       "threshold": "低于20或高于80触发警戒；30/70为注意线",
       "interpretation": "极端超买和超卖都意味着一年期投资者需要控制入场节奏。"
@@ -293,8 +293,8 @@
       "id": "target_upside",
       "pillar": "expectations",
       "label": "平均目标价空间",
-      "value": 71.6036,
-      "display": "+71.6%",
+      "value": 70.599,
+      "display": "+70.6%",
       "status": "support",
       "threshold": "平均目标价低于现价警戒；空间不足20%时注意",
       "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
@@ -313,8 +313,8 @@
       "id": "adr_premium",
       "pillar": "cross_market",
       "label": "ADR相对韩股平价",
-      "value": 39.3302,
-      "display": "+39.3%",
+      "value": 37.4444,
+      "display": "+37.4%",
       "status": "support",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
@@ -323,8 +323,8 @@
       "id": "overnight_lead",
       "pillar": "cross_market",
       "label": "ADR美国时段方向",
-      "value": 2.46,
-      "display": "+2.5%",
+      "value": 0.38,
+      "display": "+0.4%",
       "status": "neutral",
       "threshold": "ADR日跌幅超过5%触发次日韩股压力警戒；上涨3%以上为正向线索",
       "interpretation": "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。"
@@ -333,8 +333,8 @@
       "id": "us_semis_breadth",
       "pillar": "ai_memory_cycle",
       "label": "美股AI与存储代理",
-      "value": 2.68,
-      "display": "+2.68%",
+      "value": 1.9767,
+      "display": "+1.98%",
       "status": "neutral",
       "threshold": "MU、NVDA和SOX平均日跌幅超过3%触发警戒",
       "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
@@ -343,8 +343,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": 5.0,
-      "display": "+5.00%",
+      "value": 5.7692,
+      "display": "+5.77%",
       "status": "support",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -1958,9 +1958,9 @@
       },
       {
         "date": "20260921",
-        "close": 1868000.0,
-        "sma60": 1816333.33,
-        "sma200": 1373865.0
+        "close": 1879000.0,
+        "sma60": 1816516.67,
+        "sma200": 1373920.0
       }
     ],
     "evidence_history": [
@@ -2386,15 +2386,15 @@
       },
       {
         "date": "2026-09-21",
-        "generated_at": "2026-09-21T07:07:24+00:00",
-        "price": 1868000.0,
+        "generated_at": "2026-09-21T14:01:36+00:00",
+        "price": 1879000.0,
         "status_counts": {
           "alert": 4,
           "watch": 4,
           "neutral": 4,
           "support": 6
         },
-        "adr_premium_pct": 39.33
+        "adr_premium_pct": 37.44
       }
     ]
   },
@@ -2632,52 +2632,52 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-09-21T07:07:23+00:00",
+        "fetched_at": "2026-09-21T14:01:35+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-09-21T07:07:23+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-09-21T07:07:23+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-09-21T07:07:23+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-09-21T07:07:23+00:00",
+        "fetched_at": "2026-09-21T14:01:35+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-09-21T07:07:23+00:00",
+        "fetched_at": "2026-09-21T14:01:35+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-09-21T14:01:35+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-09-21T14:01:35+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-09-21T14:01:35+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-21T07:07:23+00:00",
-        "error": null
-      },
-      "kospi_history": {
-        "status": "fresh",
-        "fetched_at": "2026-09-21T07:07:23+00:00",
+        "fetched_at": "2026-09-21T14:01:35+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-09-21T07:07:23+00:00",
+        "fetched_at": "2026-09-21T14:01:35+00:00",
+        "error": null
+      },
+      "kospi_history": {
+        "status": "fresh",
+        "fetched_at": "2026-09-21T14:01:35+00:00",
         "error": null
       }
     },
     "slow_data_age_days": 52,
-    "next_scheduled_refresh": "2026-09-21T16:40+09:00",
+    "next_scheduled_refresh": "2026-09-22T16:40+09:00",
     "policy": "韩国交易时段每15分钟检查，韩国收盘后每日固化；慢变量按财报与产业数据更新。",
     "source_urls": {
       "krx_realtime": "https://polling.finance.naver.com/api/realtime/domestic/stock/000660",
