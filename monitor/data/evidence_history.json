@@ -433,14 +433,14 @@
   },
   {
     "date": "2026-09-22",
-    "generated_at": "2026-09-22T01:07:43+00:00",
-    "price": 1923500.0,
+    "generated_at": "2026-09-22T06:09:00+00:00",
+    "price": 1854000.0,
     "status_counts": {
-      "alert": 3,
-      "watch": 7,
-      "neutral": 3,
-      "support": 5
+      "alert": 4,
+      "watch": 4,
+      "neutral": 4,
+      "support": 6
     },
-    "adr_premium_pct": 34.73
+    "adr_premium_pct": 39.78
   }
 ]
