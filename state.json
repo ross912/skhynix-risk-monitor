@@ -43,7 +43,13 @@
         "label": "2028一致预期溢价",
         "display": "28.3%",
         "status": "watch",
-        "interpretation": "利润预期越领先于供给与折旧模型，失望风险越大。"
+        "interpretation": "衡量当前价格处在一年周期的哪个位置。"
+      },
+      {
+        "label": "RSI 14",
+        "display": "72.5",
+        "status": "watch",
+        "interpretation": "极端超买和超卖都意味着一年期投资者需要控制入场节奏。"
       }
     ],
     "offsets": [
@@ -95,8 +101,8 @@
     },
     "fx_usdkrw": {
       "symbol": "USDKRW",
-      "price": 1382.55,
-      "traded_at": "2026-09-17T16:00:00+00:00",
+      "price": 1372.18,
+      "traded_at": "2026-09-21T16:00:00+00:00",
       "base": "USD"
     },
     "adr_parity_usd": 138.58,
@@ -128,18 +134,18 @@
     "sox": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
-      "price": 11599.49,
-      "change": 353.39,
-      "change_pct": 3.14,
-      "traded_at": "2026-09-17T17:15:59-04:00",
+      "price": 12433.17,
+      "change": 511.49,
+      "change_pct": 4.29,
+      "traded_at": "2026-09-21T17:15:59-04:00",
       "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "samsung": {
-      "price": 260500.0,
-      "change_pct": 1.76,
-      "traded_at": "20260918"
+      "price": 280250.0,
+      "change_pct": 1.91,
+      "traded_at": "20260922"
     }
   },
   "technicals": {
@@ -201,8 +207,8 @@
       "counts": {
         "alert": 0,
         "watch": 1,
-        "neutral": 2,
-        "support": 1
+        "neutral": 1,
+        "support": 2
       },
       "signal_count": 4
     },
@@ -343,8 +349,8 @@
       "id": "samsung_peer",
       "pillar": "ai_memory_cycle",
       "label": "三星电子同步性",
-      "value": 1.7578,
-      "display": "+1.76%",
+      "value": 1.9091,
+      "display": "+1.91%",
       "status": "neutral",
       "threshold": "韩国存储同业跌幅超过5%触发警戒",
       "interpretation": "区分海力士个股问题与韩国存储板块共同波动。"
@@ -402,18 +408,6 @@
   ],
   "chart": {
     "price": [
-      {
-        "date": "20250827",
-        "close": 260000.0,
-        "sma60": 264141.67,
-        "sma200": 212730.0
-      },
-      {
-        "date": "20250828",
-        "close": 268500.0,
-        "sma60": 265158.33,
-        "sma200": 213161.5
-      },
       {
         "date": "20250829",
         "close": 269000.0,
@@ -2379,8 +2373,8 @@
         "status_counts": {
           "alert": 4,
           "watch": 4,
-          "neutral": 6,
-          "support": 4
+          "neutral": 5,
+          "support": 5
         },
         "adr_premium_pct": 36.53
       },

@@ -409,14 +409,38 @@
   },
   {
     "date": "2026-09-18",
-    "generated_at": "2026-09-18T06:29:01+00:00",
-    "price": 1839000.0,
+    "generated_at": "2026-09-20T21:45:25+00:00",
+    "price": 1849000.0,
+    "status_counts": {
+      "alert": 4,
+      "watch": 4,
+      "neutral": 5,
+      "support": 5
+    },
+    "adr_premium_pct": 40.76
+  },
+  {
+    "date": "2026-09-21",
+    "generated_at": "2026-09-21T22:34:38+00:00",
+    "price": 1879000.0,
     "status_counts": {
       "alert": 4,
       "watch": 4,
       "neutral": 3,
       "support": 7
     },
-    "adr_premium_pct": 37.57
+    "adr_premium_pct": 37.92
+  },
+  {
+    "date": "2026-09-22",
+    "generated_at": "2026-09-22T01:07:43+00:00",
+    "price": 1923500.0,
+    "status_counts": {
+      "alert": 3,
+      "watch": 7,
+      "neutral": 3,
+      "support": 5
+    },
+    "adr_premium_pct": 34.73
   }
 ]
