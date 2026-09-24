@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-24T04:55:35+00:00",
-  "generated_at_seoul": "2026-09-24T13:55:35+09:00",
+  "generated_at": "2026-09-24T05:11:34+00:00",
+  "generated_at_seoul": "2026-09-24T14:11:34+09:00",
   "trigger": "intraday",
   "summary": {
     "status_counts": {
@@ -12,7 +12,7 @@
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
-    "data_completeness_pct": 90.0,
+    "data_completeness_pct": 100.0,
     "holding_horizon_months": 12,
     "key_risks": [
       {
@@ -2398,7 +2398,7 @@
       },
       {
         "date": "2026-09-23",
-        "generated_at": "2026-09-24T04:55:35+00:00",
+        "generated_at": "2026-09-24T05:11:34+00:00",
         "price": 1863000.0,
         "status_counts": {
           "alert": 3,
@@ -2638,57 +2638,54 @@
     }
   ],
   "data_quality": {
-    "completeness_pct": 90.0,
+    "completeness_pct": 100.0,
     "failed_sources": [],
-    "cached_sources": [
-      "samsung_history",
-      "kospi_history"
-    ],
+    "cached_sources": [],
     "sources": {
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-09-24T04:55:19+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-09-24T04:55:19+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-09-24T04:55:19+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-09-24T04:55:19+00:00",
-        "error": null
-      },
-      "krx_history": {
-        "status": "fresh",
-        "fetched_at": "2026-09-24T04:55:19+00:00",
+        "fetched_at": "2026-09-24T05:11:31+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-09-24T04:55:19+00:00",
+        "fetched_at": "2026-09-24T05:11:31+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-09-24T05:11:31+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-09-24T05:11:31+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-09-24T05:11:31+00:00",
+        "error": null
+      },
+      "krx_history": {
+        "status": "fresh",
+        "fetched_at": "2026-09-24T05:11:31+00:00",
+        "error": null
+      },
+      "samsung_history": {
+        "status": "fresh",
+        "fetched_at": "2026-09-24T05:11:31+00:00",
+        "error": null
+      },
+      "kospi_history": {
+        "status": "fresh",
+        "fetched_at": "2026-09-24T05:11:31+00:00",
         "error": null
       },
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-09-24T04:55:19+00:00",
+        "fetched_at": "2026-09-24T05:11:31+00:00",
         "error": null
-      },
-      "samsung_history": {
-        "status": "cached",
-        "fetched_at": "2026-09-24T04:38:51+00:00",
-        "error": "The read operation timed out"
-      },
-      "kospi_history": {
-        "status": "cached",
-        "fetched_at": "2026-09-24T04:38:51+00:00",
-        "error": "The read operation timed out"
       }
     },
     "slow_data_age_days": 55,
