@@ -1,6 +1,6 @@
 {
   "sox": {
-    "fetched_at": "2026-10-01T01:32:40+00:00",
+    "fetched_at": "2026-10-01T07:40:55+00:00",
     "data": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
@@ -14,49 +14,49 @@
     }
   },
   "micron": {
-    "fetched_at": "2026-10-01T01:32:40+00:00",
+    "fetched_at": "2026-10-01T07:40:55+00:00",
     "data": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
       "price": 1065.11,
-      "change": 0.03,
+      "change": 0.0,
       "change_pct": 0.0,
-      "traded_at": "2026-09-30T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "traded_at": "2026-10-01T03:40:56-04:00",
+      "market_status": "PREOPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     }
   },
   "adr": {
-    "fetched_at": "2026-10-01T01:32:40+00:00",
+    "fetched_at": "2026-10-01T07:40:55+00:00",
     "data": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
       "price": 184.15,
-      "change": -2.53,
-      "change_pct": -1.36,
-      "traded_at": "2026-09-30T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "traded_at": "2026-10-01T03:40:56-04:00",
+      "market_status": "PREOPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     }
   },
   "nvidia": {
-    "fetched_at": "2026-10-01T01:32:40+00:00",
+    "fetched_at": "2026-10-01T07:40:55+00:00",
     "data": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
       "price": 228.38,
-      "change": 1.17,
-      "change_pct": 0.51,
-      "traded_at": "2026-09-30T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "traded_at": "2026-10-01T03:40:56-04:00",
+      "market_status": "PREOPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     }
   },
   "samsung_history": {
-    "fetched_at": "2026-10-01T01:32:40+00:00",
+    "fetched_at": "2026-10-01T07:40:55+00:00",
     "data": [
       {
         "date": "20240314",
@@ -5013,15 +5013,15 @@
       {
         "date": "20261001",
         "open": 266500.0,
-        "high": 270000.0,
+        "high": 276000.0,
         "low": 264500.0,
-        "close": 268000.0,
-        "volume": 4127197.0
+        "close": 272500.0,
+        "volume": 13243484.0
       }
     ]
   },
   "krx_history": {
-    "fetched_at": "2026-10-01T01:32:40+00:00",
+    "fetched_at": "2026-10-01T07:40:55+00:00",
     "data": [
       {
         "date": "20240314",
@@ -9978,15 +9978,15 @@
       {
         "date": "20261001",
         "open": 1762000.0,
-        "high": 1790000.0,
+        "high": 1833000.0,
         "low": 1749000.0,
-        "close": 1775000.0,
-        "volume": 631312.0
+        "close": 1811000.0,
+        "volume": 2121406.0
       }
     ]
   },
   "kospi_history": {
-    "fetched_at": "2026-10-01T01:32:40+00:00",
+    "fetched_at": "2026-10-01T07:40:55+00:00",
     "data": [
       {
         "date": "20240314",
@@ -14943,15 +14943,15 @@
       {
         "date": "20261001",
         "open": 6814.49,
-        "high": 6854.21,
+        "high": 6971.36,
         "low": 6765.06,
-        "close": 6820.22,
-        "volume": 118948.0
+        "close": 6971.35,
+        "volume": 258693.0
       }
     ]
   },
   "fx": {
-    "fetched_at": "2026-10-01T01:32:40+00:00",
+    "fetched_at": "2026-10-01T07:40:55+00:00",
     "data": {
       "symbol": "USDKRW",
       "price": 1355.4,
@@ -14960,19 +14960,19 @@
     }
   },
   "krx_quote": {
-    "fetched_at": "2026-10-01T01:32:40+00:00",
+    "fetched_at": "2026-10-01T07:40:55+00:00",
     "data": {
       "symbol": "000660",
       "name": "SK하이닉스",
-      "price": 1775000.0,
-      "previous_close_change": -1000.0,
-      "change_pct": -0.06,
+      "price": 1811000.0,
+      "previous_close_change": 35000.0,
+      "change_pct": 1.97,
       "open": 1762000.0,
-      "high": 1790000.0,
+      "high": 1833000.0,
       "low": 1749000.0,
-      "volume": 632627.0,
+      "volume": 2121860.0,
       "market_status": "OPEN",
-      "traded_at": "2026-10-01T10:32:40.857265+09:00",
+      "traded_at": "2026-10-01T16:40:56.713298+09:00",
       "exchange": "KOSPI"
     }
   }
