@@ -2425,9 +2425,9 @@
         "generated_at": "2026-09-29T08:31:48+00:00",
         "price": 1787000.0,
         "status_counts": {
-          "alert": 4,
+          "alert": 3,
           "watch": 7,
-          "neutral": 2,
+          "neutral": 3,
           "support": 5
         },
         "adr_premium_pct": 38.24
