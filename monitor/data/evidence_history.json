@@ -565,14 +565,14 @@
   },
   {
     "date": "2026-10-13",
-    "generated_at": "2026-10-13T10:27:47+00:00",
-    "price": 1460000.0,
+    "generated_at": "2026-10-13T17:43:05+00:00",
+    "price": 1456000.0,
     "status_counts": {
       "alert": 4,
-      "watch": 8,
-      "neutral": 1,
+      "watch": 9,
+      "neutral": 0,
       "support": 5
     },
-    "adr_premium_pct": 48.13
+    "adr_premium_pct": 43.18
   }
 ]
