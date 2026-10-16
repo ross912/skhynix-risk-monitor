@@ -601,14 +601,14 @@
   },
   {
     "date": "2026-10-16",
-    "generated_at": "2026-10-15T23:54:33+00:00",
-    "price": 1262000.0,
+    "generated_at": "2026-10-16T03:25:10+00:00",
+    "price": 1290000.0,
     "status_counts": {
-      "alert": 7,
+      "alert": 6,
       "watch": 7,
-      "neutral": 0,
+      "neutral": 1,
       "support": 4
     },
-    "adr_premium_pct": 55.82
+    "adr_premium_pct": 52.44
   }
 ]
