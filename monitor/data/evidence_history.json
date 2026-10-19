@@ -613,14 +613,14 @@
   },
   {
     "date": "2026-10-19",
-    "generated_at": "2026-10-19T06:07:50+00:00",
-    "price": 1276000.0,
+    "generated_at": "2026-10-19T13:01:00+00:00",
+    "price": 1304000.0,
     "status_counts": {
-      "alert": 8,
-      "watch": 5,
+      "alert": 7,
+      "watch": 6,
       "neutral": 1,
       "support": 4
     },
-    "adr_premium_pct": 42.49
+    "adr_premium_pct": 39.43
   }
 ]
