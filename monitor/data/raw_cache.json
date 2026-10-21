@@ -1,62 +1,62 @@
 {
   "sox": {
-    "fetched_at": "2026-10-21T10:26:50+00:00",
+    "fetched_at": "2026-10-21T15:29:13+00:00",
     "data": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
-      "price": 11283.81,
-      "change": -32.53,
-      "change_pct": -0.29,
-      "traded_at": "2026-10-20T17:15:59-04:00",
-      "market_status": "CLOSE",
+      "price": 11440.72,
+      "change": 156.91,
+      "change_pct": 1.39,
+      "traded_at": "2026-10-21T11:29:14-04:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     }
   },
   "micron": {
-    "fetched_at": "2026-10-21T10:26:50+00:00",
+    "fetched_at": "2026-10-21T15:29:13+00:00",
     "data": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
-      "price": 896.07,
-      "change": -8.83,
-      "change_pct": -0.98,
-      "traded_at": "2026-10-20T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "price": 909.41,
+      "change": 13.34,
+      "change_pct": 1.49,
+      "traded_at": "2026-10-21T11:29:14-04:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     }
   },
   "adr": {
-    "fetched_at": "2026-10-21T10:26:50+00:00",
+    "fetched_at": "2026-10-21T15:29:13+00:00",
     "data": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
-      "price": 139.79,
-      "change": -3.08,
-      "change_pct": -2.16,
-      "traded_at": "2026-10-20T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "price": 142.48,
+      "change": 2.69,
+      "change_pct": 1.92,
+      "traded_at": "2026-10-21T11:29:14-04:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     }
   },
   "nvidia": {
-    "fetched_at": "2026-10-21T10:26:50+00:00",
+    "fetched_at": "2026-10-21T15:29:13+00:00",
     "data": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
-      "price": 216.47,
-      "change": -0.62,
-      "change_pct": -0.29,
-      "traded_at": "2026-10-20T16:00:00-04:00",
-      "market_status": "CLOSE",
+      "price": 220.11,
+      "change": 3.64,
+      "change_pct": 1.68,
+      "traded_at": "2026-10-21T11:29:14-04:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     }
   },
   "samsung_history": {
-    "fetched_at": "2026-10-21T10:26:50+00:00",
+    "fetched_at": "2026-10-21T15:29:13+00:00",
     "data": [
       {
         "date": "20240401",
@@ -5015,13 +5015,13 @@
         "open": 217000.0,
         "high": 228000.0,
         "low": 217000.0,
-        "close": 223000.0,
-        "volume": 16477927.0
+        "close": 223500.0,
+        "volume": 16637378.0
       }
     ]
   },
   "krx_history": {
-    "fetched_at": "2026-10-21T10:26:50+00:00",
+    "fetched_at": "2026-10-21T15:29:13+00:00",
     "data": [
       {
         "date": "20240401",
@@ -9980,13 +9980,13 @@
         "open": 1260000.0,
         "high": 1329000.0,
         "low": 1254000.0,
-        "close": 1286000.0,
-        "volume": 4060231.0
+        "close": 1288000.0,
+        "volume": 4076308.0
       }
     ]
   },
   "kospi_history": {
-    "fetched_at": "2026-10-21T10:26:50+00:00",
+    "fetched_at": "2026-10-21T15:29:13+00:00",
     "data": [
       {
         "date": "20240401",
@@ -14946,33 +14946,33 @@
         "high": 5816.43,
         "low": 5630.14,
         "close": 5735.66,
-        "volume": 214353.0
+        "volume": 225900.0
       }
     ]
   },
   "fx": {
-    "fetched_at": "2026-10-21T10:26:50+00:00",
+    "fetched_at": "2026-10-21T15:29:13+00:00",
     "data": {
       "symbol": "USDKRW",
-      "price": 1327.84,
-      "traded_at": "2026-10-20T16:00:00+00:00",
+      "price": 1325.57,
+      "traded_at": "2026-10-21T16:00:00+00:00",
       "base": "USD"
     }
   },
   "krx_quote": {
-    "fetched_at": "2026-10-21T10:26:50+00:00",
+    "fetched_at": "2026-10-21T15:29:13+00:00",
     "data": {
       "symbol": "000660",
       "name": "SK하이닉스",
-      "price": 1286000.0,
-      "previous_close_change": 63000.0,
-      "change_pct": 5.15,
+      "price": 1288000.0,
+      "previous_close_change": 65000.0,
+      "change_pct": 5.31,
       "open": 1260000.0,
       "high": 1329000.0,
       "low": 1254000.0,
-      "volume": 4060424.0,
-      "market_status": "OPEN",
-      "traded_at": "2026-10-21T19:26:51.330671+09:00",
+      "volume": 4076308.0,
+      "market_status": "CLOSE",
+      "traded_at": "2026-10-21T20:00:00+09:00",
       "exchange": "KOSPI"
     }
   }
