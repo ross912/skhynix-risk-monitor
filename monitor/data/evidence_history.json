@@ -649,14 +649,14 @@
   },
   {
     "date": "2026-10-22",
-    "generated_at": "2026-10-22T00:52:17+00:00",
-    "price": 1282000.0,
+    "generated_at": "2026-10-22T05:29:48+00:00",
+    "price": 1215000.0,
     "status_counts": {
       "alert": 5,
       "watch": 6,
       "neutral": 2,
       "support": 5
     },
-    "adr_premium_pct": 48.12
+    "adr_premium_pct": 56.29
   }
 ]
