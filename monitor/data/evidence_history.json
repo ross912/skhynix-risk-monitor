@@ -661,14 +661,14 @@
   },
   {
     "date": "2026-10-23",
-    "generated_at": "2026-10-23T00:49:26+00:00",
-    "price": 1216000.0,
+    "generated_at": "2026-10-23T05:26:35+00:00",
+    "price": 1254000.0,
     "status_counts": {
-      "alert": 8,
-      "watch": 5,
-      "neutral": 1,
+      "alert": 7,
+      "watch": 7,
+      "neutral": 0,
       "support": 4
     },
-    "adr_premium_pct": 43.45
+    "adr_premium_pct": 39.11
   }
 ]
