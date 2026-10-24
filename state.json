@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-24T04:59:46+00:00",
-  "generated_at_seoul": "2026-10-24T13:59:46+09:00",
+  "generated_at": "2026-10-24T09:19:48+00:00",
+  "generated_at_seoul": "2026-10-24T18:19:48+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -2626,7 +2626,7 @@
       },
       {
         "date": "2026-10-23",
-        "generated_at": "2026-10-24T04:59:46+00:00",
+        "generated_at": "2026-10-24T09:19:48+00:00",
         "price": 1263000.0,
         "status_counts": {
           "alert": 5,
@@ -2872,47 +2872,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-10-24T04:59:44+00:00",
-        "error": null
-      },
-      "krx_quote": {
-        "status": "fresh",
-        "fetched_at": "2026-10-24T04:59:44+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-10-24T04:59:44+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-10-24T04:59:44+00:00",
+        "fetched_at": "2026-10-24T09:19:47+00:00",
         "error": null
       },
       "micron": {
         "status": "fresh",
-        "fetched_at": "2026-10-24T04:59:44+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-10-24T04:59:44+00:00",
+        "fetched_at": "2026-10-24T09:19:47+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-10-24T04:59:44+00:00",
+        "fetched_at": "2026-10-24T09:19:47+00:00",
+        "error": null
+      },
+      "krx_quote": {
+        "status": "fresh",
+        "fetched_at": "2026-10-24T09:19:47+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-10-24T09:19:47+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-10-24T09:19:47+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-10-24T09:19:47+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-10-24T04:59:44+00:00",
+        "fetched_at": "2026-10-24T09:19:47+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-10-24T04:59:44+00:00",
+        "fetched_at": "2026-10-24T09:19:47+00:00",
         "error": null
       }
     },
