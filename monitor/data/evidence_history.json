@@ -709,14 +709,14 @@
   },
   {
     "date": "2026-10-29",
-    "generated_at": "2026-10-29T02:38:52+00:00",
-    "price": 1498000.0,
+    "generated_at": "2026-10-29T08:53:24+00:00",
+    "price": 1501000.0,
     "status_counts": {
       "alert": 5,
       "watch": 4,
       "neutral": 2,
       "support": 7
     },
-    "adr_premium_pct": 47.38
+    "adr_premium_pct": 47.09
   }
 ]
