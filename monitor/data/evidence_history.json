@@ -721,14 +721,14 @@
   },
   {
     "date": "2026-10-30",
-    "generated_at": "2026-10-30T18:04:02+00:00",
+    "generated_at": "2026-10-30T22:12:29+00:00",
     "price": 1391000.0,
     "status_counts": {
       "alert": 6,
-      "watch": 7,
-      "neutral": 1,
+      "watch": 6,
+      "neutral": 2,
       "support": 4
     },
-    "adr_premium_pct": 41.16
+    "adr_premium_pct": 43.23
   }
 ]
