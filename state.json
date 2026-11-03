@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-03T11:47:33+00:00",
-  "generated_at_seoul": "2026-11-03T20:47:33+09:00",
+  "generated_at": "2026-11-03T18:40:00+00:00",
+  "generated_at_seoul": "2026-11-04T03:40:00+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
-      "alert": 5,
-      "watch": 7,
-      "neutral": 2,
-      "support": 4
+      "alert": 4,
+      "watch": 6,
+      "neutral": 3,
+      "support": 5
     },
     "headline": "存在需处理的警戒信号",
     "action": "先核对警戒项的数据时点和触发条件，再决定仓位；支持项不能抵消未被验证的估值或供给假设。",
@@ -40,10 +40,10 @@
         "interpretation": "分析师一致评级可能掩盖目标价分布的巨大不确定性。"
       },
       {
-        "label": "美股AI与存储代理",
-        "display": "-3.47%",
-        "status": "alert",
-        "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
+        "label": "200日趋势距离",
+        "display": "-5.7%",
+        "status": "watch",
+        "interpretation": "趋势破位和极端偏离分开观察，不把上涨本身视为风险。"
       }
     ],
     "offsets": [
@@ -54,16 +54,16 @@
         "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
       },
       {
+        "label": "ADR相对韩股平价",
+        "display": "+44.5%",
+        "status": "support",
+        "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
+      },
+      {
         "label": "四大云厂资本开支",
         "display": "$732B",
         "status": "support",
         "interpretation": "当前资本开支仍在扩张，属于需求侧支持；但合计口径包含非AI设施与租赁，不应等同于HBM订单。"
-      },
-      {
-        "label": "净现金缓冲",
-        "display": "₩69.4T",
-        "status": "support",
-        "interpretation": "强资产负债表降低资本开支周期中的融资与流动性风险。"
       }
     ]
   },
@@ -85,54 +85,54 @@
     "adr": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
-      "price": 147.71,
-      "change": -1.5,
-      "change_pct": -1.01,
-      "traded_at": "2026-11-02T16:00:00-05:00",
-      "market_status": "CLOSE",
+      "price": 151.93,
+      "change": 4.22,
+      "change_pct": 2.86,
+      "traded_at": "2026-11-03T13:39:59-05:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "fx_usdkrw": {
       "symbol": "USDKRW",
-      "price": 1342.9,
-      "traded_at": "2026-11-02T16:00:00+00:00",
+      "price": 1344.59,
+      "traded_at": "2026-11-03T16:00:00+00:00",
       "base": "USD"
     },
-    "adr_parity_usd": 105.29,
-    "adr_premium_pct": 40.28,
-    "adr_premium_change_pct_points": -1.81,
-    "overnight_spread_pct_points": 2.93,
+    "adr_parity_usd": 105.16,
+    "adr_premium_pct": 44.47,
+    "adr_premium_change_pct_points": 4.19,
+    "overnight_spread_pct_points": 6.8,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
-      "price": 202.06,
-      "change": -2.58,
-      "change_pct": -1.26,
-      "traded_at": "2026-11-02T16:00:00-05:00",
-      "market_status": "CLOSE",
+      "price": 208.04,
+      "change": 5.98,
+      "change_pct": 2.96,
+      "traded_at": "2026-11-03T13:39:59-05:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "micron": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
-      "price": 833.59,
-      "change": -51.15,
-      "change_pct": -5.78,
-      "traded_at": "2026-11-02T16:00:00-05:00",
-      "market_status": "CLOSE",
+      "price": 852.47,
+      "change": 18.88,
+      "change_pct": 2.26,
+      "traded_at": "2026-11-03T13:39:59-05:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "sox": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
-      "price": 10328.33,
-      "change": -360.47,
-      "change_pct": -3.37,
-      "traded_at": "2026-11-02T17:15:59-05:00",
-      "market_status": "CLOSE",
+      "price": 10633.5,
+      "change": 305.17,
+      "change_pct": 2.96,
+      "traded_at": "2026-11-03T13:39:59-05:00",
+      "market_status": "OPEN",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -186,22 +186,22 @@
     },
     "cross_market": {
       "label": "ADR跨市场",
-      "status": "watch",
+      "status": "support",
       "counts": {
         "alert": 0,
-        "watch": 1,
+        "watch": 0,
         "neutral": 1,
-        "support": 0
+        "support": 1
       },
       "signal_count": 2
     },
     "ai_memory_cycle": {
       "label": "AI与内存周期",
-      "status": "alert",
+      "status": "watch",
       "counts": {
-        "alert": 1,
+        "alert": 0,
         "watch": 2,
-        "neutral": 0,
+        "neutral": 1,
         "support": 1
       },
       "signal_count": 4
@@ -313,9 +313,9 @@
       "id": "adr_premium",
       "pillar": "cross_market",
       "label": "ADR相对韩股平价",
-      "value": 40.2827,
-      "display": "+40.3%",
-      "status": "neutral",
+      "value": 44.4721,
+      "display": "+44.5%",
+      "status": "support",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
     },
@@ -323,9 +323,9 @@
       "id": "overnight_lead",
       "pillar": "cross_market",
       "label": "ADR美国时段方向",
-      "value": -1.01,
-      "display": "-1.0%",
-      "status": "watch",
+      "value": 2.86,
+      "display": "+2.9%",
+      "status": "neutral",
       "threshold": "ADR日跌幅超过5%触发次日韩股压力警戒；上涨3%以上为正向线索",
       "interpretation": "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。"
     },
@@ -333,9 +333,9 @@
       "id": "us_semis_breadth",
       "pillar": "ai_memory_cycle",
       "label": "美股AI与存储代理",
-      "value": -3.47,
-      "display": "-3.47%",
-      "status": "alert",
+      "value": 2.7267,
+      "display": "+2.73%",
+      "status": "neutral",
       "threshold": "MU、NVDA和SOX平均日跌幅超过3%触发警戒",
       "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
     },
@@ -2710,15 +2710,15 @@
       },
       {
         "date": "2026-11-03",
-        "generated_at": "2026-11-03T11:47:33+00:00",
+        "generated_at": "2026-11-03T18:40:00+00:00",
         "price": 1414000.0,
         "status_counts": {
-          "alert": 5,
-          "watch": 7,
-          "neutral": 2,
-          "support": 4
+          "alert": 4,
+          "watch": 6,
+          "neutral": 3,
+          "support": 5
         },
-        "adr_premium_pct": 40.28
+        "adr_premium_pct": 44.47
       }
     ]
   },
@@ -2956,47 +2956,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-11-03T11:47:31+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-11-03T11:47:31+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-11-03T11:47:31+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-11-03T11:47:31+00:00",
+        "fetched_at": "2026-11-03T18:39:58+00:00",
         "error": null
       },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-11-03T11:47:31+00:00",
+        "fetched_at": "2026-11-03T18:39:58+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-11-03T18:39:58+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-11-03T18:39:58+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-11-03T18:39:58+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-11-03T11:47:31+00:00",
+        "fetched_at": "2026-11-03T18:39:58+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-03T11:47:31+00:00",
+        "fetched_at": "2026-11-03T18:39:58+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-03T11:47:31+00:00",
+        "fetched_at": "2026-11-03T18:39:58+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-03T11:47:31+00:00",
+        "fetched_at": "2026-11-03T18:39:58+00:00",
         "error": null
       }
     },
