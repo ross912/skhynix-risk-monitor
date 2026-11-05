@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-05T18:57:22+00:00",
-  "generated_at_seoul": "2026-11-06T03:57:22+09:00",
+  "generated_at": "2026-11-05T23:56:39+00:00",
+  "generated_at_seoul": "2026-11-06T08:56:39+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
       "alert": 8,
-      "watch": 5,
-      "neutral": 1,
+      "watch": 4,
+      "neutral": 2,
       "support": 4
     },
     "headline": "存在需处理的警戒信号",
@@ -23,13 +23,13 @@
       },
       {
         "label": "距52周高点",
-        "display": "-56.8%",
+        "display": "-56.7%",
         "status": "alert",
         "interpretation": "衡量当前价格处在一年周期的哪个位置。"
       },
       {
         "label": "EWMA年化波动率",
-        "display": "98.5%",
+        "display": "95.5%",
         "status": "alert",
         "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
       },
@@ -49,7 +49,7 @@
     "offsets": [
       {
         "label": "平均目标价空间",
-        "display": "+154.0%",
+        "display": "+153.6%",
         "status": "support",
         "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
       },
@@ -71,25 +71,25 @@
     "krx": {
       "symbol": "000660",
       "name": "SK하이닉스",
-      "price": 1262000.0,
-      "previous_close_change": -134000.0,
-      "change_pct": -9.6,
-      "open": 1320000.0,
-      "high": 1320000.0,
-      "low": 1250000.0,
-      "volume": 4280048.0,
-      "market_status": "CLOSE",
-      "traded_at": "2026-11-05T20:00:00+09:00",
+      "price": 1264000.0,
+      "previous_close_change": 0.0,
+      "change_pct": 0.0,
+      "open": null,
+      "high": null,
+      "low": null,
+      "volume": null,
+      "market_status": "PREOPEN",
+      "traded_at": "2026-11-06T08:56:38.983902+09:00",
       "exchange": "KOSPI"
     },
     "adr": {
       "symbol": "SKHY",
       "name": "SK hynix Inc. ADR",
-      "price": 126.43,
-      "change": -16.64,
-      "change_pct": -11.63,
-      "traded_at": "2026-11-05T13:57:21-05:00",
-      "market_status": "OPEN",
+      "price": 123.9,
+      "change": -19.17,
+      "change_pct": -13.4,
+      "traded_at": "2026-11-05T16:00:00-05:00",
+      "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -99,40 +99,40 @@
       "traded_at": "2026-11-05T16:00:00+00:00",
       "base": "USD"
     },
-    "adr_parity_usd": 93.85,
-    "adr_premium_pct": 34.71,
-    "adr_premium_change_pct_points": -17.04,
-    "overnight_spread_pct_points": -2.03,
+    "adr_parity_usd": 94.0,
+    "adr_premium_pct": 31.81,
+    "adr_premium_change_pct_points": -2.9,
+    "overnight_spread_pct_points": -13.4,
     "nvidia": {
       "symbol": "NVDA",
       "name": "NVIDIA Corporation",
-      "price": 183.14,
-      "change": -16.99,
-      "change_pct": -8.49,
-      "traded_at": "2026-11-05T13:57:21-05:00",
-      "market_status": "OPEN",
+      "price": 181.6,
+      "change": -18.53,
+      "change_pct": -9.26,
+      "traded_at": "2026-11-05T16:00:00-05:00",
+      "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "micron": {
       "symbol": "MU",
       "name": "Micron Technology  Inc.",
-      "price": 675.58,
-      "change": -119.65,
-      "change_pct": -15.05,
-      "traded_at": "2026-11-05T13:57:21-05:00",
-      "market_status": "OPEN",
+      "price": 656.39,
+      "change": -138.84,
+      "change_pct": -17.46,
+      "traded_at": "2026-11-05T16:00:00-05:00",
+      "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
     "sox": {
       "symbol": ".SOX",
       "name": "PHLX SEMICONDUCTOR S",
-      "price": 9228.53,
-      "change": -1040.12,
-      "change_pct": -10.13,
-      "traded_at": "2026-11-05T13:57:21-05:00",
-      "market_status": "OPEN",
+      "price": 9011.14,
+      "change": -1257.52,
+      "change_pct": -12.25,
+      "traded_at": "2026-11-05T17:15:59-05:00",
+      "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
     },
@@ -143,20 +143,20 @@
     }
   },
   "technicals": {
-    "sma20": 1380450.0,
-    "sma60": 1596566.67,
-    "sma120": 1847183.33,
-    "sma200": 1506045.0,
-    "rsi14": 49.85,
-    "ewma_volatility_pct": 98.46,
+    "sma20": 1359350.0,
+    "sma60": 1593933.33,
+    "sma120": 1842425.0,
+    "sma200": 1508620.0,
+    "rsi14": 47.99,
+    "ewma_volatility_pct": 95.47,
     "var95_pct": 10.04,
     "cvar95_pct": 12.6,
-    "drawdown_52w_pct": -56.77,
+    "drawdown_52w_pct": -56.7,
     "max_drawdown_1y_pct": -59.23,
     "high_52w": 2919000.0,
     "low_52w": 519000.0,
-    "momentum_20d_pct": -26.41,
-    "momentum_60d_pct": -15.59,
+    "momentum_20d_pct": -25.03,
+    "momentum_60d_pct": -11.11,
     "volume_ratio_20d": 1.12,
     "beta_120d": 1.56,
     "correlation_kospi_120d": 0.94
@@ -189,8 +189,8 @@
       "status": "alert",
       "counts": {
         "alert": 1,
-        "watch": 1,
-        "neutral": 0,
+        "watch": 0,
+        "neutral": 1,
         "support": 0
       },
       "signal_count": 2
@@ -223,7 +223,7 @@
       "id": "trend_200d",
       "pillar": "market_regime",
       "label": "200日趋势距离",
-      "value": 83.7956,
+      "value": 83.7852,
       "display": "-16.2%",
       "status": "alert",
       "threshold": "低于200日线10%触发警戒；高于50%提示过热",
@@ -233,8 +233,8 @@
       "id": "drawdown_52w",
       "pillar": "market_regime",
       "label": "距52周高点",
-      "value": -56.766,
-      "display": "-56.8%",
+      "value": -56.6975,
+      "display": "-56.7%",
       "status": "alert",
       "threshold": "回撤超过20%进入注意，超过35%触发警戒",
       "interpretation": "衡量当前价格处在一年周期的哪个位置。"
@@ -243,8 +243,8 @@
       "id": "ewma_vol",
       "pillar": "market_regime",
       "label": "EWMA年化波动率",
-      "value": 98.4629,
-      "display": "98.5%",
+      "value": 95.4654,
+      "display": "95.5%",
       "status": "alert",
       "threshold": "50%以上进入注意，80%以上触发警戒；RiskMetrics λ=0.94",
       "interpretation": "近期收益率获得更高权重，适合捕捉财报后波动跃迁。"
@@ -253,8 +253,8 @@
       "id": "rsi14",
       "pillar": "market_regime",
       "label": "RSI 14",
-      "value": 49.8545,
-      "display": "49.9",
+      "value": 47.9879,
+      "display": "48.0",
       "status": "neutral",
       "threshold": "低于20或高于80触发警戒；30/70为注意线",
       "interpretation": "极端超买和超卖都意味着一年期投资者需要控制入场节奏。"
@@ -293,8 +293,8 @@
       "id": "target_upside",
       "pillar": "expectations",
       "label": "平均目标价空间",
-      "value": 154.006,
-      "display": "+154.0%",
+      "value": 153.6041,
+      "display": "+153.6%",
       "status": "support",
       "threshold": "平均目标价低于现价警戒；空间不足20%时注意",
       "interpretation": "目标价只能作为预期温度计，不能替代内在价值。"
@@ -313,9 +313,9 @@
       "id": "adr_premium",
       "pillar": "cross_market",
       "label": "ADR相对韩股平价",
-      "value": 34.7141,
-      "display": "+34.7%",
-      "status": "watch",
+      "value": 31.8094,
+      "display": "+31.8%",
+      "status": "neutral",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
     },
@@ -323,8 +323,8 @@
       "id": "overnight_lead",
       "pillar": "cross_market",
       "label": "ADR美国时段方向",
-      "value": -11.63,
-      "display": "-11.6%",
+      "value": -13.4,
+      "display": "-13.4%",
       "status": "alert",
       "threshold": "ADR日跌幅超过5%触发次日韩股压力警戒；上涨3%以上为正向线索",
       "interpretation": "不再用未同步的韩美“同日涨跌差”直接判断，只把ADR自身在韩国收盘后的方向作为领先线索。"
@@ -333,8 +333,8 @@
       "id": "us_semis_breadth",
       "pillar": "ai_memory_cycle",
       "label": "美股AI与存储代理",
-      "value": -11.2233,
-      "display": "-11.22%",
+      "value": -12.99,
+      "display": "-12.99%",
       "status": "alert",
       "threshold": "MU、NVDA和SOX平均日跌幅超过3%触发警戒",
       "interpretation": "用跨市场同行捕捉韩国收盘后的产业风险变化。"
@@ -402,12 +402,6 @@
   ],
   "chart": {
     "price": [
-      {
-        "date": "20251015",
-        "close": 422500.0,
-        "sma60": 298691.67,
-        "sma200": 236098.0
-      },
       {
         "date": "20251016",
         "close": 452500.0,
@@ -1961,6 +1955,12 @@
         "close": 1262000.0,
         "sma60": 1596566.67,
         "sma200": 1506045.0
+      },
+      {
+        "date": "20261106",
+        "close": 1264000.0,
+        "sma60": 1593933.33,
+        "sma200": 1508620.0
       }
     ],
     "evidence_history": [
@@ -2743,6 +2743,18 @@
           "support": 4
         },
         "adr_premium_pct": 34.71
+      },
+      {
+        "date": "2026-11-06",
+        "generated_at": "2026-11-05T23:56:39+00:00",
+        "price": 1264000.0,
+        "status_counts": {
+          "alert": 8,
+          "watch": 4,
+          "neutral": 2,
+          "support": 4
+        },
+        "adr_premium_pct": 31.81
       }
     ]
   },
@@ -2980,47 +2992,47 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-11-05T18:57:20+00:00",
+        "fetched_at": "2026-11-05T23:56:37+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-11-05T18:57:20+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-11-05T18:57:20+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-11-05T18:57:20+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-11-05T18:57:20+00:00",
+        "fetched_at": "2026-11-05T23:56:37+00:00",
         "error": null
       },
       "nvidia": {
         "status": "fresh",
-        "fetched_at": "2026-11-05T18:57:20+00:00",
+        "fetched_at": "2026-11-05T23:56:37+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-11-05T23:56:37+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-11-05T23:56:37+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-11-05T23:56:37+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-05T18:57:20+00:00",
+        "fetched_at": "2026-11-05T23:56:37+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-05T18:57:20+00:00",
+        "fetched_at": "2026-11-05T23:56:37+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-05T18:57:20+00:00",
+        "fetched_at": "2026-11-05T23:56:37+00:00",
         "error": null
       }
     },
