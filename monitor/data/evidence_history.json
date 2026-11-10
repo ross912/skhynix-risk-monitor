@@ -805,14 +805,14 @@
   },
   {
     "date": "2026-11-10",
-    "generated_at": "2026-11-10T07:48:10+00:00",
-    "price": 1215000.0,
+    "generated_at": "2026-11-10T15:49:03+00:00",
+    "price": 1198000.0,
     "status_counts": {
       "alert": 5,
-      "watch": 4,
-      "neutral": 2,
-      "support": 7
+      "watch": 7,
+      "neutral": 1,
+      "support": 5
     },
-    "adr_premium_pct": 48.96
+    "adr_premium_pct": 45.11
   }
 ]
