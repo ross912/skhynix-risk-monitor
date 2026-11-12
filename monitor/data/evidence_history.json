@@ -829,14 +829,14 @@
   },
   {
     "date": "2026-11-12",
-    "generated_at": "2026-11-12T10:41:55+00:00",
-    "price": 1250000.0,
+    "generated_at": "2026-11-12T18:35:17+00:00",
+    "price": 1241000.0,
     "status_counts": {
       "alert": 5,
-      "watch": 5,
+      "watch": 8,
       "neutral": 1,
-      "support": 7
+      "support": 4
     },
-    "adr_premium_pct": 52.14
+    "adr_premium_pct": 48.04
   }
 ]
