@@ -841,14 +841,14 @@
   },
   {
     "date": "2026-11-13",
-    "generated_at": "2026-11-13T11:30:26+00:00",
+    "generated_at": "2026-11-13T18:40:55+00:00",
     "price": 1233000.0,
     "status_counts": {
-      "alert": 5,
+      "alert": 6,
       "watch": 6,
-      "neutral": 3,
+      "neutral": 2,
       "support": 4
     },
-    "adr_premium_pct": 49.0
+    "adr_premium_pct": 42.33
   }
 ]
