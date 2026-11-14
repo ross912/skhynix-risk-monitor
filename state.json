@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-13T23:51:46+00:00",
-  "generated_at_seoul": "2026-11-14T08:51:46+09:00",
+  "generated_at": "2026-11-14T03:38:10+00:00",
+  "generated_at_seoul": "2026-11-14T12:38:10+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 92.21,
     "adr_premium_pct": 42.92,
-    "adr_premium_change_pct_points": 0.59,
+    "adr_premium_change_pct_points": 0.0,
     "overnight_spread_pct_points": -2.63,
     "nvidia": {
       "symbol": "NVDA",
@@ -2806,7 +2806,7 @@
       },
       {
         "date": "2026-11-13",
-        "generated_at": "2026-11-13T23:51:46+00:00",
+        "generated_at": "2026-11-14T03:38:10+00:00",
         "price": 1233000.0,
         "status_counts": {
           "alert": 5,
@@ -2820,7 +2820,7 @@
   },
   "slow_factors": {
     "as_of": "2026-07-31",
-    "age_days": 105,
+    "age_days": 106,
     "market_consensus": {
       "revenue_2027_trn_krw": 533.9,
       "operating_profit_2027_trn_krw": 418.6,
@@ -3052,51 +3052,51 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-11-13T23:51:45+00:00",
-        "error": null
-      },
-      "sox": {
-        "status": "fresh",
-        "fetched_at": "2026-11-13T23:51:45+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-11-13T23:51:45+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-11-13T23:51:45+00:00",
+        "fetched_at": "2026-11-14T03:38:09+00:00",
         "error": null
       },
       "adr": {
         "status": "fresh",
-        "fetched_at": "2026-11-13T23:51:45+00:00",
+        "fetched_at": "2026-11-14T03:38:09+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-11-14T03:38:09+00:00",
+        "error": null
+      },
+      "sox": {
+        "status": "fresh",
+        "fetched_at": "2026-11-14T03:38:09+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-11-14T03:38:09+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-11-13T23:51:45+00:00",
+        "fetched_at": "2026-11-14T03:38:09+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-13T23:51:45+00:00",
+        "fetched_at": "2026-11-14T03:38:09+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-13T23:51:45+00:00",
+        "fetched_at": "2026-11-14T03:38:09+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-13T23:51:45+00:00",
+        "fetched_at": "2026-11-14T03:38:09+00:00",
         "error": null
       }
     },
-    "slow_data_age_days": 105,
+    "slow_data_age_days": 106,
     "next_scheduled_refresh": "2026-11-16T16:40+09:00",
     "policy": "韩国交易时段每15分钟检查，韩国收盘后每日固化；慢变量按财报与产业数据更新。",
     "source_urls": {
