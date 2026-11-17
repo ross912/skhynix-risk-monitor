@@ -865,14 +865,14 @@
   },
   {
     "date": "2026-11-17",
-    "generated_at": "2026-11-17T03:52:46+00:00",
-    "price": 1128000.0,
+    "generated_at": "2026-11-17T12:32:22+00:00",
+    "price": 1100000.0,
     "status_counts": {
       "alert": 7,
-      "watch": 5,
-      "neutral": 2,
+      "watch": 6,
+      "neutral": 1,
       "support": 4
     },
-    "adr_premium_pct": 44.59
+    "adr_premium_pct": 48.27
   }
 ]
