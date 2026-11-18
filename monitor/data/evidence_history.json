@@ -877,14 +877,14 @@
   },
   {
     "date": "2026-11-18",
-    "generated_at": "2026-11-18T02:56:51+00:00",
-    "price": 1118000.0,
+    "generated_at": "2026-11-18T11:12:42+00:00",
+    "price": 1164000.0,
     "status_counts": {
       "alert": 5,
-      "watch": 7,
-      "neutral": 1,
-      "support": 5
+      "watch": 6,
+      "neutral": 3,
+      "support": 4
     },
-    "adr_premium_pct": 46.54
+    "adr_premium_pct": 40.75
   }
 ]
