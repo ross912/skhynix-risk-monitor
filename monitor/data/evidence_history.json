@@ -901,14 +901,14 @@
   },
   {
     "date": "2026-11-20",
-    "generated_at": "2026-11-19T23:54:23+00:00",
-    "price": 1183000.0,
+    "generated_at": "2026-11-20T05:57:59+00:00",
+    "price": 1100000.0,
     "status_counts": {
-      "alert": 5,
-      "watch": 6,
-      "neutral": 3,
+      "alert": 6,
+      "watch": 7,
+      "neutral": 1,
       "support": 4
     },
-    "adr_premium_pct": 33.86
+    "adr_premium_pct": 43.96
   }
 ]
