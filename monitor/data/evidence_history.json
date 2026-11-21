@@ -901,12 +901,12 @@
   },
   {
     "date": "2026-11-20",
-    "generated_at": "2026-11-20T22:07:40+00:00",
+    "generated_at": "2026-11-21T03:10:11+00:00",
     "price": 1100000.0,
     "status_counts": {
       "alert": 8,
-      "watch": 6,
-      "neutral": 0,
+      "watch": 5,
+      "neutral": 1,
       "support": 4
     },
     "adr_premium_pct": 26.11

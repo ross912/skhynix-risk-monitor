@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-20T22:07:40+00:00",
-  "generated_at_seoul": "2026-11-21T07:07:40+09:00",
+  "generated_at": "2026-11-21T03:10:11+00:00",
+  "generated_at_seoul": "2026-11-21T12:10:11+09:00",
   "trigger": "github-actions",
   "summary": {
     "status_counts": {
       "alert": 8,
-      "watch": 6,
-      "neutral": 0,
+      "watch": 5,
+      "neutral": 1,
       "support": 4
     },
     "headline": "存在需处理的警戒信号",
@@ -101,7 +101,7 @@
     },
     "adr_parity_usd": 82.12,
     "adr_premium_pct": 26.11,
-    "adr_premium_change_pct_points": -14.28,
+    "adr_premium_change_pct_points": 0.0,
     "overnight_spread_pct_points": -6.09,
     "nvidia": {
       "symbol": "NVDA",
@@ -131,7 +131,7 @@
       "price": 8408.59,
       "change": -1011.13,
       "change_pct": -10.73,
-      "traded_at": "2026-11-20T17:07:38-05:00",
+      "traded_at": "2026-11-20T17:15:59-05:00",
       "market_status": "CLOSE",
       "exchange": "NASDAQ Stock Exchange",
       "delay_name": "실시간"
@@ -189,8 +189,8 @@
       "status": "alert",
       "counts": {
         "alert": 1,
-        "watch": 1,
-        "neutral": 0,
+        "watch": 0,
+        "neutral": 1,
         "support": 0
       },
       "signal_count": 2
@@ -315,7 +315,7 @@
       "label": "ADR相对韩股平价",
       "value": 26.1144,
       "display": "+26.1%",
-      "status": "watch",
+      "status": "neutral",
       "threshold": "正股视角：折价超过5%或单次溢价收窄3个百分点时注意；折价10%以上警戒",
       "interpretation": "按1股普通股对应10份ADS换算。正溢价仅表示美国时段需求或时差，不是韩股的直接下跌信号。"
     },
@@ -2866,12 +2866,12 @@
       },
       {
         "date": "2026-11-20",
-        "generated_at": "2026-11-20T22:07:40+00:00",
+        "generated_at": "2026-11-21T03:10:11+00:00",
         "price": 1100000.0,
         "status_counts": {
           "alert": 8,
-          "watch": 6,
-          "neutral": 0,
+          "watch": 5,
+          "neutral": 1,
           "support": 4
         },
         "adr_premium_pct": 26.11
@@ -2880,7 +2880,7 @@
   },
   "slow_factors": {
     "as_of": "2026-07-31",
-    "age_days": 112,
+    "age_days": 113,
     "market_consensus": {
       "revenue_2027_trn_krw": 533.9,
       "operating_profit_2027_trn_krw": 418.6,
@@ -3112,51 +3112,51 @@
     "sources": {
       "fx": {
         "status": "fresh",
-        "fetched_at": "2026-11-20T22:07:39+00:00",
+        "fetched_at": "2026-11-21T03:10:09+00:00",
         "error": null
       },
       "sox": {
         "status": "fresh",
-        "fetched_at": "2026-11-20T22:07:39+00:00",
-        "error": null
-      },
-      "adr": {
-        "status": "fresh",
-        "fetched_at": "2026-11-20T22:07:39+00:00",
-        "error": null
-      },
-      "micron": {
-        "status": "fresh",
-        "fetched_at": "2026-11-20T22:07:39+00:00",
-        "error": null
-      },
-      "nvidia": {
-        "status": "fresh",
-        "fetched_at": "2026-11-20T22:07:39+00:00",
+        "fetched_at": "2026-11-21T03:10:09+00:00",
         "error": null
       },
       "krx_quote": {
         "status": "fresh",
-        "fetched_at": "2026-11-20T22:07:39+00:00",
+        "fetched_at": "2026-11-21T03:10:09+00:00",
+        "error": null
+      },
+      "micron": {
+        "status": "fresh",
+        "fetched_at": "2026-11-21T03:10:09+00:00",
+        "error": null
+      },
+      "adr": {
+        "status": "fresh",
+        "fetched_at": "2026-11-21T03:10:09+00:00",
+        "error": null
+      },
+      "nvidia": {
+        "status": "fresh",
+        "fetched_at": "2026-11-21T03:10:09+00:00",
         "error": null
       },
       "samsung_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-20T22:07:39+00:00",
+        "fetched_at": "2026-11-21T03:10:09+00:00",
         "error": null
       },
       "kospi_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-20T22:07:39+00:00",
+        "fetched_at": "2026-11-21T03:10:09+00:00",
         "error": null
       },
       "krx_history": {
         "status": "fresh",
-        "fetched_at": "2026-11-20T22:07:39+00:00",
+        "fetched_at": "2026-11-21T03:10:09+00:00",
         "error": null
       }
     },
-    "slow_data_age_days": 112,
+    "slow_data_age_days": 113,
     "next_scheduled_refresh": "2026-11-23T16:40+09:00",
     "policy": "韩国交易时段每15分钟检查，韩国收盘后每日固化；慢变量按财报与产业数据更新。",
     "source_urls": {
