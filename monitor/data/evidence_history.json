@@ -925,14 +925,14 @@
   },
   {
     "date": "2026-11-24",
-    "generated_at": "2026-11-24T10:04:08+00:00",
-    "price": 1118000.0,
+    "generated_at": "2026-11-24T20:37:40+00:00",
+    "price": 1113000.0,
     "status_counts": {
-      "alert": 5,
-      "watch": 4,
+      "alert": 7,
+      "watch": 5,
       "neutral": 2,
-      "support": 7
+      "support": 4
     },
-    "adr_premium_pct": 49.94
+    "adr_premium_pct": 34.51
   }
 ]
